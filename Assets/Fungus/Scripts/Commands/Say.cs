@@ -129,7 +129,7 @@ namespace Fungus
                 Continue();
             });
         }
-
+       
         public override string GetSummary()
         {
             string namePrefix = "";
@@ -164,7 +164,12 @@ namespace Fungus
 
             sayDialog.Stop();
         }
-
+        public string GetStoryText()
+        {
+            
+            Debug.Log($"this story text:{storyText}");
+            return storyText;
+        }
         #endregion
 
         #region ILocalizable implementation
@@ -178,7 +183,7 @@ namespace Fungus
         {
             storyText = standardText;
         }
-
+    
         public virtual string GetDescription()
         {
             return description;
