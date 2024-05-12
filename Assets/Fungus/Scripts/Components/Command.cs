@@ -22,6 +22,7 @@ namespace Fungus
         /// <param name="commandName">The display name of the command.</param>
         /// <param name="helpText">Help information to display in the inspector.</param>
         /// <param name="priority">If two command classes have the same name, the one with highest priority is listed. Negative priority removess the command from the list.</param>///
+      
         public CommandInfoAttribute(string category, string commandName, string helpText, int priority = 0)
         {
             this.Category = category;
@@ -47,6 +48,7 @@ namespace Fungus
 
         [HideInInspector]
         [SerializeField] protected int indentLevel;
+        
 
         protected string errorMessage = "";
 
