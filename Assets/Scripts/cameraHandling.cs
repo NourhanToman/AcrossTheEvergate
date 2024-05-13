@@ -10,6 +10,7 @@ public class cameraHandling : MonoBehaviour
     //[SerializeField] CinemachineVirtualCamera cinemachineTargetLock;
     [SerializeField] CinemachineFreeLook cinemachineTargetLock;
     [SerializeField] CinemachineFreeLook cinemachineFreelock;
+    [SerializeField] CinemachineVirtualCamera AimCamera;
 
     public CinemachineTargetGroup CMtargetGroup
     {
@@ -21,6 +22,7 @@ public class cameraHandling : MonoBehaviour
     {
         VirutalCameraLimitation();
         changePriority();
+        SwitchCameras();
     }
 
     void VirutalCameraLimitation()
@@ -45,6 +47,20 @@ public class cameraHandling : MonoBehaviour
         {
             cinemachineTargetLock.Priority = 11;
             cinemachineFreelock.Priority = 9;
+        }
+    }
+
+    void SwitchCameras()
+    {
+        if (InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false)
+        {
+            AimCamera.gameObject.SetActive(true);
+            cinemachineFreelock.gameObject.SetActive(false);
+        }
+        else if(InputManager.instance.isHoldingAttack == false && cinemachineFreelock.gameObject.activeInHierarchy == false)
+        {
+            cinemachineFreelock.gameObject.SetActive(true);
+            AimCamera.gameObject.SetActive(false);
         }
     }
 }

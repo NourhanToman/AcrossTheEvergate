@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     PlayerMovement movementScript;
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         movementScript = GetComponent<PlayerMovement>();
     }
 
