@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection.Normalize();
         moveDirection = moveDirection * moveSpeed;
         Vector3 movementVelocity = moveDirection;
-        rb.velocity = movementVelocity;
+        rb.velocity = new Vector3(movementVelocity.x , rb.velocity.y , movementVelocity.z);
     } // normal movment handiling
 
     void handleRotation()

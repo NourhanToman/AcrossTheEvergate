@@ -53,6 +53,69 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""48e79502-b7d4-4d54-96a5-b0bf5889130b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcf83d1c-5b59-4f92-9ddf-c49e67135c02"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""986a834a-496a-4be3-ba17-6edba4fac20b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Spell"",
+                    ""type"": ""Button"",
+                    ""id"": ""e60665b6-f080-4fe2-b7d0-94a289aacaff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""WorldMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""f718df3a-8103-4124-ac78-c2015c85dde1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SpellBook"",
+                    ""type"": ""Button"",
+                    ""id"": ""0b6b2bb3-fc26-40e8-862e-af2e9a2d10e5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""8f5b956e-6810-4999-81bf-76872721ad66"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -112,6 +175,105 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""2c614580-96d8-4878-9298-b6ce2b30ad30"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""0065b05c-3f87-4e7e-bdf6-23e1cb0feadb"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/hat/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""bccfe84b-d7f8-452d-9664-e02f42046344"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2b76cadc-0229-4882-b2f9-c090dfc98dec"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/hat/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""964e457f-64aa-4ca0-9d2d-a9d6a23e16c1"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""60688507-cc75-40e4-adfd-2bba48a3fdc5"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/hat/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d721ead8-81f6-4ec8-a0e2-b0c451be204a"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d81117cb-253d-4ccb-a0b8-b0935cedc446"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/hat/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""f79fbaf4-6887-4a0d-8a97-b9b5f4b06113"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""e111fb17-7a18-4488-b876-03da0b99589d"",
                     ""path"": ""<Keyboard>/e"",
@@ -132,6 +294,237 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""TargetLock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6071e3ad-4244-405e-b04a-d1ecc458f958"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TargetLock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b286f6c7-24d5-447b-9374-58db1edf72f4"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba00e284-c151-40b6-b6af-bfb61cdd3d12"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e26e3e1-5cd8-4307-a2e7-d0396d89e4cf"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc16bdb6-ad3e-4ef6-80be-ae2626c532ad"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ccb06bb-1b5c-4d1d-bf1a-ef440b51921f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6b71dae1-bae0-43ae-80bb-e863cc4910e6"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e32a5e07-7098-4642-b757-ecf659acb40b"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Spell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""499c3830-a7df-493e-b59d-c2419e7fd9b7"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Spell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""083e3446-9ef6-4290-ad9d-44ae99ae0e16"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""482d2ae7-6a3b-44df-a5cb-b6e136364a4b"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fca0192-0ee1-4149-80a8-312ebcdd40de"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpellBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1377d984-e492-4c96-a5d4-2150404bfbd3"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/button7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpellBook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b4d85e43-2677-45ab-bcd2-6bc729a79fcb"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bd0473b-788b-4dbc-a181-75bb879406a6"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2428b3d1-5895-4de1-8feb-3f42b4cec52b"",
+                    ""path"": ""<Joystick>/{Hatswitch}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""dc0d89d5-fd93-4e9b-ba78-509be8f51ce3"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""59b1424b-7da7-44a3-8a8f-b1a280ea75b7"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""fde23900-7fab-4f35-b1ac-95d65d6d34d7"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/z"",
+                    ""interactions"": """",
+                    ""processors"": ""Invert"",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""91e08378-ca38-47b4-b167-a01e14b4f3bc"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/rz"",
+                    ""interactions"": """",
+                    ""processors"": ""Invert"",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""ed915f9d-eede-4fe2-9a6c-5378d6cf0872"",
+                    ""path"": ""<HID::Twin USB Gamepad      >/rz"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -143,6 +536,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerLocomoation_Movement = m_PlayerLocomoation.FindAction("Movement", throwIfNotFound: true);
         m_PlayerLocomoation_DrawWeapon = m_PlayerLocomoation.FindAction("DrawWeapon", throwIfNotFound: true);
         m_PlayerLocomoation_TargetLock = m_PlayerLocomoation.FindAction("TargetLock", throwIfNotFound: true);
+        m_PlayerLocomoation_Jump = m_PlayerLocomoation.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerLocomoation_Attack = m_PlayerLocomoation.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerLocomoation_Interact = m_PlayerLocomoation.FindAction("Interact", throwIfNotFound: true);
+        m_PlayerLocomoation_Spell = m_PlayerLocomoation.FindAction("Spell", throwIfNotFound: true);
+        m_PlayerLocomoation_WorldMap = m_PlayerLocomoation.FindAction("WorldMap", throwIfNotFound: true);
+        m_PlayerLocomoation_SpellBook = m_PlayerLocomoation.FindAction("SpellBook", throwIfNotFound: true);
+        m_PlayerLocomoation_Look = m_PlayerLocomoation.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +607,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomoation_Movement;
     private readonly InputAction m_PlayerLocomoation_DrawWeapon;
     private readonly InputAction m_PlayerLocomoation_TargetLock;
+    private readonly InputAction m_PlayerLocomoation_Jump;
+    private readonly InputAction m_PlayerLocomoation_Attack;
+    private readonly InputAction m_PlayerLocomoation_Interact;
+    private readonly InputAction m_PlayerLocomoation_Spell;
+    private readonly InputAction m_PlayerLocomoation_WorldMap;
+    private readonly InputAction m_PlayerLocomoation_SpellBook;
+    private readonly InputAction m_PlayerLocomoation_Look;
     public struct PlayerLocomoationActions
     {
         private @InputActions m_Wrapper;
@@ -214,6 +621,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerLocomoation_Movement;
         public InputAction @DrawWeapon => m_Wrapper.m_PlayerLocomoation_DrawWeapon;
         public InputAction @TargetLock => m_Wrapper.m_PlayerLocomoation_TargetLock;
+        public InputAction @Jump => m_Wrapper.m_PlayerLocomoation_Jump;
+        public InputAction @Attack => m_Wrapper.m_PlayerLocomoation_Attack;
+        public InputAction @Interact => m_Wrapper.m_PlayerLocomoation_Interact;
+        public InputAction @Spell => m_Wrapper.m_PlayerLocomoation_Spell;
+        public InputAction @WorldMap => m_Wrapper.m_PlayerLocomoation_WorldMap;
+        public InputAction @SpellBook => m_Wrapper.m_PlayerLocomoation_SpellBook;
+        public InputAction @Look => m_Wrapper.m_PlayerLocomoation_Look;
         public InputActionMap Get() { return m_Wrapper.m_PlayerLocomoation; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +646,27 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TargetLock.started += instance.OnTargetLock;
             @TargetLock.performed += instance.OnTargetLock;
             @TargetLock.canceled += instance.OnTargetLock;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @Spell.started += instance.OnSpell;
+            @Spell.performed += instance.OnSpell;
+            @Spell.canceled += instance.OnSpell;
+            @WorldMap.started += instance.OnWorldMap;
+            @WorldMap.performed += instance.OnWorldMap;
+            @WorldMap.canceled += instance.OnWorldMap;
+            @SpellBook.started += instance.OnSpellBook;
+            @SpellBook.performed += instance.OnSpellBook;
+            @SpellBook.canceled += instance.OnSpellBook;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
         }
 
         private void UnregisterCallbacks(IPlayerLocomoationActions instance)
@@ -245,6 +680,27 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TargetLock.started -= instance.OnTargetLock;
             @TargetLock.performed -= instance.OnTargetLock;
             @TargetLock.canceled -= instance.OnTargetLock;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @Spell.started -= instance.OnSpell;
+            @Spell.performed -= instance.OnSpell;
+            @Spell.canceled -= instance.OnSpell;
+            @WorldMap.started -= instance.OnWorldMap;
+            @WorldMap.performed -= instance.OnWorldMap;
+            @WorldMap.canceled -= instance.OnWorldMap;
+            @SpellBook.started -= instance.OnSpellBook;
+            @SpellBook.performed -= instance.OnSpellBook;
+            @SpellBook.canceled -= instance.OnSpellBook;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
         }
 
         public void RemoveCallbacks(IPlayerLocomoationActions instance)
@@ -267,5 +723,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnDrawWeapon(InputAction.CallbackContext context);
         void OnTargetLock(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnSpell(InputAction.CallbackContext context);
+        void OnWorldMap(InputAction.CallbackContext context);
+        void OnSpellBook(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
     }
 }

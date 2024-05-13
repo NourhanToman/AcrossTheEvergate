@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     public bool isHoldingWeapon;
     public float horizontalInput;
     public float verticalInput;
+    public bool isHoldingAttack;
     private void Awake()
     {
         if(instance == null)
@@ -31,6 +32,8 @@ public class InputManager : MonoBehaviour
             action = new InputActions();
             action.PlayerLocomoation.Movement.performed += i => moveInput = i.ReadValue<Vector2>();
             action.PlayerLocomoation.DrawWeapon.performed += i => HandleWeaponDraw();
+            action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
+            action.PlayerLocomoation.Attack.canceled += i => HandlePlayerAttack();
         }
         action.Enable();
     }
@@ -51,6 +54,18 @@ public class InputManager : MonoBehaviour
         horizontalInput = moveInput.x;
     }
 
+
+    public void HandlePlayerAttack()
+    {
+        if(isHoldingAttack == false && isHoldingWeapon == true)
+        {
+            isHoldingAttack = true;
+        }
+        else
+        {
+            isHoldingAttack = false;
+        }
+    }
     void HandleWeaponDraw()
     {
         if(isHoldingWeapon == false)
