@@ -5,10 +5,8 @@ using Cinemachine;
 
 public class cameraHandling : MonoBehaviour
 {
-    [SerializeField] TargetLockOn targetLock;
     [SerializeField] CinemachineTargetGroup _CMTargetGroup;
-    //[SerializeField] CinemachineVirtualCamera cinemachineTargetLock;
-    [SerializeField] CinemachineFreeLook cinemachineTargetLock;
+    [SerializeField] CinemachineVirtualCamera cinemachineTargetLock;
     [SerializeField] CinemachineFreeLook cinemachineFreelock;
     [SerializeField] CinemachineVirtualCamera AimCamera;
 
@@ -39,14 +37,13 @@ public class cameraHandling : MonoBehaviour
 
     void changePriority()
     {
-
-        cinemachineTargetLock.Priority = 9;
-        cinemachineFreelock.Priority = 11;
-
-        if(_CMTargetGroup.m_Targets[0].target != null && targetLock == true) //&& manager.anim.swordState == true)
+        if(_CMTargetGroup.m_Targets[0].target != null && InputManager.instance.isLockingOnTarget == true) //&& manager.anim.swordState == true)
         {
-            cinemachineTargetLock.Priority = 11;
-            cinemachineFreelock.Priority = 9;
+            cinemachineTargetLock.gameObject.SetActive(true);
+        }
+        else
+        {
+            cinemachineTargetLock.gameObject.SetActive(false);
         }
     }
 

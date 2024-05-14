@@ -12,6 +12,10 @@ public class InputManager : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public bool isHoldingAttack;
+    public bool isLockingOnTarget;
+    public bool canAttackAgain;
+    public bool canMove;
+    public bool playerAttacked;
     private void Awake()
     {
         if(instance == null)
@@ -22,7 +26,10 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
+        canAttackAgain = true;
         isHoldingWeapon = false;
+        canMove = true;
+        playerAttacked = false;
     }
 
     private void OnEnable()
@@ -33,7 +40,8 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Movement.performed += i => moveInput = i.ReadValue<Vector2>();
             action.PlayerLocomoation.DrawWeapon.performed += i => HandleWeaponDraw();
             action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
-            action.PlayerLocomoation.Attack.canceled += i => HandlePlayerAttack();
+            action.PlayerLocomoation.Attack.canceled += i => PlayerReleaseAttack();
+            action.PlayerLocomoation.TargetLock.performed += i => LockOnTarget();
         }
         action.Enable();
     }
@@ -42,28 +50,37 @@ public class InputManager : MonoBehaviour
     {
         action.Disable();
     }
-
     public void HandelAllInputs()
     {
         handleMovementInput();
     }
-
     public void handleMovementInput()
     {
-        verticalInput = moveInput.y;
-        horizontalInput = moveInput.x;
-    }
-
-
-    public void HandlePlayerAttack()
-    {
-        if(isHoldingAttack == false && isHoldingWeapon == true)
+        if(canAttackAgain == true)
         {
-            isHoldingAttack = true;
+            verticalInput = moveInput.y;
+            horizontalInput = moveInput.x;
         }
         else
         {
-            isHoldingAttack = false;
+            verticalInput = 0f; horizontalInput = 0f;
+        }
+
+    }
+    public void HandlePlayerAttack()
+    {
+        if(isHoldingAttack == false && isHoldingWeapon == true && canAttackAgain == true)
+        {
+            isHoldingAttack = true;
+            playerAttacked = true;
+        }
+    }
+    public void PlayerReleaseAttack()
+    {
+        isHoldingAttack = false;
+        if (canAttackAgain == true && playerAttacked == true)
+        {
+            StartCoroutine(WaitBeforeAttackAgain());
         }
     }
     void HandleWeaponDraw()
@@ -76,5 +93,23 @@ public class InputManager : MonoBehaviour
         {
             isHoldingWeapon = false;
         }
+    }
+    void LockOnTarget()
+    {
+        if(isLockingOnTarget == false && isHoldingWeapon == true)
+        {
+            isLockingOnTarget = true;
+        }
+        else
+        {
+            isLockingOnTarget = false;
+        }
+    }
+    IEnumerator WaitBeforeAttackAgain()
+    {
+        canAttackAgain = false;
+        yield return new WaitForSeconds(0.55f);
+        playerAttacked= false;
+        canAttackAgain = true;
     }
 }

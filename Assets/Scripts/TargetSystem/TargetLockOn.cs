@@ -1,6 +1,7 @@
 using System.Collections;
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TargetLockOn : MonoBehaviour
 {
@@ -12,10 +13,10 @@ public class TargetLockOn : MonoBehaviour
     [SerializeField] Collider[] overlapColiders;
     [SerializeField] float checkRadius;
     [SerializeField] LayerMask checkLayer;
-
+    [SerializeField] Vector3 boxSize;
     [Header("Target System")]
-    public bool targetLock = false;
     public int targetCounter = 0;
+    public float TargetLockOnCursorOffset;
 
     public Transform target
     {
@@ -28,7 +29,6 @@ public class TargetLockOn : MonoBehaviour
     {
         manager = GetComponent<PlayerManager>();
     }
-
     private void Start()
     {
         StartCoroutine(Sorting());
@@ -60,7 +60,7 @@ public class TargetLockOn : MonoBehaviour
 
             target = overlapColiders[targetCounter].transform;
             CM.CMtargetGroup.m_Targets[0].target = target;
-            lockOnCanves.transform.position = Camera.main.WorldToScreenPoint(target.position);
+            lockOnCanves.transform.position = Camera.main.WorldToScreenPoint(new Vector3(target.position.x, target.position.y + TargetLockOnCursorOffset , target.position.z));
         }
 
 
@@ -70,7 +70,7 @@ public class TargetLockOn : MonoBehaviour
     {
         lockOnCanves.SetActive(false);
 
-        if(targetLock == true && CM.CMtargetGroup.m_Targets[0].target != null)
+        if(InputManager.instance.isLockingOnTarget == true && CM.CMtargetGroup.m_Targets[0].target != null)
         {
             lockOnCanves.SetActive(true);
         }
