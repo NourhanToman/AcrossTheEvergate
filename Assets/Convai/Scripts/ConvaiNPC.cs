@@ -335,7 +335,7 @@ namespace Convai.Scripts
         public void HandleInputSubmission(string input)
         {
             Logger.DebugLog("Sending user text to the server...", Logger.LogCategory.Character);
-            _convaiChatUIHandler.SendPlayerText(input);
+            //_convaiChatUIHandler.SendPlayerText(input);
 
             // Run SendTextData without awaiting it to avoid blocking the UI thread.
             // Capture the context to return to the main thread after the call.

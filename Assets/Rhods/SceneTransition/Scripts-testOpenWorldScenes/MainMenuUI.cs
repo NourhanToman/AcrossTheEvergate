@@ -8,6 +8,6 @@ public class MainMenuUI : MonoBehaviour
     public void startBttn()
     {
         SceneManager.LoadSceneAsync(0);
-        SceneManager.LoadSceneAsync("Scene1", LoadSceneMode.Additive);
+       // SceneManager.LoadSceneAsync("Scene1", LoadSceneMode.Additive);
     }
 }

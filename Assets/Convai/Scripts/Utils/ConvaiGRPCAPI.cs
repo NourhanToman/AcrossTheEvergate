@@ -68,12 +68,12 @@ namespace Convai.Scripts.Utils
         {
             // Check if there are pending user texts to display
             // If chatUIHandler is available, send the first user text in the list
-            if (_stringUserText.Count > 0 && _chatUIHandler != null)
+            /*if (_stringUserText.Count > 0 && _chatUIHandler != null)
             {
                 _chatUIHandler.SendPlayerText(_stringUserText[0]);
                 // Remove the displayed user text from the list
                 _stringUserText.RemoveAt(0);
-            }
+            }*/
         }
 
         private void OnDestroy()
