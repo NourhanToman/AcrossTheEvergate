@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,17 +24,21 @@ public class PlayerMovement : MonoBehaviour
     public void handleAllMovement()
     {
         handleMovement();
-        handleRotation();
-
-        //if (manager.anim.swordState == true && manager.targetLock == true)
-        //{
-        //    handlLockTargetRotation();
-        //}
-        //else
-        //{
-
-        //}
-
+    }
+    public void HandleAllRotations()
+    {
+        if (InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == true)
+        {
+            handlLockTargetRotation();
+        }
+        else if (InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == false)
+        {
+            FireRotation();
+        }
+        else
+        {
+            handleRotation();
+        }
     }
 
     void handleMovement()
@@ -62,10 +67,22 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = rotation;
     } // normal rotation handiling
 
+    void FireRotation()
+    {
+        if (InputManager.instance.isHoldingAttack == true)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(cameraTransform.forward);
+            Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = new Quaternion(0, rotation.y, 0, rotation.w);
+        }
+    }
+
     private void handlLockTargetRotation()
     {
         Vector3 rotationOffset = lockOn.target.transform.position - transform.position;
         rotationOffset.y = 0;
         transform.forward += Vector3.Lerp(transform.forward, rotationOffset, Time.deltaTime * rotationSpeed);
     } // locktarget rotation movement
+
+
 }

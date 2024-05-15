@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         InputManager.instance.HandelAllInputs();
+        movementScript.HandleAllRotations();
         //controlls.HandleAllInputs();
     }
 
