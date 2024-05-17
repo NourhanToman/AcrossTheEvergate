@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
     }
-
     public void handleAllMovement()
     {
         handleMovement();
@@ -40,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
             handleRotation();
         }
     }
-
     void handleMovement()
     {
         moveDirection = cameraTransform.forward * InputManager.instance.verticalInput;
@@ -51,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementVelocity = moveDirection;
         rb.velocity = new Vector3(movementVelocity.x , rb.velocity.y , movementVelocity.z);
     } // normal movment handiling
-
     void handleRotation()
     {
         targerDirection = cameraTransform.forward * InputManager.instance.verticalInput;
@@ -66,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         transform.rotation = rotation;
     } // normal rotation handiling
-
     void FireRotation()
     {
         if (InputManager.instance.isHoldingAttack == true)
@@ -76,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = new Quaternion(0, rotation.y, 0, rotation.w);
         }
     }
-
     private void handlLockTargetRotation()
     {
         Vector3 rotationOffset = lockOn.target.transform.position - transform.position;

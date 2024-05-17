@@ -21,7 +21,8 @@ public class TargetLockOn : MonoBehaviour
     public Transform target
     {
         get => _TargetToLockOn;
-        set => _TargetToLockOn = value;
+        //set => _TargetToLockOn = value;
+        private set { }
     }
 
 

@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
 {
     InputActions action;
     public static InputManager instance;
+    public DistanceShader shad;
     Vector2 moveInput;
     public bool isHoldingWeapon;
     public float horizontalInput;
@@ -42,6 +43,7 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
             action.PlayerLocomoation.Attack.canceled += i => PlayerReleaseAttack();
             action.PlayerLocomoation.TargetLock.performed += i => LockOnTarget();
+            action.PlayerLocomoation.TimeTravel.performed += i => TimeTravel();
         }
         action.Enable();
     }
@@ -103,6 +105,18 @@ public class InputManager : MonoBehaviour
         else
         {
             isLockingOnTarget = false;
+        }
+    }
+
+    void TimeTravel()
+    {
+        if(shad.activate == false)
+        {
+            shad.activate = true;
+        }
+        else
+        {
+            shad.activate = false;
         }
     }
     IEnumerator WaitBeforeAttackAgain()
