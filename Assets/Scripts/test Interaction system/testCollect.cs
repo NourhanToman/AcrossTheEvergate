@@ -6,15 +6,16 @@ namespace AccrossTheEvergate
 {
     public class testCollect : MonoBehaviour, IInteractable
     {
+        [SerializeField] public string promptText;
         public void Interact()
         {
-            Debug.Log("collect");
+            //Debug.Log("collect");
             gameObject.SetActive(false);
         }
 
         public string GetPrompt()
         {
-            return "To collect";
+            return promptText;
         }
     }
 }
