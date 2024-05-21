@@ -543,6 +543,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: VelocityY
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Grounded
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8726618348674799824}
   m_Solo: 0
@@ -583,43 +586,43 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Vertical
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: HoldingBow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: HoldingFire
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: VelocityY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -799,7 +802,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DrawArrow
-  m_Speed: 2
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8914034368181374260}
@@ -1312,7 +1315,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 0.16666667
     m_Position: {x: 0, y: 1}
@@ -1321,7 +1324,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 0.33333334
     m_Position: {x: 1, y: 0}
@@ -1330,7 +1333,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 0.5
     m_Position: {x: -1, y: 0}
@@ -1339,7 +1342,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 0.6666667
     m_Position: {x: 1, y: 1}
@@ -1348,7 +1351,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 0.8333333
     m_Position: {x: -1, y: 1}
@@ -1357,7 +1360,7 @@ BlendTree:
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 29125a39e6fd04c44b1b90195c17f26e,
+    m_Motion: {fileID: -203655887218126122, guid: 87bcaa7d8cf086b44822b7641185d7bc,
       type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: -1}
@@ -1479,10 +1482,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.13
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
   m_ExitTime: 0.74
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
