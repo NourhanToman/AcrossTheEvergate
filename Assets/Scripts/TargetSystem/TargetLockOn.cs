@@ -21,8 +21,8 @@ public class TargetLockOn : MonoBehaviour
     public Transform target
     {
         get => _TargetToLockOn;
-        //set => _TargetToLockOn = value;
-        private set { }
+        set => _TargetToLockOn = value;
+        //private set { }
     }
 
 
@@ -51,7 +51,7 @@ public class TargetLockOn : MonoBehaviour
         CM.CMtargetGroup.m_Targets[0].target = null;
         overlapColiders = Physics.OverlapSphere(transform.position, checkRadius, checkLayer);
 
-        foreach (Collider col in overlapColiders)
+        foreach (Collider colider in overlapColiders)
         {
 
             if(targetCounter >= overlapColiders.Length)
