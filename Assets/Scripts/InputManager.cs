@@ -7,7 +7,6 @@ public class InputManager : MonoBehaviour
 {
     InputActions action;
     public static InputManager instance;
-    public DistanceShader shad;
     Vector2 moveInput;
     public bool isHoldingWeapon;
     public float horizontalInput;
@@ -17,6 +16,8 @@ public class InputManager : MonoBehaviour
     public bool canAttackAgain;
     public bool canMove;
     public bool playerAttacked;
+    public bool isJumping;
+    public bool canJump;
     private void Awake()
     {
         if(instance == null)
@@ -31,6 +32,8 @@ public class InputManager : MonoBehaviour
         isHoldingWeapon = false;
         canMove = true;
         playerAttacked = false;
+        isJumping = false;
+        canJump = true;
     }
 
     private void OnEnable()
@@ -43,7 +46,7 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
             action.PlayerLocomoation.Attack.canceled += i => PlayerReleaseAttack();
             action.PlayerLocomoation.TargetLock.performed += i => LockOnTarget();
-            action.PlayerLocomoation.TimeTravel.performed += i => TimeTravel();
+            action.PlayerLocomoation.Jump.performed += i => playerJump();
         }
         action.Enable();
     }
@@ -108,15 +111,12 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    void TimeTravel()
+    void playerJump()
     {
-        if(shad.activate == false)
+        if(isJumping == false && canJump == true)
         {
-            shad.activate = true;
-        }
-        else
-        {
-            shad.activate = false;
+            isJumping = true;
+            canJump = false;
         }
     }
     IEnumerator WaitBeforeAttackAgain()
