@@ -59,7 +59,7 @@ public class TargetLockOn : MonoBehaviour
                targetCounter = 0;
             }
 
-            target = overlapColiders[targetCounter].transform;
+            target = overlapColiders[0].transform;
             CM.CMtargetGroup.m_Targets[0].target = target;
             lockOnCanves.transform.position = Camera.main.WorldToScreenPoint(new Vector3(target.position.x, target.position.y + TargetLockOnCursorOffset , target.position.z));
         }
