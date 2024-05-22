@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     public bool canAttackAgain;
     public bool canMove;
     public bool playerAttacked;
+    public bool playerInteracted;
     private void Awake()
     {
         if(instance == null)
@@ -30,6 +31,7 @@ public class InputManager : MonoBehaviour
         isHoldingWeapon = false;
         canMove = true;
         playerAttacked = false;
+        playerInteracted = false;
     }
 
     private void OnEnable()
@@ -42,6 +44,8 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
             action.PlayerLocomoation.Attack.canceled += i => PlayerReleaseAttack();
             action.PlayerLocomoation.TargetLock.performed += i => LockOnTarget();
+            action.PlayerLocomoation.Interact.performed += i => Interact();
+            action.PlayerLocomoation.Interact.canceled += i => CancelInteract();
         }
         action.Enable();
     }
@@ -111,5 +115,15 @@ public class InputManager : MonoBehaviour
         yield return new WaitForSeconds(0.55f);
         playerAttacked= false;
         canAttackAgain = true;
+    }
+
+    void Interact()
+    {
+        playerInteracted = true;
+    }
+
+    void CancelInteract()
+    {
+        playerInteracted = false;
     }
 }
