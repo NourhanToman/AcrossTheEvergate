@@ -22,6 +22,7 @@ public class TargetLockOn : MonoBehaviour
     {
         get => _TargetToLockOn;
         set => _TargetToLockOn = value;
+        //private set { }
     }
 
 
@@ -50,7 +51,7 @@ public class TargetLockOn : MonoBehaviour
         CM.CMtargetGroup.m_Targets[0].target = null;
         overlapColiders = Physics.OverlapSphere(transform.position, checkRadius, checkLayer);
 
-        foreach (Collider col in overlapColiders)
+        foreach (Collider colider in overlapColiders)
         {
 
             if(targetCounter >= overlapColiders.Length)
@@ -58,7 +59,7 @@ public class TargetLockOn : MonoBehaviour
                targetCounter = 0;
             }
 
-            target = overlapColiders[targetCounter].transform;
+            target = overlapColiders[0].transform;
             CM.CMtargetGroup.m_Targets[0].target = target;
             lockOnCanves.transform.position = Camera.main.WorldToScreenPoint(new Vector3(target.position.x, target.position.y + TargetLockOnCursorOffset , target.position.z));
         }

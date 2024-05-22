@@ -18,11 +18,10 @@ public class cameraHandling : MonoBehaviour
 
     void Update()
     {
-        VirutalCameraLimitation();
+        //VirutalCameraLimitation();
         changePriority();
         SwitchCameras();
     }
-
     void VirutalCameraLimitation()
     {
         if (cinemachineTargetLock.transform.position.y >= 5f)
@@ -34,7 +33,6 @@ public class cameraHandling : MonoBehaviour
             cinemachineTargetLock.transform.position = new Vector3(cinemachineTargetLock.transform.position.x, 1f, cinemachineTargetLock.transform.position.z);
         }
     }
-
     void changePriority()
     {
         if(_CMTargetGroup.m_Targets[0].target != null && InputManager.instance.isLockingOnTarget == true) //&& manager.anim.swordState == true)
@@ -46,7 +44,6 @@ public class cameraHandling : MonoBehaviour
             cinemachineTargetLock.gameObject.SetActive(false);
         }
     }
-
     void SwitchCameras()
     {
         if (InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false)

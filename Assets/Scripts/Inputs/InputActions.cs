@@ -116,6 +116,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TimeTravel"",
+                    ""type"": ""Button"",
+                    ""id"": ""2200e324-d4c0-4802-865f-48a58c491baf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -276,7 +285,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e111fb17-7a18-4488-b876-03da0b99589d"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -525,6 +534,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5b3ee1f-8fce-445a-9014-b809cc062677"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TimeTravel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -543,6 +563,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerLocomoation_WorldMap = m_PlayerLocomoation.FindAction("WorldMap", throwIfNotFound: true);
         m_PlayerLocomoation_SpellBook = m_PlayerLocomoation.FindAction("SpellBook", throwIfNotFound: true);
         m_PlayerLocomoation_Look = m_PlayerLocomoation.FindAction("Look", throwIfNotFound: true);
+        m_PlayerLocomoation_TimeTravel = m_PlayerLocomoation.FindAction("TimeTravel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -614,6 +635,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomoation_WorldMap;
     private readonly InputAction m_PlayerLocomoation_SpellBook;
     private readonly InputAction m_PlayerLocomoation_Look;
+    private readonly InputAction m_PlayerLocomoation_TimeTravel;
     public struct PlayerLocomoationActions
     {
         private @InputActions m_Wrapper;
@@ -628,6 +650,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @WorldMap => m_Wrapper.m_PlayerLocomoation_WorldMap;
         public InputAction @SpellBook => m_Wrapper.m_PlayerLocomoation_SpellBook;
         public InputAction @Look => m_Wrapper.m_PlayerLocomoation_Look;
+        public InputAction @TimeTravel => m_Wrapper.m_PlayerLocomoation_TimeTravel;
         public InputActionMap Get() { return m_Wrapper.m_PlayerLocomoation; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -667,6 +690,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @TimeTravel.started += instance.OnTimeTravel;
+            @TimeTravel.performed += instance.OnTimeTravel;
+            @TimeTravel.canceled += instance.OnTimeTravel;
         }
 
         private void UnregisterCallbacks(IPlayerLocomoationActions instance)
@@ -701,6 +727,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @TimeTravel.started -= instance.OnTimeTravel;
+            @TimeTravel.performed -= instance.OnTimeTravel;
+            @TimeTravel.canceled -= instance.OnTimeTravel;
         }
 
         public void RemoveCallbacks(IPlayerLocomoationActions instance)
@@ -730,5 +759,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnWorldMap(InputAction.CallbackContext context);
         void OnSpellBook(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnTimeTravel(InputAction.CallbackContext context);
     }
 }
