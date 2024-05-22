@@ -94,6 +94,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TimeTravel",
+                    "type": "Button",
+                    "id": "2200e324-d4c0-4802-865f-48a58c491baf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -503,6 +512,17 @@
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a5b3ee1f-8fce-445a-9014-b809cc062677",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TimeTravel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

@@ -17,6 +17,8 @@ public class InputManager : MonoBehaviour
     public bool canMove;
     public bool playerAttacked;
     public bool playerInteracted;
+    public bool isJumping;
+    public bool canJump;
     private void Awake()
     {
         if(instance == null)
@@ -32,6 +34,8 @@ public class InputManager : MonoBehaviour
         canMove = true;
         playerAttacked = false;
         playerInteracted = false;
+        isJumping = false;
+        canJump = true;
     }
 
     private void OnEnable()
@@ -46,6 +50,7 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.TargetLock.performed += i => LockOnTarget();
             action.PlayerLocomoation.Interact.performed += i => Interact();
             action.PlayerLocomoation.Interact.canceled += i => CancelInteract();
+            action.PlayerLocomoation.Jump.performed += i => playerJump();
         }
         action.Enable();
     }
@@ -107,6 +112,15 @@ public class InputManager : MonoBehaviour
         else
         {
             isLockingOnTarget = false;
+        }
+    }
+
+    void playerJump()
+    {
+        if(isJumping == false && canJump == true)
+        {
+            isJumping = true;
+            canJump = false;
         }
     }
     IEnumerator WaitBeforeAttackAgain()
