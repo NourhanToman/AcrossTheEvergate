@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &373216166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Characters.Array.data[0].gameObject
       value: 
-      objectReference: {fileID: 1425258935}
+      objectReference: {fileID: 0}
     - target: {fileID: 2728381557873022253, guid: d48e039e0643fd848beb10345244dda6,
         type: 3}
       propertyPath: m_IsActive
@@ -343,6 +343,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7836876365707095289, guid: d48e039e0643fd848beb10345244dda6,
+        type: 3}
+      propertyPath: activeConvaiNPC
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9188272265464542276, guid: d48e039e0643fd848beb10345244dda6,
         type: 3}
       propertyPath: m_BackGroundColor.a
@@ -407,7 +412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &705583213
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -509,7 +514,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 705583215}
   selectedCommands:
-  - {fileID: 705583222}
+  - {fileID: 705583218}
   variables: []
   description: 
   stepPause: 0
@@ -556,7 +561,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6314763485126647165}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -666,7 +671,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6314763485126647165}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -799,7 +804,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6314763485126647165}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -855,7 +860,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6314763485126647165}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -1047,12 +1052,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1425258935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5464255474811306444, guid: 31cb0bc017ffddd4995c972d2709f358,
-    type: 3}
-  m_PrefabInstance: {fileID: 6314763485126647164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653320648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1298,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6314763485126647164
+--- !u!1001 &8912028957350079742
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1311,6 +1310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Convai NPC Evergate Grimoire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225167953369212347, guid: 31cb0bc017ffddd4995c972d2709f358,
+        type: 3}
+      propertyPath: MinDistance
+      value: 2.7134287
       objectReference: {fileID: 0}
     - target: {fileID: 8507122478729007161, guid: 31cb0bc017ffddd4995c972d2709f358,
         type: 3}
@@ -1367,18 +1371,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31cb0bc017ffddd4995c972d2709f358, type: 3}
---- !u!114 &6314763485126647165 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4734395025801450683, guid: 31cb0bc017ffddd4995c972d2709f358,
-    type: 3}
-  m_PrefabInstance: {fileID: 6314763485126647164}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425258935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1390,4 +1382,4 @@ SceneRoots:
   - {fileID: 376296897}
   - {fileID: 373216167}
   - {fileID: 1653320652}
-  - {fileID: 6314763485126647164}
+  - {fileID: 8912028957350079742}
