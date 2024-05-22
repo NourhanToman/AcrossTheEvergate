@@ -1,3 +1,4 @@
+using Fungus;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,12 @@ namespace Convai.Scripts.Utils
         // Reference to the main camera used for ray casting.
         private Camera _mainCamera;
 
+        public LayerMask ignorePlayer;
+        [SerializeField] private Flowchart chart;
+        bool foundConvaiNPC = false;
         private ConvaiNPC ActiveConvaiNPC
+
+        
         {
             get => activeConvaiNPC;
             set
@@ -60,26 +66,36 @@ namespace Convai.Scripts.Utils
             _mainCamera = Camera.main;
         }
 
+       /* private void Update()
+        {
+            if (foundConvaiNPC)
+            {
+                chart.SetBooleanVariable("Entered", true);
+            }
+        }*/
         private void LateUpdate()
         {
             // Create a ray based on the camera's position and forward.
             Ray ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.forward);
-            bool foundConvaiNPC = false;
+            foundConvaiNPC = false;
 
             // Perform a raycast
-            if (Physics.Raycast(ray, out RaycastHit hit, rayLength))
+            if (Physics.Raycast(ray, out RaycastHit hit, rayLength , ignorePlayer))
             {
                 ConvaiNPC convaiNpc = GetConvaiNPC(hit.transform.gameObject);
                 if (convaiNpc != null)
                 {
                     // If an NPC was hit by the ray
                     foundConvaiNPC = true;
+                    chart.ExecuteBlock("Book");
+
                     if (_lastHitNpc != convaiNpc)
                     {
                         // If the hit NPC is different from the last hit NPC
                         Logger.DebugLog($"Player is near {convaiNpc.gameObject.name}",
                             Logger.LogCategory.Character);
                         convaiNpc.isCharacterActive = true;
+                        
 
                         // Deactivate the previous NPC if it's different
                         if (ActiveConvaiNPC != null && ActiveConvaiNPC != convaiNpc)
