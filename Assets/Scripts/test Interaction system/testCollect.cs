@@ -8,7 +8,7 @@ namespace AccrossTheEvergate
     {
         [SerializeField] public string promptText;
         //event of the object/quest/objective
-        private ServiceLocator _serviceLocator;
+       /* private ServiceLocator _serviceLocator;
         private Inventory _inventory;
 
         private void Awake()
@@ -17,7 +17,7 @@ namespace AccrossTheEvergate
         }
 
         private void Start() => _inventory = _serviceLocator.GetService<Inventory>();
-
+*/
         public void Interact()
         {
             //Debug.Log("collect");
