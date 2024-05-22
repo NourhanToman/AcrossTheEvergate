@@ -35,7 +35,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityAnimator
         {
             if (animator == null)
             {
-                Logging.LogWarning("Animator is null");
+                Debug.LogWarning("Animator is null");
                 return TaskStatus.Failure;
             }
 
