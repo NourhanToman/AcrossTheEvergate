@@ -18,7 +18,7 @@ public class cameraHandling : MonoBehaviour
 
     void Update()
     {
-        VirutalCameraLimitation();
+        //VirutalCameraLimitation();
         changePriority();
         SwitchCameras();
     }

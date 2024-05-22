@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection += cameraTransform.right * InputManager.instance.horizontalInput;
         moveDirection.y = 0;
         moveDirection.Normalize();
-        moveDirection = moveDirection * moveSpeed;
+        moveDirection *= moveSpeed;
         Vector3 movementVelocity = moveDirection;
         rb.velocity = new Vector3(movementVelocity.x , rb.velocity.y , movementVelocity.z);
     } // normal movment handiling
