@@ -60,14 +60,14 @@ public class cameraHandling : MonoBehaviour
             AimCameraWithLock.gameObject.SetActive(false);
             AimCamera.gameObject.SetActive(false);
         }
-        else if(InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false && InputManager.instance.isLockingOnTarget == true)
+        else if(InputManager.instance.isHoldingAttack && InputManager.instance.isLockingOnTarget == true)
         {
             AimCameraWithLock.gameObject.SetActive(true);
             AimCamera.gameObject.SetActive(false);
             cinemachineFreelock.gameObject.SetActive(false);
         }
 
-        if(InputManager.instance.isHoldingAttack == true)
+        if(InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == false)
         {
             CrossHair.gameObject.SetActive(true);
         }
