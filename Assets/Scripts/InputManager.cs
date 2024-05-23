@@ -1,16 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    InputActions action;
+    private InputActions action;
     public static InputManager instance;
-    Vector2 moveInput;
+    private Vector2 moveInput;
+    private Vector2 rotationInput;
     public bool isHoldingWeapon;
     public float horizontalInput;
     public float verticalInput;
+    public float horizontalRotationInput;
+    public float verticalRotationInput;
     public bool isHoldingAttack;
     public bool isLockingOnTarget;
     public bool canAttackAgain;
@@ -19,9 +20,10 @@ public class InputManager : MonoBehaviour
     public bool playerInteracted;
     public bool isJumping;
     public bool canJump;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -40,10 +42,12 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if(action == null)
+        if (action == null)
         {
             action = new InputActions();
             action.PlayerLocomoation.Movement.performed += i => moveInput = i.ReadValue<Vector2>();
+            action.PlayerLocomoation.Look.started += i => rotationInput = i.ReadValue<Vector2>();
+            action.PlayerLocomoation.Look.canceled += i => rotationInput  = Vector2.zero;
             action.PlayerLocomoation.DrawWeapon.performed += i => HandleWeaponDraw();
             action.PlayerLocomoation.Attack.performed += i => HandlePlayerAttack();
             action.PlayerLocomoation.Attack.canceled += i => PlayerReleaseAttack();
@@ -59,13 +63,16 @@ public class InputManager : MonoBehaviour
     {
         action.Disable();
     }
+
     public void HandelAllInputs()
     {
         handleMovementInput();
+        handleRotationInput();
     }
+
     public void handleMovementInput()
     {
-        if(canAttackAgain == true)
+        if (canAttackAgain == true)
         {
             verticalInput = moveInput.y;
             horizontalInput = moveInput.x;
@@ -74,16 +81,30 @@ public class InputManager : MonoBehaviour
         {
             verticalInput = 0f; horizontalInput = 0f;
         }
-
     }
+
+    public void handleRotationInput()
+    {
+        if (canAttackAgain == true)
+        {
+            verticalRotationInput = rotationInput.y ;
+            horizontalRotationInput = rotationInput.x ;
+        }
+        else
+        {
+            verticalRotationInput = 0f; horizontalRotationInput = 0f;
+        }
+    }
+
     public void HandlePlayerAttack()
     {
-        if(isHoldingAttack == false && isHoldingWeapon == true && canAttackAgain == true)
+        if (isHoldingAttack == false && isHoldingWeapon == true && canAttackAgain == true)
         {
             isHoldingAttack = true;
             playerAttacked = true;
         }
     }
+
     public void PlayerReleaseAttack()
     {
         isHoldingAttack = false;
@@ -92,20 +113,22 @@ public class InputManager : MonoBehaviour
             StartCoroutine(WaitBeforeAttackAgain());
         }
     }
-    void HandleWeaponDraw()
+
+    private void HandleWeaponDraw()
     {
-        if(isHoldingWeapon == false)
+        if (isHoldingWeapon == false)
         {
-            isHoldingWeapon=true;
+            isHoldingWeapon = true;
         }
         else
         {
             isHoldingWeapon = false;
         }
     }
-    void LockOnTarget()
+
+    private void LockOnTarget()
     {
-        if(isLockingOnTarget == false && isHoldingWeapon == true)
+        if (isLockingOnTarget == false && isHoldingWeapon == true)
         {
             isLockingOnTarget = true;
         }
@@ -115,19 +138,20 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    void playerJump()
+    private void playerJump()
     {
-        if(isJumping == false && canJump == true)
+        if (isJumping == false && canJump == true)
         {
             isJumping = true;
             canJump = false;
         }
     }
-    IEnumerator WaitBeforeAttackAgain()
+
+    private IEnumerator WaitBeforeAttackAgain()
     {
         canAttackAgain = false;
         yield return new WaitForSeconds(0.55f);
-        playerAttacked= false;
+        playerAttacked = false;
         canAttackAgain = true;
     }
 

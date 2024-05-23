@@ -5,25 +5,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] TargetLockOn lockOn;
+    [SerializeField] private TargetLockOn lockOn;
     private Rigidbody rb;
     private Vector3 moveDirection;
     private Vector3 targerDirection = Vector3.zero;
     private Transform cameraTransform;
 
     [Header("PlayerMovement")]
-    [SerializeField] float moveSpeed = 6f;
-    [SerializeField] float rotationSpeed = 15f;
+    [SerializeField] private float moveSpeed = 6f;
+
+    [SerializeField] private float rotationSpeed = 15f;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
     }
+
     public void handleAllMovement()
     {
         handleMovement();
     }
+
     public void HandleAllRotations()
     {
         if (InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == true)
@@ -39,17 +43,19 @@ public class PlayerMovement : MonoBehaviour
             handleRotation();
         }
     }
-    void handleMovement()
+
+    private void handleMovement()
     {
         moveDirection = cameraTransform.forward * InputManager.instance.verticalInput;
         moveDirection += cameraTransform.right * InputManager.instance.horizontalInput;
         moveDirection.y = 0;
         moveDirection.Normalize();
-        moveDirection = moveDirection * moveSpeed;
+        moveDirection *= moveSpeed;
         Vector3 movementVelocity = moveDirection;
-        rb.velocity = new Vector3(movementVelocity.x , rb.velocity.y , movementVelocity.z);
+        rb.velocity = new Vector3(movementVelocity.x, rb.velocity.y, movementVelocity.z);
     } // normal movment handiling
-    void handleRotation()
+
+    private void handleRotation()
     {
         targerDirection = cameraTransform.forward * InputManager.instance.verticalInput;
         targerDirection += cameraTransform.right * InputManager.instance.horizontalInput;
@@ -63,21 +69,27 @@ public class PlayerMovement : MonoBehaviour
         Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         transform.rotation = rotation;
     } // normal rotation handiling
-    void FireRotation()
+
+    private void FireRotation()
     {
-        if (InputManager.instance.isHoldingAttack == true)
+        targerDirection = cameraTransform.forward;
+        //targerDirection += cameraTransform.right;
+        //targerDirection.y = 0f;
+        targerDirection.Normalize();
+        if (targerDirection == Vector3.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(cameraTransform.forward);
-            Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            transform.rotation = new Quaternion(0, rotation.y, 0, rotation.w);
+            targerDirection = transform.forward;
         }
+        Quaternion targetRotation = Quaternion.LookRotation(targerDirection);
+        Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, (rotationSpeed / 3) * Time.deltaTime);
+
+        transform.rotation = rotation;
     }
+
     private void handlLockTargetRotation()
     {
         Vector3 rotationOffset = lockOn.target.transform.position - transform.position;
         rotationOffset.y = 0;
         transform.forward += Vector3.Lerp(transform.forward, rotationOffset, Time.deltaTime * rotationSpeed);
     } // locktarget rotation movement
-
-
 }
