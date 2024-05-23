@@ -125,13 +125,31 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlipPageRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd581baf-8189-4380-9340-a89f4bfcf34e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlipPageLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""ecdf4b16-089c-47b6-a3a5-0ffce6c69329"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""e111fb17-7a18-4488-b876-03da0b99589d"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -510,6 +528,50 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""772f0c7e-c6b5-4d05-8030-0270bb96030c"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlipPageRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c861da6e-858e-4339-a7b3-fe6aa286fb42"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlipPageRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b0f7c679-2ab7-48cb-a9b6-3c989d9aae6b"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlipPageLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c742382d-cd47-4112-b4ca-3ee37199219a"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlipPageLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1535,6 +1597,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerLocomoation_SpellBook = m_PlayerLocomoation.FindAction("SpellBook", throwIfNotFound: true);
         m_PlayerLocomoation_Look = m_PlayerLocomoation.FindAction("Look", throwIfNotFound: true);
         m_PlayerLocomoation_TimeTravel = m_PlayerLocomoation.FindAction("TimeTravel", throwIfNotFound: true);
+        m_PlayerLocomoation_FlipPageRight = m_PlayerLocomoation.FindAction("FlipPageRight", throwIfNotFound: true);
+        m_PlayerLocomoation_FlipPageLeft = m_PlayerLocomoation.FindAction("FlipPageLeft", throwIfNotFound: true);
         // Test
         m_Test = asset.FindActionMap("Test", throwIfNotFound: true);
         m_Test_Newaction = m_Test.FindAction("New action", throwIfNotFound: true);
@@ -1623,6 +1687,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomoation_SpellBook;
     private readonly InputAction m_PlayerLocomoation_Look;
     private readonly InputAction m_PlayerLocomoation_TimeTravel;
+    private readonly InputAction m_PlayerLocomoation_FlipPageRight;
+    private readonly InputAction m_PlayerLocomoation_FlipPageLeft;
     public struct PlayerLocomoationActions
     {
         private @InputActions m_Wrapper;
@@ -1638,6 +1704,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @SpellBook => m_Wrapper.m_PlayerLocomoation_SpellBook;
         public InputAction @Look => m_Wrapper.m_PlayerLocomoation_Look;
         public InputAction @TimeTravel => m_Wrapper.m_PlayerLocomoation_TimeTravel;
+        public InputAction @FlipPageRight => m_Wrapper.m_PlayerLocomoation_FlipPageRight;
+        public InputAction @FlipPageLeft => m_Wrapper.m_PlayerLocomoation_FlipPageLeft;
         public InputActionMap Get() { return m_Wrapper.m_PlayerLocomoation; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1680,6 +1748,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TimeTravel.started += instance.OnTimeTravel;
             @TimeTravel.performed += instance.OnTimeTravel;
             @TimeTravel.canceled += instance.OnTimeTravel;
+            @FlipPageRight.started += instance.OnFlipPageRight;
+            @FlipPageRight.performed += instance.OnFlipPageRight;
+            @FlipPageRight.canceled += instance.OnFlipPageRight;
+            @FlipPageLeft.started += instance.OnFlipPageLeft;
+            @FlipPageLeft.performed += instance.OnFlipPageLeft;
+            @FlipPageLeft.canceled += instance.OnFlipPageLeft;
         }
 
         private void UnregisterCallbacks(IPlayerLocomoationActions instance)
@@ -1717,6 +1791,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TimeTravel.started -= instance.OnTimeTravel;
             @TimeTravel.performed -= instance.OnTimeTravel;
             @TimeTravel.canceled -= instance.OnTimeTravel;
+            @FlipPageRight.started -= instance.OnFlipPageRight;
+            @FlipPageRight.performed -= instance.OnFlipPageRight;
+            @FlipPageRight.canceled -= instance.OnFlipPageRight;
+            @FlipPageLeft.started -= instance.OnFlipPageLeft;
+            @FlipPageLeft.performed -= instance.OnFlipPageLeft;
+            @FlipPageLeft.canceled -= instance.OnFlipPageLeft;
         }
 
         public void RemoveCallbacks(IPlayerLocomoationActions instance)
@@ -1919,6 +1999,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnSpellBook(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnTimeTravel(InputAction.CallbackContext context);
+        void OnFlipPageRight(InputAction.CallbackContext context);
+        void OnFlipPageLeft(InputAction.CallbackContext context);
     }
     public interface ITestActions
     {
