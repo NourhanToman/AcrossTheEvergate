@@ -9,6 +9,8 @@ public class cameraHandling : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera cinemachineTargetLock;
     [SerializeField] CinemachineFreeLook cinemachineFreelock;
     [SerializeField] CinemachineVirtualCamera AimCamera;
+    [SerializeField] CinemachineVirtualCamera AimCameraWithLock;
+    [SerializeField] GameObject CrossHair;
 
     public CinemachineTargetGroup CMtargetGroup
     {
@@ -46,15 +48,39 @@ public class cameraHandling : MonoBehaviour
     }
     void SwitchCameras()
     {
-        if (InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false)
+        if (InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false && InputManager.instance.isLockingOnTarget == false)
         {
             AimCamera.gameObject.SetActive(true);
+            AimCameraWithLock.gameObject.SetActive(false);
             cinemachineFreelock.gameObject.SetActive(false);
         }
         else if(InputManager.instance.isHoldingAttack == false && cinemachineFreelock.gameObject.activeInHierarchy == false)
         {
             cinemachineFreelock.gameObject.SetActive(true);
+            AimCameraWithLock.gameObject.SetActive(false);
             AimCamera.gameObject.SetActive(false);
         }
+        else if(InputManager.instance.isHoldingAttack && InputManager.instance.isLockingOnTarget == true)
+        {
+            AimCameraWithLock.gameObject.SetActive(true);
+            AimCamera.gameObject.SetActive(false);
+            cinemachineFreelock.gameObject.SetActive(false);
+        }
+
+        if(InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == false)
+        {
+            CrossHair.gameObject.SetActive(true);
+        }
+        else
+        {
+            CrossHair.gameObject.SetActive(false);
+        }
+    }
+    IEnumerator SwitchToFreeLook()
+    {
+        yield return new WaitForSeconds(0.5f);
+        cinemachineFreelock.gameObject.SetActive(true);
+        AimCameraWithLock.gameObject.SetActive(false);
+        AimCamera.gameObject.SetActive(false);
     }
 }
