@@ -339,6 +339,17 @@
                 },
                 {
                     "name": "",
+                    "id": "0970cf45-9a00-4400-80de-e42a89f73026",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2428b3d1-5895-4de1-8feb-3f42b4cec52b",
                     "path": "<Joystick>/{Hatswitch}",
                     "interactions": "",
@@ -347,61 +358,6 @@
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "dc0d89d5-fd93-4e9b-ba78-509be8f51ce3",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "59b1424b-7da7-44a3-8a8f-b1a280ea75b7",
-                    "path": "<HID::Twin USB Gamepad      >/z",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "fde23900-7fab-4f35-b1ac-95d65d6d34d7",
-                    "path": "<HID::Twin USB Gamepad      >/z",
-                    "interactions": "",
-                    "processors": "Invert",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "91e08378-ca38-47b4-b167-a01e14b4f3bc",
-                    "path": "<HID::Twin USB Gamepad      >/rz",
-                    "interactions": "",
-                    "processors": "Invert",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "ed915f9d-eede-4fe2-9a6c-5378d6cf0872",
-                    "path": "<HID::Twin USB Gamepad      >/rz",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -978,6 +934,61 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "32b1af59-a918-4730-ab69-1cc5806515bd",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "1ed400d8-4443-4062-86f3-9950d59af822",
+                    "path": "<HID::Twin USB Gamepad      >/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a322934f-88e8-43f8-b54d-62e757c67578",
+                    "path": "<HID::Twin USB Gamepad      >/z",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "ea9b008f-1f7e-436d-b8d4-38e57d178f72",
+                    "path": "<HID::Twin USB Gamepad      >/rz",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "d1e54c85-cf8e-436c-b276-a3b2d3df5899",
+                    "path": "<HID::Twin USB Gamepad      >/rz",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
