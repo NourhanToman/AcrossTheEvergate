@@ -10,6 +10,9 @@ public class AutoFlip : MonoBehaviour {
     public Book ControledBook;
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
+
+   [SerializeField] Transform LeftPos;
+   [SerializeField] Transform RightPos;
     // Use this for initialization
     void Start () {
         /*if (!ControledBook)
@@ -32,11 +35,19 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage >= ControledBook.TotalPageCount) return;
         isFlipping = true;
         float frameTime = PageFlipTime / AnimationFramesCount;
+//        float xc = (LeftPos.position.x + RightPos.position.x) / 2;
+//        float xl = ((RightPos.position.x - LeftPos.position.x) / 2) * 0.9f;
         float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
         float xl = ((ControledBook.EndBottomRight.x - ControledBook.EndBottomLeft.x) / 2) * 0.9f;
-        //float h =  ControledBook.Height * 0.5f;
+
+       // float h =  ControledBook.Height * 0.5f;
+        //float h = Mathf.Abs(RightPos.position.y) * 0.9f;
         float h = Mathf.Abs(ControledBook.EndBottomRight.y) * 0.9f;
         float dx = (xl)*2 / AnimationFramesCount;
+        Debug.Log(dx);
+        Debug.Log(h);
+        Debug.Log(xc);
+        Debug.Log(xl);
         StartCoroutine(FlipRTL(xc, xl, h, frameTime, dx));
     }
     public void FlipLeftPage()
@@ -45,11 +56,16 @@ public class AutoFlip : MonoBehaviour {
         if (ControledBook.currentPage <= 0) return;
         isFlipping = true;
         float frameTime = PageFlipTime / AnimationFramesCount;
-        float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
-        float xl = ((ControledBook.EndBottomRight.x - ControledBook.EndBottomLeft.x) / 2) * 0.9f;
+       /* float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
+        float xl = ((ControledBook.EndBottomRight.x - ControledBook.EndBottomLeft.x) / 2) * 0.9f;*/
+        float xc = (LeftPos.position.x + RightPos.position.x) / 2;
+        float xl = ((RightPos.position.x - LeftPos.position.x) / 2) * 0.9f;
+
         //float h =  ControledBook.Height * 0.5f;
-        float h = Mathf.Abs(ControledBook.EndBottomRight.y) * 0.9f;
+       // float h = Mathf.Abs(ControledBook.EndBottomRight.y) * 0.9f;
+        float h = Mathf.Abs(RightPos.position.y) * 0.9f;
         float dx = (xl) * 2 / AnimationFramesCount;
+        
         StartCoroutine(FlipLTR(xc, xl, h, frameTime, dx));
     }
 
@@ -73,8 +89,11 @@ public class AutoFlip : MonoBehaviour {
         float frameTime = PageFlipTime / AnimationFramesCount;
         float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
         float xl = ((ControledBook.EndBottomRight.x - ControledBook.EndBottomLeft.x) / 2)*0.9f;
+        //float xc = (LeftPos.position.x + RightPos.position.x) / 2;
+        //float xl = ((RightPos.position.x - LeftPos.position.x) / 2)*0.9f;
         //float h =  ControledBook.Height * 0.5f;
         float h = Mathf.Abs(ControledBook.EndBottomRight.y)*0.9f;
+       // float h = Mathf.Abs(RightPos.position.y)*0.9f;
         //y=-(h/(xl)^2)*(x-xc)^2          
         //               y         
         //               |          
