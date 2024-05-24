@@ -20,6 +20,8 @@ public class InputManager : MonoBehaviour
     public bool playerInteracted;
     public bool isJumping;
     public bool canJump;
+    public bool isRightFlip;
+    public bool isLeftFlip;
 
     private void Awake()
     {
@@ -55,6 +57,11 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Interact.performed += i => Interact();
             action.PlayerLocomoation.Interact.canceled += i => CancelInteract();
             action.PlayerLocomoation.Jump.performed += i => playerJump();
+            action.PlayerLocomoation.FlipPageRight.performed += i => RightFlip();
+            action.PlayerLocomoation.FlipPageRight.canceled += i => CancelRightFlip();
+            action.PlayerLocomoation.FlipPageLeft.performed += i => LeftFlip();
+            action.PlayerLocomoation.FlipPageLeft.canceled += i => CancelLeftFlip();
+
         }
         action.Enable();
     }
@@ -69,6 +76,7 @@ public class InputManager : MonoBehaviour
         handleMovementInput();
         handleRotationInput();
     }
+
 
     public void handleMovementInput()
     {
@@ -163,5 +171,23 @@ public class InputManager : MonoBehaviour
     void CancelInteract()
     {
         playerInteracted = false;
+    }
+
+    void RightFlip()
+    {
+        isRightFlip = true;
+    }
+
+    void CancelRightFlip()
+    {
+        isRightFlip = false;
+    }
+    void LeftFlip()
+    {
+        isLeftFlip = true;
+    }
+    void CancelLeftFlip()
+    {
+        isLeftFlip = false;
     }
 }

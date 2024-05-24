@@ -12,10 +12,10 @@ public class AutoFlip : MonoBehaviour {
     bool isFlipping = false;
     // Use this for initialization
     void Start () {
-        if (!ControledBook)
+        /*if (!ControledBook)
             ControledBook = GetComponent<Book>();
         if (AutoStartFlip)
-            StartFlipping();
+            StartFlipping();*/
         ControledBook.OnFlip.AddListener(new UnityEngine.Events.UnityAction(PageFlipped));
 	}
     void PageFlipped()
@@ -52,6 +52,21 @@ public class AutoFlip : MonoBehaviour {
         float dx = (xl) * 2 / AnimationFramesCount;
         StartCoroutine(FlipLTR(xc, xl, h, frameTime, dx));
     }
+
+    void Update()
+    {
+        if (InputManager.instance.isRightFlip == true)
+        {
+            FlipLeftPage();
+
+        }
+
+        if (InputManager.instance.isLeftFlip == true)
+        {
+            FlipRightPage();
+        }
+    }
+
     IEnumerator FlipToEnd()
     {
         yield return new WaitForSeconds(DelayBeforeStarting);
@@ -93,6 +108,8 @@ public class AutoFlip : MonoBehaviour {
                 break;
         }
     }
+
+
     IEnumerator FlipRTL(float xc, float xl, float h, float frameTime, float dx)
     {
         float x = xc + xl;

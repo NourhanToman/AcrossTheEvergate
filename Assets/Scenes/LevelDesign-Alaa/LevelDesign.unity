@@ -2021,7 +2021,7 @@ Transform:
   m_GameObject: {fileID: 661172935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.92, y: -0.28600502, z: -11.768997}
+  m_LocalPosition: {x: -2.92, y: -0.19, z: -11.768997}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4284,6 +4284,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09992c9773dfda4ab08e16fa412986b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1151476552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151476540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd47de87074eac438314812faec9a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  promptUIPanel: {fileID: 0}
+  promptUIText: {fileID: 0}
 --- !u!1 &1153103875
 GameObject:
   m_ObjectHideFlags: 0
@@ -6284,17 +6301,17 @@ PrefabInstance:
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01818944
+      value: 0.018189441
       objectReference: {fileID: 0}
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000008940697
+      value: 0.00000005960465
       objectReference: {fileID: 0}
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000022351742
+      value: -0.000000040978197
       objectReference: {fileID: 0}
     - target: {fileID: 336562562036880056, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -6544,6 +6561,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1151476551}
+    - targetCorrespondingSourceObject: {fileID: 7095379785681367320, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1151476552}
   m_SourcePrefab: {fileID: 100100000, guid: 8db6108fd8c8ab844a27e425148a6f65, type: 3}
 --- !u!1 &1722663008
 GameObject:
