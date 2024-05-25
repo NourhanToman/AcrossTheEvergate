@@ -10,18 +10,18 @@ namespace AccrossTheEvergate
     [TaskCategory("Behavior")]
     public class NPCRange : Action
     {
-        public SharedTransform playerTransform; 
-        
-        private float fleeDistance = 30f; 
-        private float detectionRange = 40f; 
+        public SharedTransform playerTransform;
+        public SharedBool WithinRange;
+
+        private float fleeDistance = 20f; 
+        private float detectionRange = 20f; 
 
         private NavMeshAgent navMeshAgent;
         private Transform npcTransform;
         private Animator npcAnimation;
-        private bool isSucess;
         public override void OnStart()
         {
-            isSucess = false;
+           // WithinRange.Value = false;
             navMeshAgent = GetComponent<NavMeshAgent>();
             npcAnimation = GetComponent<Animator>();
             npcTransform = transform;
@@ -36,7 +36,8 @@ namespace AccrossTheEvergate
                         }*/
             if (Vector3.Distance(npcTransform.position, playerTransform.Value.position) <= detectionRange)
             {
-              /*//  Debug.Log("Within Range");
+                WithinRange.Value = true;
+                //  Debug.Log("Within Range");
                 Vector3 fleeDirection = (npcTransform.position - playerTransform.Value.position).normalized;
                 Vector3 newGoal = npcTransform.position + fleeDirection * fleeDistance;
 
@@ -47,12 +48,16 @@ namespace AccrossTheEvergate
                     navMeshAgent.SetDestination(hit.position);
                     npcAnimation.SetFloat("RUN", 1.0f, 0.1f, Time.deltaTime);
                     // npcAnimation.SetBool("Run",true);
-                   // return TaskStatus.Running;
-                }*/
-                return TaskStatus.Success;
-
+                    if(transform.position == hit.position)
+                    {
+                        WithinRange.Value = false;
+                        return TaskStatus.Success;
+                    }
+                     
+                }
+                return TaskStatus.Running;
             }
-
+            
             return TaskStatus.Failure;
         }
 

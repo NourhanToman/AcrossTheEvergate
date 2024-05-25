@@ -39,6 +39,7 @@ namespace AccrossTheEvergate
                 //  Debug.Log("Within Range");
                 Vector3 fleeDirection = (npcTransform.position - playerTransform.Value.position).normalized;
                 Vector3 newGoal = npcTransform.position + fleeDirection * fleeDistance;
+                Debug.Log("NewGoal: " +newGoal);
 
                 NavMeshHit hit;
                 if (NavMesh.SamplePosition(newGoal, out hit, fleeDistance * 1.5f, NavMesh.AllAreas))
@@ -46,15 +47,15 @@ namespace AccrossTheEvergate
                     navMeshAgent.speed = 2.0f;
                     navMeshAgent.SetDestination(hit.position);
                     npcAnimation.SetFloat("RUN", 1.0f, 0.1f, Time.deltaTime);
-                    // npcAnimation.SetBool("Run",true);
-                    if(Vector3.Distance(npcTransform.position, newGoal) > 0.2f )
-                        return TaskStatus.Running;
-                }
+                    
+                } else if (Vector3.Distance(npcTransform.position, newGoal) > 0.2f)
+                        return TaskStatus.Success;
+                
                 //return TaskStatus.Success;
 
            // }
 
-            return TaskStatus.Success;
+            return TaskStatus.Failure;
         }
     }
 }
