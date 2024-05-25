@@ -38,7 +38,7 @@ public class AttackSystm : MonoBehaviour
             ChargeEffect.Stop();
             ChargeEffect2.Stop();
             chargeEffectActivated = false;
-            GameObject arrowPrefab = Instantiate(arrow, new Vector3(transform.position.x , this.transform.position.y + yPos , transform.position.z), Quaternion.identity);
+            GameObject arrowPrefab = Instantiate(arrow, ArrowPos.position, Quaternion.identity);
             arrowPrefab.transform.rotation = this.transform.rotation;
             ShootEffect.Play();
             shootEffectActivated = true;
