@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2488722992267457924}
-  - component: {fileID: 7292521758623722987}
   - component: {fileID: 339742776056093062}
   - component: {fileID: 9028530154012053408}
   - component: {fileID: 4418911748461041367}
   - component: {fileID: 574344651211428794}
+  - component: {fileID: 740095017366172379}
+  - component: {fileID: 231922357071988695}
   m_Layer: 0
   m_Name: ShootFx
   m_TagString: Untagged
@@ -38,27 +39,6 @@ Transform:
   - {fileID: 5702566470763996833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7292521758623722987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2281641008058735823}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.04, y: 0.5, z: 0.04}
-  m_Center: {x: 0.04, y: -0.59, z: 0.89}
 --- !u!96 &339742776056093062
 TrailRenderer:
   serializedVersion: 3
@@ -4973,6 +4953,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowSpeed: 50
+  hitEffect: {fileID: 227381659880208441, guid: d695e2d5a920d0f4ba6c09dbb7474f79,
+    type: 3}
+--- !u!54 &740095017366172379
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281641008058735823}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &231922357071988695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281641008058735823}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.098816484, y: 0.077569485, z: 0.7994435}
+  m_Center: {x: 0.036502562, y: 1.3693235, z: 0.52177525}
 --- !u!1 &7465179427954694829
 GameObject:
   m_ObjectHideFlags: 0
@@ -9887,7 +9917,6 @@ GameObject:
   - component: {fileID: 494384584513514699}
   - component: {fileID: 3314534906551138559}
   - component: {fileID: 5900933107368087718}
-  - component: {fileID: 6743557864278572651}
   m_Layer: 0
   m_Name: ArrowFX
   m_TagString: Untagged
@@ -14709,27 +14738,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!65 &6743557864278572651
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8569132498841987135}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.04, y: 0.5, z: 0.04}
-  m_Center: {x: 0.04, y: -0.59, z: 0.89}
 --- !u!1 &9048219451555468754
 GameObject:
   m_ObjectHideFlags: 0
