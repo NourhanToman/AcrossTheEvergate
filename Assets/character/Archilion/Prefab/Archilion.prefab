@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9113374657409507705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 716.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.917
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 263.84082
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_Name
+      value: Archilion
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2776365117153530397}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1154758776492218595}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2991404683195813282}
+  m_SourcePrefab: {fileID: 100100000, guid: 213bddf6cb909db4388683936a899439, type: 3}
+--- !u!1 &8266458437336816680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 213bddf6cb909db4388683936a899439,
+    type: 3}
+  m_PrefabInstance: {fileID: 9113374657409507705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2776365117153530397
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266458437336816680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 213bddf6cb909db4388683936a899439, type: 3}
+  m_Controller: {fileID: 9100000, guid: 856e3037e3f94734fa6c13150673452a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1154758776492218595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266458437336816680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 1
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 11400000, guid: e9553a9e4bcd02d4b9eae4fb47592efb, type: 2}
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"Player
+        Transform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Turn","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"WithinRange","IsShared":true,"BooleanmValue":false}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.9
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
+--- !u!195 &2991404683195813282
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266458437336816680}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 1
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 200
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
