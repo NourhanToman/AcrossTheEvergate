@@ -44,7 +44,7 @@ namespace AccrossTheEvergate
                 NavMeshHit hit;
                 if (NavMesh.SamplePosition(newGoal, out hit, fleeDistance * 1.5f, NavMesh.AllAreas))
                 {
-                    navMeshAgent.speed = 2.0f;
+                    navMeshAgent.speed = 3.0f;
                     navMeshAgent.SetDestination(hit.position);
                     npcAnimation.SetFloat("RUN", 1.0f, 0.1f, Time.deltaTime);
                     // npcAnimation.SetBool("Run",true);

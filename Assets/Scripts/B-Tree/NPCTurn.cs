@@ -8,16 +8,20 @@ namespace AccrossTheEvergate
     [TaskCategory("Behavior")]
     public class NPCTurn : Action
     {
-        private Animator animator;
+        //private Animator animator;
         private NavMeshAgent navMeshAgent;
 
         public SharedVector3 destination;
+        public SharedBool WithinRange;
 
         public override void OnStart()
         {
-            animator = GetComponent<Animator>();
+            //animator = GetComponent<Animator>();
             navMeshAgent = GetComponent<NavMeshAgent>();
-            SetRandomDestination();
+            if (!WithinRange.Value)
+            {
+                SetRandomDestination();
+            }
         }
 
         private void SetRandomDestination()

@@ -11,9 +11,13 @@ namespace AccrossTheEvergate
     public class NPCIdle : Action
     {
         private Animator animator;
+        public SharedBool WithinRange;
         public override void OnStart()
         {
-            animator = GetComponent<Animator>();
+            if (!WithinRange.Value)
+            {
+                animator = GetComponent<Animator>();
+            }
            
         }
 

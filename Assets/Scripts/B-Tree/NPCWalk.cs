@@ -20,7 +20,8 @@ namespace AccrossTheEvergate
             animator = GetComponent<Animator>();
             if (!WithinRange.Value)
             {
-               // animator.SetFloat("RUN", 0.5f, 0.1f, Time.deltaTime);
+                // animator.SetFloat("RUN", 0.5f, 0.1f, Time.deltaTime);
+                navMeshAgent.speed = 1.0f;
                 navMeshAgent.SetDestination(destination.Value);
             }
         }
@@ -28,8 +29,8 @@ namespace AccrossTheEvergate
 
         public override TaskStatus OnUpdate()
         {
-            /*if (WithinRange.Value)
-                return TaskStatus.Failure;*/
+            if (WithinRange.Value)
+                return TaskStatus.Failure;
 
             animator.SetFloat("RUN", 0.5f, 0.1f, Time.deltaTime);
             if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance <= 0.1f)
