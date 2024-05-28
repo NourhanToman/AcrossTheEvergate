@@ -33,12 +33,12 @@ namespace AccrossTheEvergate
             _fadeManager = ServiceLocator.Instance.GetService<FadeManager>();
         }
 
-        public void LoadScene(string sceneName)
+        public void LoadScene(int sceneIndex)
         {
-            StartCoroutine(LoadSceneAsync(sceneName));
+            StartCoroutine(LoadSceneAsync(sceneIndex));
         }
 
-        IEnumerator LoadSceneAsync(string scene)
+        IEnumerator LoadSceneAsync(int sceneIndex)
         {
             //FadeOut
             yield return StartCoroutine(_fadeManager.FadeOut());
@@ -46,9 +46,9 @@ namespace AccrossTheEvergate
             //Load transition scene
             SceneManager.LoadScene(loadingScene);
             yield return null;
-
+            
             //load the other scene
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(scene);
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
             asyncOperation.allowSceneActivation = false;
 
             while (!asyncOperation.isDone)
