@@ -19,7 +19,8 @@ namespace AccrossTheEvergate
 
         public void Interact()
         {
-            _Loader.LoadDungeonScene();
+            // _Loader.LoadDungeonScene();
+            _Loader.LoadScene(2);//build index of libraryVFX scene
         }
 
         public string GetPrompt()
