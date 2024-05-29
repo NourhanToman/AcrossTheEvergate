@@ -7,7 +7,7 @@ namespace AccrossTheEvergate
 {
     public class LoadManager : MonoBehaviour
     {
-        [SerializeField] string loadingScene = "testTransition";
+        string loadingScene = "testLibraryVFX";
         public static LoadManager instance;
         private FadeManager _fadeManager;
 
