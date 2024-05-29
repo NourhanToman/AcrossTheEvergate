@@ -35,7 +35,7 @@ namespace AccrossTheEvergate
 
         public void LoadScene(int sceneIndex)
         {
-            StartCoroutine(LoadSceneAsync(sceneIndex));
+            StartCoroutine(LoadSceneAsync(sceneIndex)); 
         }
 
         IEnumerator LoadSceneAsync(int sceneIndex)
@@ -50,7 +50,7 @@ namespace AccrossTheEvergate
             //load the other scene
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
             asyncOperation.allowSceneActivation = false;
-
+            Debug.Log("here");
             while (!asyncOperation.isDone)
             {
                 if (asyncOperation.progress >= 0.9f)

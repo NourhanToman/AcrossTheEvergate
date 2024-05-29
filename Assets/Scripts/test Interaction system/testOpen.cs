@@ -9,6 +9,7 @@ namespace AccrossTheEvergate
         [SerializeField] public string promptText;
         private ServiceLocator _serviceLocator;
         private LoadManager _Loader;
+        public int index;
 
         private void Awake()
         {
@@ -20,7 +21,7 @@ namespace AccrossTheEvergate
         public void Interact()
         {
             // _Loader.LoadDungeonScene();
-            _Loader.LoadScene(1);//build index of libraryVFX scene
+            _Loader.LoadScene(index);//build index of libraryVFX scene
         }
 
         public string GetPrompt()
