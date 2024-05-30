@@ -12,6 +12,10 @@ public class cameraHandling : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera AimCameraWithLock;
     [SerializeField] GameObject CrossHair;
 
+    private InputManager _inputManager; //Rhods
+
+    private void Start() => _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
+
     public CinemachineTargetGroup CMtargetGroup
     {
         get => _CMTargetGroup;
@@ -37,7 +41,7 @@ public class cameraHandling : MonoBehaviour
     }
     void changePriority()
     {
-        if(_CMTargetGroup.m_Targets[0].target != null && InputManager.instance.isLockingOnTarget == true) //&& manager.anim.swordState == true)
+        if(_CMTargetGroup.m_Targets[0].target != null && _inputManager.isLockingOnTarget == true) //&& manager.anim.swordState == true) //Rhods
         {
             cinemachineTargetLock.gameObject.SetActive(true);
         }
@@ -48,26 +52,26 @@ public class cameraHandling : MonoBehaviour
     }
     void SwitchCameras()
     {
-        if (InputManager.instance.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false && InputManager.instance.isLockingOnTarget == false)
+        if (_inputManager.isHoldingAttack && AimCamera.gameObject.activeInHierarchy == false && _inputManager.isLockingOnTarget == false) //Rhods
         {
             AimCamera.gameObject.SetActive(true);
             AimCameraWithLock.gameObject.SetActive(false);
             cinemachineFreelock.gameObject.SetActive(false);
         }
-        else if(InputManager.instance.isHoldingAttack == false && cinemachineFreelock.gameObject.activeInHierarchy == false)
+        else if(_inputManager.isHoldingAttack == false && cinemachineFreelock.gameObject.activeInHierarchy == false) //Rhods
         {
             cinemachineFreelock.gameObject.SetActive(true);
             AimCameraWithLock.gameObject.SetActive(false);
             AimCamera.gameObject.SetActive(false);
         }
-        else if(InputManager.instance.isHoldingAttack && InputManager.instance.isLockingOnTarget == true)
+        else if(_inputManager.isHoldingAttack && _inputManager.isLockingOnTarget == true) //Rhods
         {
             AimCameraWithLock.gameObject.SetActive(true);
             AimCamera.gameObject.SetActive(false);
             cinemachineFreelock.gameObject.SetActive(false);
         }
 
-        if(InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == false)
+        if(_inputManager.isHoldingAttack == true && _inputManager.isLockingOnTarget == false) //Rhods
         {
             CrossHair.gameObject.SetActive(true);
         }

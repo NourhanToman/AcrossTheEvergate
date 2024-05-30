@@ -17,6 +17,7 @@ public class TargetLockOn : MonoBehaviour
     [Header("Target System")]
     public int targetCounter = 0;
     public float TargetLockOnCursorOffset;
+    private InputManager _inputManager; //Rhods
 
     public Transform target
     {
@@ -25,14 +26,15 @@ public class TargetLockOn : MonoBehaviour
         //private set { }
     }
 
-
     private void Awake()
     {
         manager = GetComponent<PlayerManager>();
     }
+
     private void Start()
     {
         StartCoroutine(Sorting());
+        _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
     }
     private void FixedUpdate()
     {
@@ -71,7 +73,7 @@ public class TargetLockOn : MonoBehaviour
     {
         lockOnCanves.SetActive(false);
 
-        if(InputManager.instance.isLockingOnTarget == true && CM.CMtargetGroup.m_Targets[0].target != null)
+        if(_inputManager.isLockingOnTarget == true && CM.CMtargetGroup.m_Targets[0].target != null) //Rhods
         {
             lockOnCanves.SetActive(true);
         }

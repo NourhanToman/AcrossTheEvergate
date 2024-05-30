@@ -15,12 +15,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 6f;
 
     [SerializeField] private float rotationSpeed = 15f;
+    private InputManager _inputManager; //Rhods
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
+        _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
     }
 
     public void handleAllMovement()
@@ -30,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleAllRotations()
     {
-        if (InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == true)
+        if (_inputManager.isHoldingAttack == true && _inputManager.isLockingOnTarget == true) //Rhods
         {
             handlLockTargetRotation();
         }
-        else if (InputManager.instance.isHoldingAttack == true && InputManager.instance.isLockingOnTarget == false)
+        else if (_inputManager.isHoldingAttack == true && _inputManager.isLockingOnTarget == false) //Rhods
         {
             FireRotation();
         }
@@ -46,8 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void handleMovement()
     {
-        moveDirection = cameraTransform.forward * InputManager.instance.verticalInput;
-        moveDirection += cameraTransform.right * InputManager.instance.horizontalInput;
+        moveDirection = cameraTransform.forward * _inputManager.verticalInput; //Rhods
+        moveDirection += cameraTransform.right * _inputManager.horizontalInput; //Rhods
         moveDirection.y = 0;
         moveDirection.Normalize();
         moveDirection *= moveSpeed;
@@ -57,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void handleRotation()
     {
-        targerDirection = cameraTransform.forward * InputManager.instance.verticalInput;
-        targerDirection += cameraTransform.right * InputManager.instance.horizontalInput;
+        targerDirection = cameraTransform.forward * _inputManager.verticalInput; //Rhods
+        targerDirection += cameraTransform.right * _inputManager.horizontalInput; //Rhods
         targerDirection.y = 0f;
         targerDirection.Normalize();
         if (targerDirection == Vector3.zero)

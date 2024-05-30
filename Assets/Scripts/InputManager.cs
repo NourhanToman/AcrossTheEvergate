@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    //should i add static in below and that awake template?
     private InputActions action;
     public static InputManager instance;
     private Vector2 moveInput;
@@ -28,6 +29,7 @@ public class InputManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            ServiceLocator.Instance.RegisterService(this);//Rhods
         }
     }
 

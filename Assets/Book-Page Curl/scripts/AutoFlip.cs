@@ -11,13 +11,16 @@ public class AutoFlip : MonoBehaviour {
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
     // Use this for initialization
+    private InputManager _inputManager; //Rhods
+
     void Start () {
         /*if (!ControledBook)
             ControledBook = GetComponent<Book>();
         if (AutoStartFlip)
             StartFlipping();*/
         ControledBook.OnFlip.AddListener(new UnityEngine.Events.UnityAction(PageFlipped));
-	}
+        _inputManager =  ServiceLocator.Instance.GetService<InputManager>(); //Rhods
+    }
     void PageFlipped()
     {
         isFlipping = false;
@@ -62,13 +65,13 @@ public class AutoFlip : MonoBehaviour {
 
     void Update()
     {
-        if (InputManager.instance.isRightFlip == true)
+        if (_inputManager.isRightFlip == true) //Rhods
         {
             FlipLeftPage();
 
         }
 
-        if (InputManager.instance.isLeftFlip == true)
+        if (_inputManager.isLeftFlip == true) //Rhods
         {
             FlipRightPage();
         }
