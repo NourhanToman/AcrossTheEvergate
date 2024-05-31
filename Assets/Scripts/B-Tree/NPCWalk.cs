@@ -21,7 +21,7 @@ namespace AccrossTheEvergate
             if (!WithinRange.Value)
             {
                 // animator.SetFloat("RUN", 0.5f, 0.1f, Time.deltaTime);
-                navMeshAgent.speed = 1.0f;
+                navMeshAgent.speed = 1.5f;
                 navMeshAgent.SetDestination(destination.Value);
             }
         }
