@@ -23,6 +23,8 @@ public class InputManager : MonoBehaviour
     public bool isRightFlip;
     public bool isLeftFlip;
 
+    public bool canDrawWeapon;
+
     private void Awake()
     {
         if (instance == null)
@@ -40,6 +42,7 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
+        canDrawWeapon = false;
     }
 
     private void OnEnable()
@@ -64,6 +67,11 @@ public class InputManager : MonoBehaviour
 
         }
         action.Enable();
+    }
+
+    public void setCanDrawWeapon(bool canDraw)
+    {
+        canDrawWeapon = canDraw;
     }
 
     private void OnDisable()
@@ -124,12 +132,11 @@ public class InputManager : MonoBehaviour
 
     private void HandleWeaponDraw()
     {
-        if (isHoldingWeapon == false)
+        if (canDrawWeapon && !isHoldingWeapon)
         {
             isHoldingWeapon = true;
         }
-        else
-        {
+        else if (canDrawWeapon && isHoldingWeapon){
             isHoldingWeapon = false;
         }
     }

@@ -44,7 +44,7 @@ namespace AccrossTheEvergate
                 NavMeshHit hit;
                 if (NavMesh.SamplePosition(newGoal, out hit, fleeDistance * 1.5f, NavMesh.AllAreas))
                 {
-                    navMeshAgent.speed = 3.0f;
+                    navMeshAgent.speed = 5.0f;
                     navMeshAgent.SetDestination(hit.position);
                     npcAnimation.SetFloat("RUN", 1.0f, 0.1f, Time.deltaTime);
                     // npcAnimation.SetBool("Run",true);
@@ -53,11 +53,15 @@ namespace AccrossTheEvergate
                         WithinRange.Value = false;
                         return TaskStatus.Success;
                     }
+                    else
+                    {
+                        return TaskStatus.Running;
+                    }
                      
                 }
-                return TaskStatus.Running;
+                
             }
-            
+            WithinRange.Value = false;
             return TaskStatus.Failure;
         }
 
