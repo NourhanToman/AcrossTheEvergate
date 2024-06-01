@@ -44,7 +44,7 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
-        canDrawWeapon = false;
+          = false;
     }
 
     private void OnEnable()

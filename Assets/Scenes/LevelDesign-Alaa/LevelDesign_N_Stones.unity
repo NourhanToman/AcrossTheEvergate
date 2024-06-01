@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0031462077, g: 0.0061802594, b: 0.0142527055, a: 1}
+  m_IndirectSpecularColor: {r: 0.008019127, g: 0.015752712, b: 0.03632836, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31627,7 +31627,7 @@ PrefabInstance:
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.027800344
+      value: -0.02780035
       objectReference: {fileID: 0}
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -31637,7 +31637,7 @@ PrefabInstance:
     - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000020861626
+      value: -0.00000020489097
       objectReference: {fileID: 0}
     - target: {fileID: 1623691913067415428, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -31699,6 +31699,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.00000017881393
       objectReference: {fileID: 0}
+    - target: {fileID: 3011663781446966229, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3646301861464044905, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_IsActive
@@ -31738,6 +31743,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791513290241180925, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791513290241180925, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -31808,6 +31823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.792572
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470900081708156636, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
