@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace AccrossTheEvergate
         string loadingScene = "testTransition";
         public static LoadManager instance;
         private FadeManager _fadeManager;
+        [SerializeField] private Flowchart load;
 
         private void Awake()
         {
@@ -31,10 +33,12 @@ namespace AccrossTheEvergate
         private void Start()
         {
             _fadeManager = ServiceLocator.Instance.GetService<FadeManager>();
+
         }
 
         public void LoadScene(int sceneIndex)
         {
+            load.ExecuteBlock("Load");
             StartCoroutine(LoadSceneAsync(sceneIndex)); 
         }
 

@@ -8,7 +8,7 @@ namespace AccrossTheEvergate
     {
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
+                DontDestroyOnLoad(gameObject);
         }
     }
 }

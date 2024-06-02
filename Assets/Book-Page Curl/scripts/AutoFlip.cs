@@ -41,10 +41,6 @@ public class AutoFlip : MonoBehaviour {
        // float h =  ControledBook.Height * 0.5f;
         float h = Mathf.Abs(ControledBook.EndBottomRight.y) * 0.9f;
         float dx = (xl)*2 / AnimationFramesCount;
-        Debug.Log(dx);
-        Debug.Log(h);
-        Debug.Log(xc);
-        Debug.Log(xl);
         StartCoroutine(FlipRTL(xc, xl, h, frameTime, dx));
     }
     public void FlipLeftPage()

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+
+    
+
     //should i add static in below and that awake template?
     private InputActions action;
     public static InputManager instance;
@@ -15,6 +18,7 @@ public class InputManager : MonoBehaviour
     public float verticalRotationInput;
     public bool isHoldingAttack;
     public bool isLockingOnTarget;
+    public bool canDrawWeapon;
     public bool canAttackAgain;
     public bool canMove;
     public bool playerAttacked;
@@ -23,8 +27,9 @@ public class InputManager : MonoBehaviour
     public bool canJump;
     public bool isRightFlip;
     public bool isLeftFlip;
+    public bool BookCanva;
+   
 
-    public bool canDrawWeapon;
 
     private void Awake()
     {
@@ -37,6 +42,7 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
+        
         canAttackAgain = true;
         isHoldingWeapon = false;
         canMove = true;
@@ -44,7 +50,8 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
-          = false;
+        canDrawWeapon = false;
+        BookCanva = false;
     }
 
     private void OnEnable()
@@ -62,6 +69,9 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Interact.performed += i => Interact();
             action.PlayerLocomoation.Interact.canceled += i => CancelInteract();
             action.PlayerLocomoation.Jump.performed += i => playerJump();
+
+            action.PlayerLocomoation.SpellBook.performed += i => SpellBook();
+            //action.PlayerLocomoation.SpellBook.canceled += i => CloseSpellBook();
             action.PlayerLocomoation.FlipPageRight.performed += i => RightFlip();
             action.PlayerLocomoation.FlipPageRight.canceled += i => CancelRightFlip();
             action.PlayerLocomoation.FlipPageLeft.performed += i => LeftFlip();
@@ -70,6 +80,13 @@ public class InputManager : MonoBehaviour
         }
         action.Enable();
     }
+
+    
+    private void SpellBook()
+    {
+        BookCanva = true;
+    }
+
 
     public void setCanDrawWeapon(bool canDraw)
     {
