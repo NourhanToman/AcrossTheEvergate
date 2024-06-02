@@ -400,7 +400,6 @@ namespace Convai.Scripts
             if (isCharacterActive)
                 if (GetResponseResponses.Count > 0)
                 {
-                    Debug.Log($"this GetResponseResponses Count: {GetResponseResponses.Count}");
                     GetResponseResponse getResponseResponse = GetResponseResponses.Dequeue();
 
                     if (getResponseResponse?.AudioResponse != null)
@@ -408,7 +407,6 @@ namespace Convai.Scripts
                         // Check if text data exists in the response
                         if (getResponseResponse.AudioResponse.AudioData.ToByteArray().Length > 46)
                         {
-                            Debug.Log($"this thegetResponseResponse.AudioResponse.AudioData Book time:{getResponseResponse.AudioResponse.AudioData.Length / 48000}");
                             SetAudioClipTimer(getResponseResponse.AudioResponse.AudioData.Length / 48000);
                             // Initialize empty string for text
                             string textDataString = getResponseResponse.AudioResponse.TextData;
@@ -506,8 +504,6 @@ namespace Convai.Scripts
                             if (!string.IsNullOrEmpty(currentResponseAudio.AudioTranscript))
                                 _convaiChatUIHandler.SendCharacterText(characterName,
                                     currentResponseAudio.AudioTranscript.Trim());
-                        Debug.Log($"this the audio clip of Book time:{currentResponseAudio.AudioClip.length}");
-                        audioClipTime += currentResponseAudio.AudioClip.length;
                         yield return new WaitForSeconds(currentResponseAudio.AudioClip.length);
 
                         _audioSource.Stop();
@@ -519,7 +515,8 @@ namespace Convai.Scripts
                 else
 
                 {
-                  //  Debug.Log($"this the final audio clip of Book time:{audioClipTime}");
+                    SetAudioClipTimer(0);
+
                     yield return new WaitForSeconds(0.1f);
                     SetCharacterTalking(false);
                 }
@@ -529,19 +526,20 @@ namespace Convai.Scripts
         {
             return audioClipTime;
         }
-
+        
         private void SetAudioClipTimer(float currentAudioTime)
         {
             if (currentAudioTime <= 0)
             {
                 audioClipTime = currentAudioTime;
-                Debug.Log($"audioClip Time minus:{audioClipTime}");
+              
             }
             else
             {
-                Debug.Log($"audioClip Time:{audioClipTime}");
+               
+
                 audioClipTime = audioClipTime + currentAudioTime;
-                Debug.Log($"this the current audio clip time +=:{audioClipTime}");
+                
             }
         }
 
