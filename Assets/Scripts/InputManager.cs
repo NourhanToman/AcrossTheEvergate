@@ -104,7 +104,6 @@ public class InputManager : MonoBehaviour
         handleRotationInput();
     }
 
-
     public void handleMovementInput()
     {
         if (canAttackAgain == true)
