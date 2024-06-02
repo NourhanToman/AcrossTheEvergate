@@ -71,8 +71,6 @@ public class InputManager : MonoBehaviour
         action.Enable();
     }
 
-    
-
     private void OnDisable()
     {
         action.Disable();
@@ -83,7 +81,6 @@ public class InputManager : MonoBehaviour
         handleMovementInput();
         handleRotationInput();
     }
-
 
     public void handleMovementInput()
     {
