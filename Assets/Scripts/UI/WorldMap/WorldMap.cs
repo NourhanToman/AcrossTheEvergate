@@ -12,7 +12,7 @@ namespace AccrossTheEvergate
         [SerializeField] RectTransform playerIconTransform;
         [SerializeField] RectTransform mapRectTransform;
         [SerializeField] Terrain _terrain;
-        [SerializeField] TextMeshProUGUI[] areaNames;
+        [SerializeField] GameObject[] areaNames;
         bool mapIsOpen;
         private InputManager _inputManager;
         int areaIndex;

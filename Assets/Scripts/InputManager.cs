@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            ServiceLocator.Instance.RegisterService(this);//Rhods
+            ServiceLocator.Instance.RegisterService(this);
         }
     }
 

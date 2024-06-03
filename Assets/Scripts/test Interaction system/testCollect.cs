@@ -35,9 +35,5 @@ namespace AccrossTheEvergate
             return promptText;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            q.CompleteInteraction(0);
-        }
     }
 }
