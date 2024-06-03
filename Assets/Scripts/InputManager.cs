@@ -29,10 +29,7 @@ public class InputManager : MonoBehaviour
     public bool isRightFlip;
     public bool isLeftFlip;
     public bool BookCanva;
-   
-
     public bool isMapOpen;
-    public bool canDrawWeapon;
 
     private void Awake()
     {
