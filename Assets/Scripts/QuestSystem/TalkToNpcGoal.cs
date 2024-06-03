@@ -6,6 +6,8 @@ using UnityEngine;
 public class TalkToNpcGoal : Goal
 {
     public GameObject Npc;
+    public bool ChooiseQues;
+    public List<Quest> QuestList;
 
     private void OnEnable()
     {
