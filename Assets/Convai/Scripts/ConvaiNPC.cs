@@ -8,6 +8,7 @@ using Service;
 using TMPro;
 using UnityEngine;
 using Logger = Convai.Scripts.Utils.Logger;
+
 #if UNITY_ANDROID
 using UnityEngine.Android;
 #endif
@@ -28,8 +29,6 @@ namespace Convai.Scripts
         private const int RECORDING_FREQUENCY = AUDIO_SAMPLE_RATE;
         private const int RECORDING_LENGTH = 30;
         private static readonly int Talk = Animator.StringToHash("Talk");
-
-        
 
         [Header("Character Information")]
         [Tooltip("Enter the character name for this NPC.")]
@@ -53,6 +52,8 @@ namespace Convai.Scripts
         [SerializeField]
         [ReadOnly]
         private bool isCharacterTalking;
+
+        private float audioClipTime = 0;
 
         private readonly List<ResponseAudio> _responseAudios = new();
         public readonly Queue<GetResponseResponse> GetResponseResponses = new();
@@ -87,6 +88,7 @@ namespace Convai.Scripts
 
         // Properties with getters and setters
         [field: NonSerialized] public bool IncludeActionsHandler { get; set; }
+
         [field: NonSerialized] public bool LipSync { get; set; }
         [field: NonSerialized] public bool HeadEyeTracking { get; set; }
         [field: NonSerialized] public bool EyeBlinking { get; set; }
@@ -137,7 +139,6 @@ namespace Convai.Scripts
             Logger.Info("ConvaiNPC component initialized", Logger.LogCategory.Character);
         }
 
-
         private async void Start()
         {
             // Assign the ConvaiGRPCAPI component in the scene
@@ -170,11 +171,10 @@ namespace Convai.Scripts
             // Initialize the gRPC client for the ConvaiService using the channel
             _client = new ConvaiService.ConvaiServiceClient(_channel);
 
-            #endregion
+            #endregion GRPC_SETUP
 
             sessionID = await ConvaiGRPCAPI.InitializeSessionIDAsync(characterName, _client, characterID, sessionID);
         }
-
 
         private void Update()
         {
@@ -196,7 +196,6 @@ namespace Convai.Scripts
             OnCharacterSpeaking -= HandleCharacterTalkingAnimation;
             if (_convaiChatUIHandler != null) _convaiChatUIHandler.UpdateCharacterList();
         }
-
 
         /// <summary>
         ///     Unity callback that is invoked when the application is quitting.
@@ -408,6 +407,7 @@ namespace Convai.Scripts
                         // Check if text data exists in the response
                         if (getResponseResponse.AudioResponse.AudioData.ToByteArray().Length > 46)
                         {
+                            SetAudioClipTimer(getResponseResponse.AudioResponse.AudioData.Length / 48000);
                             // Initialize empty string for text
                             string textDataString = getResponseResponse.AudioResponse.TextData;
 
@@ -482,12 +482,14 @@ namespace Convai.Scripts
         ///     1. Starts a loop that plays audio from response, and performs corresponding actions and animations.
         ///     2. Loop continues until the application quits.
         /// </remarks>
+
         private IEnumerator PlayAudioInOrder()
         {
             while (!_stopAudioPlayingLoop)
                 // Check if there are audio clips in the playlist
                 if (_responseAudios.Count > 0 && isCharacterActive)
                 {
+                    // SetAudioClipTimer(_responseAudios);
                     ResponseAudio currentResponseAudio = _responseAudios[0];
 
                     // Set the current audio clip to play
@@ -502,7 +504,6 @@ namespace Convai.Scripts
                             if (!string.IsNullOrEmpty(currentResponseAudio.AudioTranscript))
                                 _convaiChatUIHandler.SendCharacterText(characterName,
                                     currentResponseAudio.AudioTranscript.Trim());
-
                         yield return new WaitForSeconds(currentResponseAudio.AudioClip.length);
 
                         _audioSource.Stop();
@@ -514,9 +515,32 @@ namespace Convai.Scripts
                 else
 
                 {
+                    SetAudioClipTimer(0);
+
                     yield return new WaitForSeconds(0.1f);
                     SetCharacterTalking(false);
                 }
+        }
+
+        public float GetAudioClipTime()
+        {
+            return audioClipTime;
+        }
+        
+        private void SetAudioClipTimer(float currentAudioTime)
+        {
+            if (currentAudioTime <= 0)
+            {
+                audioClipTime = currentAudioTime;
+              
+            }
+            else
+            {
+               
+
+                audioClipTime = audioClipTime + currentAudioTime;
+                
+            }
         }
 
         private class ResponseAudio
