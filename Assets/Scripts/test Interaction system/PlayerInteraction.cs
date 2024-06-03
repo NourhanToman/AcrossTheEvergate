@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -26,12 +27,19 @@ namespace AccrossTheEvergate
         IInteractable CurrentInteractable;
         private InputManager _inputManager; //Rhods
 
+        private void OnEnable()
+        {
+            //InputSystem.onAnyButtonPress += OnAnyButtonPress;
+            InputSystem.onDeviceChange += OnDeviceChange;
+        }
+
         private void Start()
         {
             promptUIPanel.gameObject.SetActive(false);
             playerInteracting = false;
             CurrentInteractable = null;
-            InputUser.onChange += OnInputDeviceChanged;
+            //InputUser.onChange += OnInputDeviceChanged;
+            
             _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
         }
 
@@ -39,7 +47,12 @@ namespace AccrossTheEvergate
         private void OnDestroy()
         {
             // Unregister device change events
-            InputUser.onChange -= OnInputDeviceChanged;
+            //InputUser.onChange -= OnInputDeviceChanged;
+        }
+
+        private void OnDisable()
+        {
+            InputSystem.onDeviceChange -= OnDeviceChange;
         }
 
         private void Update()
@@ -78,16 +91,30 @@ namespace AccrossTheEvergate
             promptUIPanel.SetActive(false);
         }
 
-        private void OnInputDeviceChanged(InputUser user, InputUserChange change, InputDevice device)
+        private void OnDeviceChange(InputDevice device, InputDeviceChange change)
         {
-            // Respond to device changes
-            if (/*change == InputUserChange.ControlSchemeChanged ||*/
-                change == InputUserChange.DevicePaired ||
-                change == InputUserChange.DeviceUnpaired)
+            if (change == InputDeviceChange.Added || change == InputDeviceChange.Reconnected)
             {
-                CheckDevices();
+                //UpdatePromptForDevice(device);
             }
         }
+
+        //private void UpdatePromptForDevice(InputDevice device)
+        //{
+        //    if()
+        //}
+
+        //private void OnInputDeviceChanged(InputUser user, InputUserChange change, InputDevice device)
+        //{
+        //    // Respond to device changes
+        //    if (/*change == InputUserChange.ControlSchemeChanged ||*/
+        //        change == InputUserChange.DevicePaired ||
+        //        change == InputUserChange.DeviceUnpaired)
+        //    {
+        //        CheckDevices();
+        //        Debug.Log(device.ToString());
+        //    }
+        //}
         //Check it works
         private void CheckDevices()
         {
@@ -99,6 +126,7 @@ namespace AccrossTheEvergate
                 if (device is Keyboard || device is Mouse)
                 {
                     usingKeyboardMouse = true;
+                    Debug.Log("true");
                 }
             }
 
@@ -106,11 +134,13 @@ namespace AccrossTheEvergate
             {
                 promptUIKeyText.gameObject.SetActive(true);
                 promptUIController.gameObject.SetActive(false);
+                Debug.Log("KM");
             }
             else
             {
                 promptUIKeyText.gameObject.SetActive(false);
                 promptUIController.gameObject.SetActive(true);
+                Debug.Log("else");
             }
         }
     }

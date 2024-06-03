@@ -1,27 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace AccrossTheEvergate
-{ 
-    public class PlayerMapIconController : MonoBehaviour
+{
+    public class WorldMap : MonoBehaviour
     {
+        [Header("Map Vars")]
         [SerializeField] Transform playerObj;
-        [SerializeField] CanvasGroup mapCanvas;
+        [SerializeField] Canvas mapCanvas;
         [SerializeField] RectTransform playerIconTransform;
         [SerializeField] RectTransform mapRectTransform;
         [SerializeField] float followSpeed = 2.0f;
         [SerializeField] Terrain _terrain;
-        public bool open = false;
-        bool mapIsOpen = false;
+
+        [Header("Areas")]
+        [SerializeField] TextMeshProUGUI[] areaNames;
+        //public bool open = false;
+        bool mapIsOpen;
+        private InputManager _inputManager;
+        int areaIndex;
+
+        private void Awake()
+        {
+            ServiceLocator.Instance.RegisterService<WorldMap>(this);
+        }
+
+        private void Start()
+        {
+            _inputManager = ServiceLocator.Instance.GetService<InputManager>();
+            mapCanvas.enabled = false;
+            mapIsOpen = false;
+            areaIndex = 1;
+        }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                ToggleMap(open);
-            }
+            if (_inputManager.isMapOpen)
+                ToggleMap();
 
             if (mapIsOpen)
             {
@@ -51,18 +69,27 @@ namespace AccrossTheEvergate
             return new Vector2(mapX, mapZ);
         }
 
-        public void ToggleMap(bool open)
+        public void ToggleMap()
         {
-            mapIsOpen = open;
-            mapCanvas.alpha = open ? 1 : 0;
-            mapCanvas.interactable = open;
-            mapCanvas.blocksRaycasts = open;
+            mapCanvas.enabled = !mapCanvas.enabled;
+            mapIsOpen = mapCanvas.enabled;
 
-            if (open)
+            if (mapIsOpen)
             {
                 playerIconTransform.anchoredPosition = PlayerPositionOnMap(playerObj.position);
             }
+
+            _inputManager.isMapOpen = false;
         }
 
+        public void OpenArea(int areaId)
+        {
+            if(areaId == areaIndex)
+            {
+                areaNames[areaIndex].gameObject.SetActive(true);
+                areaIndex++;
+            }
+            
+        }
     }
 }

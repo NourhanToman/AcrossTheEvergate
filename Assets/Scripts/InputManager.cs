@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ public class InputManager : MonoBehaviour
     public bool canJump;
     public bool isRightFlip;
     public bool isLeftFlip;
-
+    public bool isMapOpen;
     public bool canDrawWeapon;
 
     private void Awake()
@@ -45,6 +46,7 @@ public class InputManager : MonoBehaviour
         isJumping = false;
         canJump = true;
         canDrawWeapon = false;
+        isMapOpen = false;
     }
 
     private void OnEnable()
@@ -66,9 +68,21 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.FlipPageRight.canceled += i => CancelRightFlip();
             action.PlayerLocomoation.FlipPageLeft.performed += i => LeftFlip();
             action.PlayerLocomoation.FlipPageLeft.canceled += i => CancelLeftFlip();
+            action.PlayerLocomoation.WorldMap.performed += i => OpenMap();
+            //action.PlayerLocomoation.WorldMap.canceled += i => CloseMap();
 
         }
         action.Enable();
+    }
+
+    //private void CloseMap()
+    //{
+    //    isMapOpen = true;
+    //}
+
+    private void OpenMap()
+    {
+        isMapOpen = true;
     }
 
     public void setCanDrawWeapon(bool canDraw)
