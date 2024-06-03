@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    //should i add static in below and that awake template?
     private InputActions action;
     public static InputManager instance;
     private Vector2 moveInput;
@@ -23,11 +24,14 @@ public class InputManager : MonoBehaviour
     public bool isRightFlip;
     public bool isLeftFlip;
 
+    //public bool canDrawWeapon;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            ServiceLocator.Instance.RegisterService(this);//Rhods
         }
     }
 
@@ -40,6 +44,7 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
+       // canDrawWeapon = false;
     }
 
     private void OnEnable()
@@ -65,6 +70,8 @@ public class InputManager : MonoBehaviour
         }
         action.Enable();
     }
+
+    
 
     private void OnDisable()
     {
@@ -124,12 +131,11 @@ public class InputManager : MonoBehaviour
 
     private void HandleWeaponDraw()
     {
-        if (isHoldingWeapon == false)
+        if ( !isHoldingWeapon)
         {
             isHoldingWeapon = true;
         }
-        else
-        {
+        else {
             isHoldingWeapon = false;
         }
     }

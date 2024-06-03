@@ -12,17 +12,19 @@ public class AttackSystm : MonoBehaviour
     [SerializeField] float yPos;
     private bool chargeEffectActivated;
     private bool shootEffectActivated;
+    private InputManager _inputManager; //Rhods
 
     private void Start()
     {
         chargeEffectActivated = false;
         shootEffectActivated = false;
+        _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(InputManager.instance.isHoldingAttack == true && chargeEffectActivated == false)
+        if(_inputManager.isHoldingAttack == true && chargeEffectActivated == false) //Rhods
         {
             ChargeEffect.Play();
             ChargeEffect2.Play();
@@ -33,7 +35,7 @@ public class AttackSystm : MonoBehaviour
                 shootEffectActivated = false;
             }
         }
-        else if (InputManager.instance.isHoldingAttack == false && shootEffectActivated == false && InputManager.instance.canAttackAgain == false)
+        else if (_inputManager.isHoldingAttack == false && shootEffectActivated == false && _inputManager.canAttackAgain == false) //Rhods
         {
             ChargeEffect.Stop();
             ChargeEffect2.Stop();

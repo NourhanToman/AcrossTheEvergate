@@ -7,7 +7,8 @@ public class startJumping : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        InputManager.instance.isJumping = false;
+        //InputManager.instance.isJumping = false;
+        ServiceLocator.Instance.GetService<InputManager>().isJumping = false; //Rhods
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -24,7 +24,7 @@ namespace AccrossTheEvergate
         
         bool playerInteracting;
         IInteractable CurrentInteractable;
-        
+        private InputManager _inputManager; //Rhods
 
         private void Start()
         {
@@ -32,6 +32,7 @@ namespace AccrossTheEvergate
             playerInteracting = false;
             CurrentInteractable = null;
             InputUser.onChange += OnInputDeviceChanged;
+            _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
         }
 
         //or on disable check y it didn't use on e & on dis
@@ -43,7 +44,7 @@ namespace AccrossTheEvergate
 
         private void Update()
         {
-            if (playerInteracting && CurrentInteractable != null && InputManager.instance.playerInteracted)
+            if (playerInteracting && CurrentInteractable != null && _inputManager.playerInteracted) //Rhods
             {
                 CallInteract(CurrentInteractable);
             }

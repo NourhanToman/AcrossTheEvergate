@@ -7,7 +7,7 @@ namespace AccrossTheEvergate
 {
     public class LoadManager : MonoBehaviour
     {
-        string loadingScene = "testLibraryVFX";
+        string loadingScene = "testTransition";
         public static LoadManager instance;
         private FadeManager _fadeManager;
 
@@ -50,7 +50,7 @@ namespace AccrossTheEvergate
             //load the other scene
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
             asyncOperation.allowSceneActivation = false;
-            Debug.Log("here");
+            //Debug.Log("here");
             while (!asyncOperation.isDone)
             {
                 if (asyncOperation.progress >= 0.9f)

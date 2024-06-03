@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class AnimationManager : MonoBehaviour
 {
@@ -18,6 +16,7 @@ public class AnimationManager : MonoBehaviour
     int jumping;
     int Grounded;
     [SerializeField] Transform Bow, handPos, backPos;
+    private InputManager _inputManager; //Rhods
 
     // Start is called before the first frame update
     void Start()
@@ -32,15 +31,16 @@ public class AnimationManager : MonoBehaviour
         velocityY = Animator.StringToHash("VelocityY");
         jumping = Animator.StringToHash("Jump");
         Grounded = Animator.StringToHash("Grounded");
+        _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
     }
 
     void Update()
     {
-        setAnimation(InputManager.instance.horizontalInput , InputManager.instance.verticalInput);
-        anim.SetBool(holdingBow, InputManager.instance.isHoldingWeapon);
-        anim.SetBool(HoldingFire, InputManager.instance.isHoldingAttack);
+        setAnimation(_inputManager.horizontalInput , _inputManager.verticalInput); //Rhods
+        anim.SetBool(holdingBow, _inputManager.isHoldingWeapon); //Rhods
+        anim.SetBool(HoldingFire, _inputManager.isHoldingAttack); //Rhods
         anim.SetFloat(velocityY, rb.velocity.y);
-        anim.SetBool(jumping, InputManager.instance.isJumping);
+        anim.SetBool(jumping, _inputManager.isJumping); //Rhods
         anim.SetBool(Grounded, col.Grounded);
     }
 
