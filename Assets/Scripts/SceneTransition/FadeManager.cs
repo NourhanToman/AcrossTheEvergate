@@ -7,8 +7,15 @@ namespace AccrossTheEvergate
 {
     public class FadeManager : MonoBehaviour
     {
+        [Header("Fading Parameters")]
         [SerializeField] CanvasGroup _canvasGroup;
         [SerializeField] float _fadeDuration = 5.0f;
+
+        [Header("Locations")]
+        [SerializeField] Transform newPlayerLocation;
+        [SerializeField] GameObject playerObj;
+        [SerializeField] GameObject oldEnviroment;
+        [SerializeField] GameObject newEnviroment;
 
         public static FadeManager instance;
 
@@ -50,6 +57,17 @@ namespace AccrossTheEvergate
                 yield return null;
             }
             _canvasGroup.alpha = 0f;
+        }
+
+        public IEnumerator Fade()
+        {
+            yield return StartCoroutine(FadeOut());
+
+            newEnviroment.gameObject.SetActive(true);
+            playerObj.transform.position = newPlayerLocation.position;
+            oldEnviroment.gameObject.SetActive(false);
+
+            yield return StartCoroutine(FadeIn());
         }
     }
 }
