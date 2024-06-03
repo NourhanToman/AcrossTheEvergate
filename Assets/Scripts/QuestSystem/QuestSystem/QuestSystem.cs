@@ -12,8 +12,14 @@ public class QuestSystem : MonoBehaviour
    private Quest endQuest;
    private int currentQuest;
    public GameObject questPanal;
-   //public Flowchart fungusFlowChars;
+   public int nextQuestId;
+    //public Flowchart fungusFlowChars;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        ServiceLocator.Instance.RegisterService(this);
+    }
 
     void Start()
     {
@@ -87,6 +93,28 @@ public class QuestSystem : MonoBehaviour
         {
             TalkToNpcGoal talk = (TalkToNpcGoal) activeQuest.ActiveGoal;
             talk.completed = true;
+        }
+        activeQuest.CheckGoals();
+        CheckQuestCompleted();
+    }
+
+    public void CompleteChooiseQuest(int id)
+    {
+        activeQuest.CheckActiveGoal();
+        if (activeQuest.ActiveGoal.GetType() == typeof(TalkToNpcGoal))
+        {
+            TalkToNpcGoal talk = (TalkToNpcGoal)activeQuest.ActiveGoal;
+
+            if (talk.ChooiseQues == true)
+            {
+                DestroyAllChildren();
+                activeQuest = talk.QuestList[id];
+                activeQuest.CheckActiveGoal();
+                if (activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null)
+                {
+                    InstantiateQuestState();
+                }
+            }
         }
         activeQuest.CheckGoals();
         CheckQuestCompleted();

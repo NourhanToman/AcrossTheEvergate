@@ -8,6 +8,7 @@ using TMPro;
 public class Quest : ScriptableObject
 {
     public List<Goal> Goals;
+    public int ID;
     public Goal ActiveGoal;
     public Collect_Iteams_Goal collect;
     public TalkToNpcGoal talk;
