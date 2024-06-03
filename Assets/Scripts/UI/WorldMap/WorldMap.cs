@@ -7,17 +7,12 @@ namespace AccrossTheEvergate
 {
     public class WorldMap : MonoBehaviour
     {
-        [Header("Map Vars")]
         [SerializeField] Transform playerObj;
         [SerializeField] Canvas mapCanvas;
         [SerializeField] RectTransform playerIconTransform;
         [SerializeField] RectTransform mapRectTransform;
-        [SerializeField] float followSpeed = 2.0f;
         [SerializeField] Terrain _terrain;
-
-        [Header("Areas")]
         [SerializeField] TextMeshProUGUI[] areaNames;
-        //public bool open = false;
         bool mapIsOpen;
         private InputManager _inputManager;
         int areaIndex;
