@@ -11,7 +11,7 @@ namespace AccrossTheEvergate
         [SerializeField] Canvas mapCanvas;
         [SerializeField] RectTransform playerIconTransform;
         [SerializeField] RectTransform mapRectTransform;
-        [SerializeField] Terrain _terrain;
+       // [SerializeField] Terrain _terrain;
         [SerializeField] GameObject[] areaNames;
         bool mapIsOpen;
         private InputManager _inputManager;
@@ -46,8 +46,8 @@ namespace AccrossTheEvergate
         Vector2 PlayerPositionOnMap(Vector3 player)
         {
             //terrain dimensions
-            float terrainWidth = _terrain.terrainData.size.x;
-            float terrainHeight = _terrain.terrainData.size.z;
+            float terrainWidth = 937.5f;
+            float terrainHeight = 875f;
 
             //convert
             float normalizedX = player.x / terrainWidth;

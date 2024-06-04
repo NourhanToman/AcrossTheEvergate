@@ -182,7 +182,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6071e3ad-4244-405e-b04a-d1ecc458f958"",
-                    ""path"": ""<HID::Twin USB Gamepad      >/button6"",
+                    ""path"": ""<DualShockGamepad>/rightStickPress"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -269,6 +269,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""d45b21c5-1a08-44e5-8c91-e9a6a65ac160"",
+                    ""path"": ""<DualShockGamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""0ccb06bb-1b5c-4d1d-bf1a-ef440b51921f"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
@@ -325,7 +336,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""482d2ae7-6a3b-44df-a5cb-b6e136364a4b"",
-                    ""path"": ""<HID::Twin USB Gamepad      >/button8"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -347,7 +358,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1377d984-e492-4c96-a5d4-2150404bfbd3"",
-                    ""path"": ""<HID::Twin USB Gamepad      >/button7"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -369,7 +380,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8bd0473b-788b-4dbc-a181-75bb879406a6"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""path"": ""<DualShockGamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

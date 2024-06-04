@@ -11,7 +11,7 @@ namespace AccrossTheEvergate
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                _EForest.ExecuteBlock("EthervaleForest1");
+                _EForest.ExecuteBlock("Ethervale");
                 _EForest.SetBooleanVariable("EF1_isDone", true);
             }
         }
