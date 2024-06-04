@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 343701204}
+  selectedFlowchart: {fileID: 1761187786}
 --- !u!4 &16613235
 Transform:
   m_ObjectHideFlags: 1
@@ -12885,7 +12885,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -25750,6 +25750,11 @@ PrefabInstance:
       objectReference: {fileID: 456951333}
     - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
         type: 3}
+      propertyPath: PastBuildings
+      value: 
+      objectReference: {fileID: 363219698}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
       propertyPath: newEnviroment
       value: 
       objectReference: {fileID: 1013725164}
@@ -25758,6 +25763,11 @@ PrefabInstance:
       propertyPath: oldEnviroment
       value: 
       objectReference: {fileID: 1104822084}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: FutureBuildings
+      value: 
+      objectReference: {fileID: 1920592872}
     - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
         type: 3}
       propertyPath: newPlayerLocation
@@ -27521,6 +27531,18 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &607634421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8820972217756260734, guid: a8cfdf730e31a834fae9d567d09b6b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586981376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22ed8432ed28324891d428b6a8fa2dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &607952376
 GameObject:
   m_ObjectHideFlags: 0
@@ -52955,7 +52977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1104822085
 Transform:
   m_ObjectHideFlags: 0
@@ -56899,7 +56921,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -59473,7 +59495,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -72715,6 +72737,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5247554598755020154, guid: a8cfdf730e31a834fae9d567d09b6b29,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5960608921299525456, guid: a8cfdf730e31a834fae9d567d09b6b29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72742,9 +72769,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279219806110391250, guid: a8cfdf730e31a834fae9d567d09b6b29,
         type: 3}
+      propertyPath: _Chart
+      value: 
+      objectReference: {fileID: 1761187786}
+    - target: {fileID: 7279219806110391250, guid: a8cfdf730e31a834fae9d567d09b6b29,
+        type: 3}
       propertyPath: AI_Wait
       value: 
       objectReference: {fileID: 1761187786}
+    - target: {fileID: 8911816790491952925, guid: a8cfdf730e31a834fae9d567d09b6b29,
+        type: 3}
+      propertyPath: _fadeInDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911816790491952925, guid: a8cfdf730e31a834fae9d567d09b6b29,
+        type: 3}
+      propertyPath: _fadeOutDuration
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75550,7 +75592,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -77911,7 +77953,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -83502,6 +83544,12 @@ GameObject:
   - component: {fileID: 1761187823}
   - component: {fileID: 1761187825}
   - component: {fileID: 1761187824}
+  - component: {fileID: 1761187826}
+  - component: {fileID: 1761187827}
+  - component: {fileID: 1761187829}
+  - component: {fileID: 1761187828}
+  - component: {fileID: 1761187831}
+  - component: {fileID: 1761187830}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -83522,7 +83570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 371.1817, y: 26.10783}
+  scrollPos: {x: 421.5817, y: 45.307827}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 437.60004
@@ -83533,10 +83581,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1761187813}
-  selectedCommands:
-  - {fileID: 1761187822}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1761187788}
   - {fileID: 1761187787}
@@ -85148,8 +85194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -172.60704
-    y: 141.06923
+    x: -171.80702
+    y: 140.26923
     width: 79.6
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -85164,9 +85210,15 @@ MonoBehaviour:
   - {fileID: 1761187803}
   - {fileID: 1761187812}
   - {fileID: 1761187820}
+  - {fileID: 1761187827}
+  - {fileID: 1761187826}
+  - {fileID: 1761187831}
   - {fileID: 1761187810}
   - {fileID: 1761187809}
+  - {fileID: 1761187829}
+  - {fileID: 1761187828}
   - {fileID: 1761187821}
+  - {fileID: 1761187830}
   - {fileID: 1761187807}
   - {fileID: 1761187823}
   - {fileID: 1761187822}
@@ -85220,7 +85272,7 @@ MonoBehaviour:
   indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 25
+    floatVal: 7
   durationOLD: 0
 --- !u!114 &1761187821
 MonoBehaviour:
@@ -85237,7 +85289,7 @@ MonoBehaviour:
   itemId: 55
   indentLevel: 1
   _duration:
-    floatRef: {fileID: 0}
+    floatRef: {fileID: 1761187815}
     floatVal: 20
   durationOLD: 0
 --- !u!114 &1761187822
@@ -85463,7 +85515,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1761187824
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -85519,7 +85571,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &1761187825
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -85535,6 +85587,282 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 1
   durationOLD: 0
+--- !u!114 &1761187826
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 60
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 1761187815}
+    floatVal: 25
+  durationOLD: 0
+--- !u!114 &1761187827
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 61
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1761187828
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 63
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1761187829
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 62
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 6
+  durationOLD: 0
+--- !u!114 &1761187830
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 65
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeOutCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1761187831
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761187785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 64
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeOutCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1763013638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f3ee4e66fcfa84147b39a308f7bc22ad,
@@ -90463,7 +90791,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
@@ -101747,7 +102075,7 @@ PrefabInstance:
     - target: {fileID: 4985558900966118803, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266458437336816680, guid: 564af2a71031afc468e19c9a1826d9bc,
         type: 3}

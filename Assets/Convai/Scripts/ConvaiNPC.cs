@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Convai.Scripts.Utils;
+using Fungus;
 using Grpc.Core;
 using Service;
 using TMPro;
@@ -18,12 +19,18 @@ using UnityEngine.Android;
 
 namespace Convai.Scripts
 {
+   
+
     [RequireComponent(typeof(Animator), typeof(AudioSource))]
     [AddComponentMenu("Convai/ConvaiNPC")]
     [HelpURL(
         "https://docs.convai.com/api-docs/plugins-and-integrations/unity-plugin/overview-of-the-convainpc.cs-script")]
     public class ConvaiNPC : MonoBehaviour
     {
+
+        [SerializeField] Flowchart _Chart;
+
+
         private const int AUDIO_SAMPLE_RATE = 44100;
         private const string GRPC_API_ENDPOINT = "stream.convai.com";
         private const int RECORDING_FREQUENCY = AUDIO_SAMPLE_RATE;
@@ -526,10 +533,11 @@ namespace Convai.Scripts
                 }
         }
 
-        public float GetAudioClipTime()
+        public void GetAudioClipTime()
         {
+            _Chart.SetFloatVariable("AI_Wait",audioClipTime);
             Debug.Log($"{audioClipTime}");
-            return audioClipTime;
+           // return audioClipTime;
         }
         
         private void SetAudioClipTimer(float currentAudioTime)

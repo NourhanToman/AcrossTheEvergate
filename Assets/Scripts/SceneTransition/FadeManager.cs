@@ -16,6 +16,8 @@ namespace AccrossTheEvergate
         [SerializeField] GameObject playerObj;
         [SerializeField] GameObject oldEnviroment;
         [SerializeField] GameObject newEnviroment;
+        [SerializeField] GameObject PastBuildings;
+        [SerializeField] GameObject FutureBuildings;
 
         public static FadeManager instance;
 
@@ -65,7 +67,10 @@ namespace AccrossTheEvergate
 
             newEnviroment.gameObject.SetActive(true);
             playerObj.transform.position = newPlayerLocation.position;
+            FutureBuildings.gameObject.SetActive(false);
+            PastBuildings.gameObject.SetActive(true);
             oldEnviroment.gameObject.SetActive(false);
+
 
             yield return StartCoroutine(FadeIn());
         }
