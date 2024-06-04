@@ -6,13 +6,13 @@ namespace AccrossTheEvergate
 {
     public class EthervaleForest : MonoBehaviour
     {
-        [SerializeField] private Flowchart _EForest;
+        [SerializeField] private Flowchart _Chart;
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                _EForest.ExecuteBlock("Ethervale");
-                _EForest.SetBooleanVariable("EF_isDone", true);
+                _Chart.ExecuteBlock("Ethervale");
+                _Chart.SetBooleanVariable("EF_isDone", true);
             }
         }
     }
