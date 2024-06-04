@@ -50,7 +50,7 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
-        canDrawWeapon = false;
+       // canDrawWeapon = false;
         BookCanva = false;
         isMapOpen = false;
     }
