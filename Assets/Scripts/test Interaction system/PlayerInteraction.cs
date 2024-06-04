@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+
 //using System.Diagnostics;
 using TMPro;
 using UnityEngine;
@@ -57,6 +59,12 @@ namespace AccrossTheEvergate
 
         private void Update()
         {
+            var currentDevice = GetCurrentInputDevice();
+            if (currentDevice != null)
+            {
+                UpdatePromptForDevice(currentDevice);
+            }
+
             if (playerInteracting && CurrentInteractable != null && _inputManager.playerInteracted) //Rhods
             {
                 CallInteract(CurrentInteractable);
@@ -93,55 +101,44 @@ namespace AccrossTheEvergate
 
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
         {
-            if (change == InputDeviceChange.Added || change == InputDeviceChange.Reconnected)
+            if (change == InputDeviceChange.Added || change == InputDeviceChange.Reconnected/* || change == InputDeviceChange.Removed*/)
             {
-                //UpdatePromptForDevice(device);
+                UpdatePromptForDevice(device);
             }
         }
 
-        //private void UpdatePromptForDevice(InputDevice device)
-        //{
-        //    if()
-        //}
-
-        //private void OnInputDeviceChanged(InputUser user, InputUserChange change, InputDevice device)
-        //{
-        //    // Respond to device changes
-        //    if (/*change == InputUserChange.ControlSchemeChanged ||*/
-        //        change == InputUserChange.DevicePaired ||
-        //        change == InputUserChange.DeviceUnpaired)
-        //    {
-        //        CheckDevices();
-        //        Debug.Log(device.ToString());
-        //    }
-        //}
-        //Check it works
-        private void CheckDevices()
+        private void UpdatePromptForDevice(InputDevice device)
         {
-            //throw new NotImplementedException();
             bool usingKeyboardMouse = false;
 
-            foreach (var device in InputSystem.devices)
+            if (device is Keyboard || device is Mouse)
             {
-                if (device is Keyboard || device is Mouse)
-                {
-                    usingKeyboardMouse = true;
-                    Debug.Log("true");
-                }
+                usingKeyboardMouse = true;
             }
 
             if (usingKeyboardMouse)
             {
                 promptUIKeyText.gameObject.SetActive(true);
                 promptUIController.gameObject.SetActive(false);
-                Debug.Log("KM");
             }
             else
             {
                 promptUIKeyText.gameObject.SetActive(false);
                 promptUIController.gameObject.SetActive(true);
-                Debug.Log("else");
             }
+        }
+
+        private InputDevice GetCurrentInputDevice()
+        {
+            if(Gamepad.current !=null && Gamepad.current.allControls.Any(control => control.IsPressed()))
+            {
+                return Gamepad.current;
+            }
+            if (Keyboard.current != null && Keyboard.current.allControls.Any(control => control.IsPressed()))
+            {
+                return Keyboard.current;
+            }
+            return null;
         }
     }
 }
