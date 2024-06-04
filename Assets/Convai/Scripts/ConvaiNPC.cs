@@ -355,6 +355,7 @@ namespace Convai.Scripts
             {
                 await ConvaiGRPCAPI.Instance.SendTextData(_client, text, characterID,
                     _isActionActive, _isLipSyncActive, _actionConfig, _faceModel);
+                GetAudioClipTime();
             }
             catch (Exception ex)
             {
@@ -408,6 +409,9 @@ namespace Convai.Scripts
                         if (getResponseResponse.AudioResponse.AudioData.ToByteArray().Length > 46)
                         {
                             SetAudioClipTimer(getResponseResponse.AudioResponse.AudioData.Length / 48000);
+                            
+
+
                             // Initialize empty string for text
                             string textDataString = getResponseResponse.AudioResponse.TextData;
 
@@ -524,6 +528,7 @@ namespace Convai.Scripts
 
         public float GetAudioClipTime()
         {
+            Debug.Log($"{audioClipTime}");
             return audioClipTime;
         }
         
