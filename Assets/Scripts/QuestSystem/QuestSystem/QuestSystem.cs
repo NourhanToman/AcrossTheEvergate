@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestSystem : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class QuestSystem : MonoBehaviour
    private Quest endQuest;
    private int currentQuest;
    public GameObject questPanal;
+   private Image _imgPanel;
+   public List<Image> _questPanel;
    public int nextQuestId;
     //public Flowchart fungusFlowChars;
     // Start is called before the first frame update
@@ -26,6 +29,7 @@ public class QuestSystem : MonoBehaviour
         resetQuests();
         currentQuest = 0;
         SetNewActiveQuest();
+        _imgPanel = questPanal.GetComponent<Image>();
     }
 
     public void CheckQuestCompleted()
@@ -45,6 +49,7 @@ public class QuestSystem : MonoBehaviour
     public void SetNewActiveQuest()
     {
         activeQuest = QuestList[currentQuest];
+        _imgPanel = _questPanel[currentQuest];
         activeQuest.CheckActiveGoal();
         if(activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null) 
         {
