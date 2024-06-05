@@ -41,14 +41,14 @@ namespace Convai.Scripts.Utils
             Subtitle
         }
 
-        [Header("UI Prefabs")] [Tooltip("Prefab for the chat box UI.")]
-        public GameObject chatBoxPrefab;
+       // [Header("UI Prefabs")] [Tooltip("Prefab for the chat box UI.")]
+       // public GameObject chatBoxPrefab;
 
         [Tooltip("Prefab for the subtitle UI.")]
         public GameObject subtitlePrefab;
 
-        [Tooltip("Prefab for the question-answer UI.")]
-        public GameObject questionAnswerPrefab;
+        //[Tooltip("Prefab for the question-answer UI.")]
+      //  public GameObject questionAnswerPrefab;
 
         [Header("Character List")] [Tooltip("List of characters.")]
         public List<Character> characters = new();
@@ -189,8 +189,8 @@ namespace Convai.Scripts.Utils
         /// </summary>
         private void InitializeUIStrategies()
         {
-            InitializeUI(chatBoxPrefab, UIType.ChatBox);
-            InitializeUI(questionAnswerPrefab, UIType.QuestionAnswer);
+           // InitializeUI(chatBoxPrefab, UIType.ChatBox);
+           // InitializeUI(questionAnswerPrefab, UIType.QuestionAnswer);
             InitializeUI(subtitlePrefab, UIType.Subtitle);
         }
 
@@ -248,7 +248,7 @@ namespace Convai.Scripts.Utils
         {
             try
             {
-                if (chatBoxPrefab == null || subtitlePrefab == null || questionAnswerPrefab == null)
+                if ( subtitlePrefab == null)
                     throw new InvalidOperationException("All UI prefabs must be assigned in the inspector.");
             }
             catch (InvalidOperationException ex)

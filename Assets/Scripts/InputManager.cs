@@ -50,7 +50,7 @@ public class InputManager : MonoBehaviour
         playerInteracted = false;
         isJumping = false;
         canJump = true;
-       // canDrawWeapon = false;
+        canDrawWeapon = false;
         BookCanva = false;
         isMapOpen = false;
     }
@@ -72,7 +72,6 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.Jump.performed += i => playerJump();
 
             action.PlayerLocomoation.SpellBook.performed += i => SpellBook();
-            //action.PlayerLocomoation.SpellBook.canceled += i => CloseSpellBook();
             action.PlayerLocomoation.FlipPageRight.performed += i => RightFlip();
             action.PlayerLocomoation.FlipPageRight.canceled += i => CancelRightFlip();
             action.PlayerLocomoation.FlipPageLeft.performed += i => LeftFlip();

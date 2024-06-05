@@ -16,6 +16,8 @@ namespace AccrossTheEvergate
         [SerializeField] GameObject playerObj;
         [SerializeField] GameObject oldEnviroment;
         [SerializeField] GameObject newEnviroment;
+        [SerializeField] GameObject pastVerdant;
+        [SerializeField] GameObject futureVerdant;
         [SerializeField] GameObject PastBuildings;
         [SerializeField] GameObject FutureBuildings;
 
@@ -69,6 +71,8 @@ namespace AccrossTheEvergate
             playerObj.transform.position = newPlayerLocation.position;
             FutureBuildings.gameObject.SetActive(false);
             PastBuildings.gameObject.SetActive(true);
+            futureVerdant.gameObject.SetActive(false);
+            pastVerdant.gameObject.SetActive(true);
             oldEnviroment.gameObject.SetActive(false);
 
 

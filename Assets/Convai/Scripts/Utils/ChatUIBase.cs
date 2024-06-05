@@ -22,7 +22,7 @@ namespace Convai.Scripts.Utils
         protected virtual void Start()
         {
             SetRecordingMarkerActive(true);
-            ConvaiGRPCAPI.Instance.OnPlayerSpeakingChanged += OnPlayerSpeakingChanged;
+          //  ConvaiGRPCAPI.Instance.OnPlayerSpeakingChanged += OnPlayerSpeakingChanged;
         }
 
         /// <summary>

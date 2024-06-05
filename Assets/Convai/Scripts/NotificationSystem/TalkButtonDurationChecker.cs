@@ -32,11 +32,11 @@ public class TalkButtonDurationChecker : MonoBehaviour
         _uiAppearanceSettings = FindObjectOfType<UIAppearanceSettings>();
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         ConvaiNPCManager.Instance.OnActiveNPCChanged += ConvaiNPCManager_OnActiveNPCChanged;
         _uiAppearanceSettings.OnAppearanceChanged += UIAppearanceSettings_OnAppearanceChanged;
-    }
+    }*/
 
     private void OnDisable()
     {
