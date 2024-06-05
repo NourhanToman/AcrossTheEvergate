@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,8 @@ namespace AccrossTheEvergate
     public class StonePuzzle : MonoBehaviour
     {
 
-        private bool isSolved = false;
+       // private bool isSolved = false;
+        [SerializeField] private Flowchart _Chart;
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
@@ -16,8 +18,11 @@ namespace AccrossTheEvergate
                 Vector3 OtherForward = other.transform.forward;
                 if(Vector3.Dot(ThisForward,OtherForward) > 0.9f)
                 {
-                    Debug.Log("Puzzle Solved");
-                    isSolved = true;
+                   // Debug.Log("Puzzle Solved");
+                   // isSolved = true;
+                    _Chart.SetBooleanVariable("SSP_isDone", true);
+                    _Chart.ExecuteBlock("SSPuzzle");
+
                 }
                /* else
                 {
