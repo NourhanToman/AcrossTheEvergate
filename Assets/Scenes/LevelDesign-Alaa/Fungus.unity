@@ -12547,8 +12547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 301987502}
+  m_Bindings: []
   m_VisualEffect: {fileID: 301987505}
 --- !u!73398921 &301987504
 VFXRenderer:
@@ -19413,8 +19412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 420707862}
+  m_Bindings: []
   m_VisualEffect: {fileID: 420707865}
 --- !u!73398921 &420707864
 VFXRenderer:
@@ -21453,8 +21451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 480507600}
+  m_Bindings: []
   m_VisualEffect: {fileID: 480507603}
 --- !u!73398921 &480507602
 VFXRenderer:
@@ -23737,6 +23734,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Q
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663127680852069323, guid: 0c146e8f94851fd45a395d156a384d6e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28.239746
       objectReference: {fileID: 0}
     - target: {fileID: 2153104840005827787, guid: 0c146e8f94851fd45a395d156a384d6e,
         type: 3}
@@ -27200,8 +27202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 595865854}
+  m_Bindings: []
   m_VisualEffect: {fileID: 595865857}
 --- !u!73398921 &595865856
 VFXRenderer:
@@ -40080,8 +40081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 814627002}
+  m_Bindings: []
   m_VisualEffect: {fileID: 814627005}
 --- !u!73398921 &814627004
 VFXRenderer:
@@ -48634,8 +48634,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013725164}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.69753367, z: -0, w: 0.716552}
-  m_LocalPosition: {x: 560.12, y: 27.9, z: 119.65}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 560.69, y: 27.9, z: 59.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48648,7 +48648,7 @@ Transform:
   - {fileID: 1301863915}
   - {fileID: 1586981377}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -88.459, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1017120308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f3ee4e66fcfa84147b39a308f7bc22ad,
@@ -72744,8 +72744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 1582945997}
+  m_Bindings: []
   m_VisualEffect: {fileID: 1582946000}
 --- !u!73398921 &1582945999
 VFXRenderer:
@@ -79437,6 +79436,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.10958017
       objectReference: {fileID: 0}
+    - target: {fileID: 666050379259131387, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1623691913067415428, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -79596,6 +79600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131632316503132463, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -96113,8 +96122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 1962912782}
+  m_Bindings: []
   m_VisualEffect: {fileID: 1962912785}
 --- !u!73398921 &1962912784
 VFXRenderer:
@@ -99399,8 +99407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings:
-  - {fileID: 2054429783}
+  m_Bindings: []
   m_VisualEffect: {fileID: 2054429786}
 --- !u!73398921 &2054429785
 VFXRenderer:
