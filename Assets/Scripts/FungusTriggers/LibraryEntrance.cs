@@ -11,8 +11,8 @@ namespace AccrossTheEvergate
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                _ETree.ExecuteBlock("Entrance");
-                _ETree.SetBooleanVariable("E_isDone", true);
+                _ETree.ExecuteBlock("TMP");
+               // _ETree.SetBooleanVariable("E_isDone", true);
             }
         }
     }
