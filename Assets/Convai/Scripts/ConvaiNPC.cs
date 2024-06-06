@@ -19,13 +19,18 @@ using UnityEngine.Android;
 
 namespace Convai.Scripts
 {
+   
+
     [RequireComponent(typeof(Animator), typeof(AudioSource))]
     [AddComponentMenu("Convai/ConvaiNPC")]
     [HelpURL(
         "https://docs.convai.com/api-docs/plugins-and-integrations/unity-plugin/overview-of-the-convainpc.cs-script")]
     public class ConvaiNPC : MonoBehaviour
     {
-        [SerializeField] Flowchart AI_Wait;
+
+        [SerializeField] Flowchart _Chart;
+
+
         private const int AUDIO_SAMPLE_RATE = 44100;
         private const string GRPC_API_ENDPOINT = "stream.convai.com";
         private const int RECORDING_FREQUENCY = AUDIO_SAMPLE_RATE;
@@ -357,6 +362,7 @@ namespace Convai.Scripts
             {
                 await ConvaiGRPCAPI.Instance.SendTextData(_client, text, characterID,
                     _isActionActive, _isLipSyncActive, _actionConfig, _faceModel);
+                GetAudioClipTime();
             }
             catch (Exception ex)
             {
@@ -410,6 +416,9 @@ namespace Convai.Scripts
                         if (getResponseResponse.AudioResponse.AudioData.ToByteArray().Length > 46)
                         {
                             SetAudioClipTimer(getResponseResponse.AudioResponse.AudioData.Length / 48000);
+                            
+
+
                             // Initialize empty string for text
                             string textDataString = getResponseResponse.AudioResponse.TextData;
 
@@ -526,8 +535,8 @@ namespace Convai.Scripts
 
         public void GetAudioClipTime()
         {
-            Debug.Log(audioClipTime);
-            AI_Wait.SetFloatVariable("AI_Wait", audioClipTime);
+            _Chart.SetFloatVariable("AI_Wait",audioClipTime);
+            Debug.Log($"{audioClipTime}");
            // return audioClipTime;
         }
         
@@ -543,7 +552,6 @@ namespace Convai.Scripts
                
 
                 audioClipTime = audioClipTime + currentAudioTime;
-                
                 
             }
         }

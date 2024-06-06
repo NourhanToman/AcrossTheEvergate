@@ -226,6 +226,7 @@ namespace Convai.Scripts.Utils
                     {
                         TextData = userText
                     }
+                    
                 });
                 await call.RequestStream.CompleteAsync();
 
