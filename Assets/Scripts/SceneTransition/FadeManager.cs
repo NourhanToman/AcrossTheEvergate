@@ -14,12 +14,13 @@ namespace AccrossTheEvergate
         [Header("Locations")]
         [SerializeField] Transform newPlayerLocation;
         [SerializeField] GameObject playerObj;
+
+        [SerializeField] List<GameObject> Future;
+        [SerializeField] List<GameObject> Past;
+
         [SerializeField] GameObject oldEnviroment;
         [SerializeField] GameObject newEnviroment;
-        [SerializeField] GameObject futureVeil;
-        [SerializeField] GameObject pastVeil;
-        [SerializeField] GameObject PastBuildings;
-        [SerializeField] GameObject FutureBuildings;
+       
 
         public static FadeManager instance;
 
@@ -27,12 +28,10 @@ namespace AccrossTheEvergate
         {
             if (instance != null && instance != this)
             {
-                // If an instance already exists and it's not this one, destroy this one
                 Destroy(gameObject);
             }
             else
             {
-                // If no instance exists, set this one as the instance
                 instance = this;
                 ServiceLocator.Instance.RegisterService(this);
                 DontDestroyOnLoad(gameObject);
@@ -69,10 +68,8 @@ namespace AccrossTheEvergate
 
             newEnviroment.gameObject.SetActive(true);
             playerObj.transform.position = newPlayerLocation.position;
-            FutureBuildings.gameObject.SetActive(false);
-            PastBuildings.gameObject.SetActive(true);
-            pastVeil.gameObject.SetActive(true);
-            futureVeil.gameObject.SetActive(false);
+            Future.ForEach(x => x.gameObject.SetActive(false));
+            Past.ForEach(x => x.gameObject.SetActive(true));
             oldEnviroment.gameObject.SetActive(false);
 
 

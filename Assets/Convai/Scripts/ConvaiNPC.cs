@@ -536,8 +536,6 @@ namespace Convai.Scripts
         public void GetAudioClipTime()
         {
             _Chart.SetFloatVariable("AI_Wait",audioClipTime);
-            Debug.Log($"{audioClipTime}");
-           // return audioClipTime;
         }
         
         private void SetAudioClipTimer(float currentAudioTime)

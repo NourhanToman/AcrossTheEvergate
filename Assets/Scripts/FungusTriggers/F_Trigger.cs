@@ -7,7 +7,7 @@ namespace AccrossTheEvergate
 {
     public class F_Trigger : MonoBehaviour
     {
-
+       
         [SerializeField] private Flowchart _ETree;
         [SerializeField] private string _EXName;
         [SerializeField] private string _BName;

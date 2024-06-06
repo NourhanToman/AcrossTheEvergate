@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 638987307}
+  selectedFlowchart: {fileID: 303524215}
 --- !u!4 &16613235
 Transform:
   m_ObjectHideFlags: 1
@@ -2742,6 +2742,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2546277019425636675, guid: bbc9485bb0b0dba4795f898257a3e9ce,
     type: 3}
   m_PrefabInstance: {fileID: 95157469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &95978064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7470900081708156636, guid: 8db6108fd8c8ab844a27e425148a6f65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719226652}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &97793429
 GameObject:
@@ -8740,18 +8746,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 805288059}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &247276160 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 809358043652085215, guid: 8db6108fd8c8ab844a27e425148a6f65,
-    type: 3}
-  m_PrefabInstance: {fileID: 1719226652}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22ed8432ed28324891d428b6a8fa2dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &248553497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b9568b6aec5d5e43a749d39c376aa82,
@@ -9659,11 +9653,11 @@ GameObject:
   - component: {fileID: 272299317}
   - component: {fileID: 272299324}
   - component: {fileID: 272299323}
-  - component: {fileID: 272299322}
   - component: {fileID: 272299321}
   - component: {fileID: 272299320}
   - component: {fileID: 272299319}
   - component: {fileID: 272299318}
+  - component: {fileID: 272299325}
   m_Layer: 0
   m_Name: 3/4 Ethervale Forest
   m_TagString: Untagged
@@ -9885,96 +9879,7 @@ MonoBehaviour:
   conditions:
   - compareOperator: 0
     anyVar:
-      variable: {fileID: 638987303}
-      data:
-        animatorData:
-          animatorRef: {fileID: 0}
-          animatorVal: {fileID: 0}
-        audioSourceData:
-          audioSourceRef: {fileID: 0}
-          audioSourceVal: {fileID: 0}
-        booleanData:
-          booleanRef: {fileID: 0}
-          booleanVal: 1
-        collectionData:
-          collectionRef: {fileID: 0}
-          collectionVal: {fileID: 0}
-        collider2DData:
-          collider2DRef: {fileID: 0}
-          collider2DVal: {fileID: 0}
-        colliderData:
-          colliderRef: {fileID: 0}
-          colliderVal: {fileID: 0}
-        colorData:
-          colorRef: {fileID: 0}
-          colorVal: {r: 0, g: 0, b: 0, a: 0}
-        floatData:
-          floatRef: {fileID: 0}
-          floatVal: 0
-        gameObjectData:
-          gameObjectRef: {fileID: 0}
-          gameObjectVal: {fileID: 0}
-        integerData:
-          integerRef: {fileID: 0}
-          integerVal: 0
-        materialData:
-          materialRef: {fileID: 0}
-          materialVal: {fileID: 0}
-        matrix4x4Data:
-          matrix4x4Ref: {fileID: 0}
-          matrix4x4Val:
-            e00: 0
-            e01: 0
-            e02: 0
-            e03: 0
-            e10: 0
-            e11: 0
-            e12: 0
-            e13: 0
-            e20: 0
-            e21: 0
-            e22: 0
-            e23: 0
-            e30: 0
-            e31: 0
-            e32: 0
-            e33: 0
-        objectData:
-          objectRef: {fileID: 0}
-          objectVal: {fileID: 0}
-        quaternionData:
-          quaternionRef: {fileID: 0}
-          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-        rigidbody2DData:
-          rigidbody2DRef: {fileID: 0}
-          rigidbody2DVal: {fileID: 0}
-        rigidbodyData:
-          rigidbodyRef: {fileID: 0}
-          rigidbodyVal: {fileID: 0}
-        spriteData:
-          spriteRef: {fileID: 0}
-          spriteVal: {fileID: 0}
-        stringData:
-          stringRef: {fileID: 0}
-          stringVal: 
-        textureData:
-          textureRef: {fileID: 0}
-          textureVal: {fileID: 0}
-        transformData:
-          transformRef: {fileID: 0}
-          transformVal: {fileID: 0}
-        vector2Data:
-          vector2Ref: {fileID: 0}
-          vector2Val: {x: 0, y: 0}
-        vector3Data:
-          vector3Ref: {fileID: 0}
-          vector3Val: {x: 0, y: 0, z: 0}
-        vector4Data:
-          vector4Ref: {fileID: 0}
-          vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  - compareOperator: 0
-    anyVar:
-      variable: {fileID: 272299320}
+      variable: {fileID: 1824823366}
       data:
         animatorData:
           animatorRef: {fileID: 0}
@@ -10063,7 +9968,7 @@ MonoBehaviour:
           vector4Val: {x: 0, y: 0, z: 0, w: 0}
   - compareOperator: 0
     anyVar:
-      variable: {fileID: 1824823366}
+      variable: {fileID: 272299320}
       data:
         animatorData:
           animatorRef: {fileID: 0}
@@ -10288,35 +10193,6 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
---- !u!114 &272299322
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272299316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  indentLevel: 1
-  storyText: "I know how absurd it sounds to chase after legends, yet succumbing
-    to this curse is out of the question since I\u2019ll be at a disadvantage with
-    my current power."
-  description: 
-  character: {fileID: 2030206634}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 8300000, guid: 23394c684eb076f48b14fe3cc6dd29c1, type: 3}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 0
-  stopVoiceover: 0
-  waitForVO: 1
-  setSayDialog: {fileID: 0}
 --- !u!114 &272299323
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10343,7 +10219,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 272299321}
-  - {fileID: 272299322}
+  - {fileID: 272299325}
   - {fileID: 272299319}
   - {fileID: 272299318}
   suppressAllAutoSelections: 0
@@ -10373,8 +10249,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 272299323}
-  selectedCommands:
-  - {fileID: 272299321}
+  selectedCommands: []
   variables:
   - {fileID: 272299320}
   description: 
@@ -10387,6 +10262,35 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &272299325
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272299316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 1
+  storyText: "I know how absurd it sounds to chase after legends, yet succumbing
+    to this curse is out of the question since I\u2019ll be at a disadvantage with
+    my current power."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 23394c684eb076f48b14fe3cc6dd29c1, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
 --- !u!1 &277148378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1841f2a7e0f2f3c4c869e7e8e3ebbdb3,
@@ -11378,95 +11282,6 @@ MonoBehaviour:
         vector4Data:
           vector4Ref: {fileID: 0}
           vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  - compareOperator: 0
-    anyVar:
-      variable: {fileID: 638987303}
-      data:
-        animatorData:
-          animatorRef: {fileID: 0}
-          animatorVal: {fileID: 0}
-        audioSourceData:
-          audioSourceRef: {fileID: 0}
-          audioSourceVal: {fileID: 0}
-        booleanData:
-          booleanRef: {fileID: 0}
-          booleanVal: 1
-        collectionData:
-          collectionRef: {fileID: 0}
-          collectionVal: {fileID: 0}
-        collider2DData:
-          collider2DRef: {fileID: 0}
-          collider2DVal: {fileID: 0}
-        colliderData:
-          colliderRef: {fileID: 0}
-          colliderVal: {fileID: 0}
-        colorData:
-          colorRef: {fileID: 0}
-          colorVal: {r: 0, g: 0, b: 0, a: 0}
-        floatData:
-          floatRef: {fileID: 0}
-          floatVal: 0
-        gameObjectData:
-          gameObjectRef: {fileID: 0}
-          gameObjectVal: {fileID: 0}
-        integerData:
-          integerRef: {fileID: 0}
-          integerVal: 0
-        materialData:
-          materialRef: {fileID: 0}
-          materialVal: {fileID: 0}
-        matrix4x4Data:
-          matrix4x4Ref: {fileID: 0}
-          matrix4x4Val:
-            e00: 0
-            e01: 0
-            e02: 0
-            e03: 0
-            e10: 0
-            e11: 0
-            e12: 0
-            e13: 0
-            e20: 0
-            e21: 0
-            e22: 0
-            e23: 0
-            e30: 0
-            e31: 0
-            e32: 0
-            e33: 0
-        objectData:
-          objectRef: {fileID: 0}
-          objectVal: {fileID: 0}
-        quaternionData:
-          quaternionRef: {fileID: 0}
-          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-        rigidbody2DData:
-          rigidbody2DRef: {fileID: 0}
-          rigidbody2DVal: {fileID: 0}
-        rigidbodyData:
-          rigidbodyRef: {fileID: 0}
-          rigidbodyVal: {fileID: 0}
-        spriteData:
-          spriteRef: {fileID: 0}
-          spriteVal: {fileID: 0}
-        stringData:
-          stringRef: {fileID: 0}
-          stringVal: 
-        textureData:
-          textureRef: {fileID: 0}
-          textureVal: {fileID: 0}
-        transformData:
-          transformRef: {fileID: 0}
-          transformVal: {fileID: 0}
-        vector2Data:
-          vector2Ref: {fileID: 0}
-          vector2Val: {x: 0, y: 0}
-        vector3Data:
-          vector3Ref: {fileID: 0}
-          vector3Val: {x: 0, y: 0, z: 0}
-        vector4Data:
-          vector4Ref: {fileID: 0}
-          vector4Val: {x: 0, y: 0, z: 0, w: 0}
   compareOperator: 0
   anyVar:
     variable: {fileID: 0}
@@ -11689,7 +11504,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 295515253}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 295515251}
   variables:
   - {fileID: 295515250}
   description: 
@@ -11978,7 +11794,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -12147,9 +11963,14 @@ GameObject:
   - component: {fileID: 303524209}
   - component: {fileID: 303524221}
   - component: {fileID: 303524220}
-  - component: {fileID: 303524219}
   - component: {fileID: 303524218}
   - component: {fileID: 303524217}
+  - component: {fileID: 303524222}
+  - component: {fileID: 303524223}
+  - component: {fileID: 303524226}
+  - component: {fileID: 303524225}
+  - component: {fileID: 303524224}
+  - component: {fileID: 303524227}
   m_Layer: 0
   m_Name: SSPuzzle
   m_TagString: Untagged
@@ -12185,7 +12006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 4
-  indentLevel: 0
+  indentLevel: 1
 --- !u!114 &303524210
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12698,7 +12519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 1
-  indentLevel: 0
+  indentLevel: 1
   storyText: At last, I'm one step closer to the culmination of my quest.
   description: 
   character: {fileID: 2030206634}
@@ -12737,15 +12558,20 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 303524212}
+  - {fileID: 303524222}
+  - {fileID: 303524226}
+  - {fileID: 303524224}
+  - {fileID: 303524209}
   - {fileID: 303524213}
   - {fileID: 303524221}
   - {fileID: 303524220}
-  - {fileID: 303524219}
+  - {fileID: 303524223}
   - {fileID: 303524218}
   - {fileID: 303524217}
-  - {fileID: 303524212}
+  - {fileID: 303524227}
   - {fileID: 303524210}
-  - {fileID: 303524209}
+  - {fileID: 303524225}
   suppressAllAutoSelections: 0
 --- !u!114 &303524215
 MonoBehaviour:
@@ -12763,7 +12589,7 @@ MonoBehaviour:
   scrollPos: {x: 24.549679, y: 72.74563}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 492.80002
   zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
@@ -12774,7 +12600,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 303524214}
   selectedCommands:
-  - {fileID: 303524213}
+  - {fileID: 303524227}
   variables:
   - {fileID: 303524211}
   description: 
@@ -12800,14 +12626,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 123
-  indentLevel: 0
+  indentLevel: 1
   description: 
   delay: 0
   invokeType: 0
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247276160}
+      - m_Target: {fileID: 607634421}
         m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
         m_MethodName: FadeOutCurrentAppearance
         m_Mode: 1
@@ -12881,80 +12707,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 122
-  indentLevel: 0
+  indentLevel: 1
   _duration:
     floatRef: {fileID: 1824823368}
     floatVal: 20
   durationOLD: 0
---- !u!114 &303524219
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303524207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 121
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 247276160}
-        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
-        m_MethodName: FadeInCurrentAppearance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 856902431}
-        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
-        m_MethodName: GetAudioClipTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &303524220
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12968,7 +12725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 120
-  indentLevel: 0
+  indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
     floatVal: 6
@@ -12986,14 +12743,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 119
-  indentLevel: 0
+  indentLevel: 1
   description: 
   delay: 0
   invokeType: 0
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 856902431}
+      - m_Target: {fileID: 1586981378}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -13030,6 +12787,455 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &303524222
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 124
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1833622516}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1765773461}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &303524223
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 125
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &303524224
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 142
+  indentLevel: 2
+  storyText: These must be the consequences the grimoire warned me about. Let's hope
+    they aren't as grim as they seem.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &303524225
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 127
+  indentLevel: 0
+--- !u!114 &303524226
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 126
+  indentLevel: 1
+  anyOrAllConditions: 0
+  conditions:
+  - compareOperator: 0
+    anyVar:
+      variable: {fileID: 1474833943}
+      data:
+        animatorData:
+          animatorRef: {fileID: 0}
+          animatorVal: {fileID: 0}
+        audioSourceData:
+          audioSourceRef: {fileID: 0}
+          audioSourceVal: {fileID: 0}
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 1
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        collider2DData:
+          collider2DRef: {fileID: 0}
+          collider2DVal: {fileID: 0}
+        colliderData:
+          colliderRef: {fileID: 0}
+          colliderVal: {fileID: 0}
+        colorData:
+          colorRef: {fileID: 0}
+          colorVal: {r: 0, g: 0, b: 0, a: 0}
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 0
+        gameObjectData:
+          gameObjectRef: {fileID: 0}
+          gameObjectVal: {fileID: 0}
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        materialData:
+          materialRef: {fileID: 0}
+          materialVal: {fileID: 0}
+        matrix4x4Data:
+          matrix4x4Ref: {fileID: 0}
+          matrix4x4Val:
+            e00: 0
+            e01: 0
+            e02: 0
+            e03: 0
+            e10: 0
+            e11: 0
+            e12: 0
+            e13: 0
+            e20: 0
+            e21: 0
+            e22: 0
+            e23: 0
+            e30: 0
+            e31: 0
+            e32: 0
+            e33: 0
+        objectData:
+          objectRef: {fileID: 0}
+          objectVal: {fileID: 0}
+        quaternionData:
+          quaternionRef: {fileID: 0}
+          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+        rigidbody2DData:
+          rigidbody2DRef: {fileID: 0}
+          rigidbody2DVal: {fileID: 0}
+        rigidbodyData:
+          rigidbodyRef: {fileID: 0}
+          rigidbodyVal: {fileID: 0}
+        spriteData:
+          spriteRef: {fileID: 0}
+          spriteVal: {fileID: 0}
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        textureData:
+          textureRef: {fileID: 0}
+          textureVal: {fileID: 0}
+        transformData:
+          transformRef: {fileID: 0}
+          transformVal: {fileID: 0}
+        vector2Data:
+          vector2Ref: {fileID: 0}
+          vector2Val: {x: 0, y: 0}
+        vector3Data:
+          vector3Ref: {fileID: 0}
+          vector3Val: {x: 0, y: 0, z: 0}
+        vector4Data:
+          vector4Ref: {fileID: 0}
+          vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  compareOperator: 0
+  anyVar:
+    variable: {fileID: 0}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &303524227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303524207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 143
+  indentLevel: 1
+  storyText: We must hasten to the next relic.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
 --- !u!1 &305314406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a5354f4bb2d0f843b43825028f8a6c5,
@@ -18975,7 +19181,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -20782,7 +20988,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -24634,6 +24840,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 272f6ea372a7343499b5aa612014761f, type: 3}
+--- !u!1 &576237043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 823722065833027504, guid: a8cfdf730e31a834fae9d567d09b6b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586981376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &577381183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24861,9 +25073,39 @@ PrefabInstance:
       objectReference: {fileID: 1920592872}
     - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
         type: 3}
+      propertyPath: Past.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: Future.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
       propertyPath: newPlayerLocation
       value: 
       objectReference: {fileID: 685862138}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: Past.Array.data[0]
+      value: 
+      objectReference: {fileID: 340980415}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: Past.Array.data[1]
+      value: 
+      objectReference: {fileID: 363219698}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: Future.Array.data[0]
+      value: 
+      objectReference: {fileID: 2018276705}
+    - target: {fileID: 4904375583415094847, guid: 2c056fc9e4433be43963b696cf9b00a7,
+        type: 3}
+      propertyPath: Future.Array.data[1]
+      value: 
+      objectReference: {fileID: 1920592872}
     - target: {fileID: 6517823101881823920, guid: 2c056fc9e4433be43963b696cf9b00a7,
         type: 3}
       propertyPath: m_Name
@@ -25133,11 +25375,11 @@ Transform:
   m_GameObject: {fileID: 580993170}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.5733533, z: -0, w: 0.8193083}
-  m_LocalPosition: {x: -197.28, y: -6.125061, z: 48.95}
-  m_LocalScale: {x: 0.51283765, y: 0.5128376, z: 1.14}
+  m_LocalPosition: {x: -128.16776, y: 59.056686, z: -148.43794}
+  m_LocalScale: {x: 0.51283765, y: 0.5128376, z: 1.1400001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1104822085}
+  m_Father: {fileID: 1710087806}
   m_LocalEulerAnglesHint: {x: 0, y: 69.969, z: 0}
 --- !u!114 &580993175
 MonoBehaviour:
@@ -26357,7 +26599,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -27956,7 +28198,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 638987306}
   selectedCommands:
-  - {fileID: 638987302}
+  - {fileID: 638987313}
   variables:
   - {fileID: 638987303}
   description: 
@@ -28129,6 +28371,54 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1095021557}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2082109666}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2127397276}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1203419213}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   booleanParameter:
     booleanRef: {fileID: 0}
@@ -33533,95 +33823,6 @@ MonoBehaviour:
         vector4Data:
           vector4Ref: {fileID: 0}
           vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  - compareOperator: 0
-    anyVar:
-      variable: {fileID: 638987303}
-      data:
-        animatorData:
-          animatorRef: {fileID: 0}
-          animatorVal: {fileID: 0}
-        audioSourceData:
-          audioSourceRef: {fileID: 0}
-          audioSourceVal: {fileID: 0}
-        booleanData:
-          booleanRef: {fileID: 0}
-          booleanVal: 1
-        collectionData:
-          collectionRef: {fileID: 0}
-          collectionVal: {fileID: 0}
-        collider2DData:
-          collider2DRef: {fileID: 0}
-          collider2DVal: {fileID: 0}
-        colliderData:
-          colliderRef: {fileID: 0}
-          colliderVal: {fileID: 0}
-        colorData:
-          colorRef: {fileID: 0}
-          colorVal: {r: 0, g: 0, b: 0, a: 0}
-        floatData:
-          floatRef: {fileID: 0}
-          floatVal: 0
-        gameObjectData:
-          gameObjectRef: {fileID: 0}
-          gameObjectVal: {fileID: 0}
-        integerData:
-          integerRef: {fileID: 0}
-          integerVal: 0
-        materialData:
-          materialRef: {fileID: 0}
-          materialVal: {fileID: 0}
-        matrix4x4Data:
-          matrix4x4Ref: {fileID: 0}
-          matrix4x4Val:
-            e00: 0
-            e01: 0
-            e02: 0
-            e03: 0
-            e10: 0
-            e11: 0
-            e12: 0
-            e13: 0
-            e20: 0
-            e21: 0
-            e22: 0
-            e23: 0
-            e30: 0
-            e31: 0
-            e32: 0
-            e33: 0
-        objectData:
-          objectRef: {fileID: 0}
-          objectVal: {fileID: 0}
-        quaternionData:
-          quaternionRef: {fileID: 0}
-          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-        rigidbody2DData:
-          rigidbody2DRef: {fileID: 0}
-          rigidbody2DVal: {fileID: 0}
-        rigidbodyData:
-          rigidbodyRef: {fileID: 0}
-          rigidbodyVal: {fileID: 0}
-        spriteData:
-          spriteRef: {fileID: 0}
-          spriteVal: {fileID: 0}
-        stringData:
-          stringRef: {fileID: 0}
-          stringVal: 
-        textureData:
-          textureRef: {fileID: 0}
-          textureVal: {fileID: 0}
-        transformData:
-          transformRef: {fileID: 0}
-          transformVal: {fileID: 0}
-        vector2Data:
-          vector2Ref: {fileID: 0}
-          vector2Val: {x: 0, y: 0}
-        vector3Data:
-          vector3Ref: {fileID: 0}
-          vector3Val: {x: 0, y: 0, z: 0}
-        vector4Data:
-          vector4Ref: {fileID: 0}
-          vector4Val: {x: 0, y: 0, z: 0, w: 0}
   compareOperator: 0
   anyVar:
     variable: {fileID: 0}
@@ -38508,7 +38709,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -39988,18 +40189,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854540563}
   m_CullTransparentMesh: 1
---- !u!114 &856902431 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1465343876259501939, guid: 8db6108fd8c8ab844a27e425148a6f65,
-    type: 3}
-  m_PrefabInstance: {fileID: 1719226652}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &859955089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b4e197b300365274686807242cf370b6,
@@ -50455,7 +50644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1095021558
 Transform:
   m_ObjectHideFlags: 0
@@ -50939,7 +51128,6 @@ Transform:
   - {fileID: 1359385488}
   - {fileID: 1262904784}
   - {fileID: 2093191350}
-  - {fileID: 580993174}
   - {fileID: 1710087806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54403,7 +54591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1203419214
 Transform:
   m_ObjectHideFlags: 0
@@ -64798,7 +64986,6 @@ GameObject:
   - component: {fileID: 1474833907}
   - component: {fileID: 1474833918}
   - component: {fileID: 1474833917}
-  - component: {fileID: 1474833916}
   - component: {fileID: 1474833915}
   - component: {fileID: 1474833914}
   - component: {fileID: 1474833920}
@@ -64807,21 +64994,18 @@ GameObject:
   - component: {fileID: 1474833923}
   - component: {fileID: 1474833922}
   - component: {fileID: 1474833934}
-  - component: {fileID: 1474833933}
   - component: {fileID: 1474833932}
   - component: {fileID: 1474833931}
   - component: {fileID: 1474833930}
   - component: {fileID: 1474833929}
   - component: {fileID: 1474833928}
   - component: {fileID: 1474833927}
-  - component: {fileID: 1474833926}
   - component: {fileID: 1474833925}
   - component: {fileID: 1474833924}
   - component: {fileID: 1474833935}
   - component: {fileID: 1474833936}
   - component: {fileID: 1474833942}
   - component: {fileID: 1474833941}
-  - component: {fileID: 1474833940}
   - component: {fileID: 1474833939}
   - component: {fileID: 1474833938}
   - component: {fileID: 1474833937}
@@ -64829,6 +65013,11 @@ GameObject:
   - component: {fileID: 1474833943}
   - component: {fileID: 1474833945}
   - component: {fileID: 1474833946}
+  - component: {fileID: 1474833948}
+  - component: {fileID: 1474833947}
+  - component: {fileID: 1474833949}
+  - component: {fileID: 1474833950}
+  - component: {fileID: 1474833956}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -65407,7 +65596,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 53.604248
     y: 59.599976
-    width: 85.106384
+    width: 82.34042
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65420,14 +65609,14 @@ MonoBehaviour:
   - {fileID: 1474833911}
   - {fileID: 1474833918}
   - {fileID: 1474833917}
-  - {fileID: 1474833916}
+  - {fileID: 1474833948}
   - {fileID: 1474833915}
   - {fileID: 1474833914}
   - {fileID: 1474833920}
   - {fileID: 1474833919}
   - {fileID: 1474833921}
   - {fileID: 1474833934}
-  - {fileID: 1474833933}
+  - {fileID: 1474833947}
   - {fileID: 1474833932}
   - {fileID: 1474833931}
   - {fileID: 1474833930}
@@ -65448,7 +65637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 54.59573, y: 65.4085}
+  scrollPos: {x: -146.25531, y: 75.62128}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 479
@@ -65459,8 +65648,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1474833912}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1474833909}
@@ -65496,7 +65684,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247276160}
+      - m_Target: {fileID: 607634421}
         m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
         m_MethodName: FadeOutCurrentAppearance
         m_Mode: 1
@@ -65551,75 +65739,6 @@ MonoBehaviour:
     floatRef: {fileID: 1824823368}
     floatVal: 20
   durationOLD: 0
---- !u!114 &1474833916
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474833905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 104
-  indentLevel: 1
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 247276160}
-        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
-        m_MethodName: FadeInCurrentAppearance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 856902431}
-        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
-        m_MethodName: GetAudioClipTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1474833917
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -65658,7 +65777,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 856902431}
+      - m_Target: {fileID: 1586981378}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -65760,7 +65879,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 856902431}
+      - m_Target: {fileID: 1586981378}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -65812,8 +65931,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 190.08507
-    y: 99.059586
-    width: 148.93616
+    y: 97.99576
+    width: 142.76596
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65825,7 +65944,7 @@ MonoBehaviour:
   - {fileID: 1474833946}
   - {fileID: 1474833942}
   - {fileID: 1474833941}
-  - {fileID: 1474833940}
+  - {fileID: 1474833950}
   - {fileID: 1474833939}
   - {fileID: 1474833938}
   - {fileID: 1474833937}
@@ -65846,7 +65965,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 190.08502
     y: 12.251095
-    width: 105.319145
+    width: 103.61702
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65858,11 +65977,12 @@ MonoBehaviour:
   - {fileID: 1474833945}
   - {fileID: 1474833928}
   - {fileID: 1474833927}
-  - {fileID: 1474833926}
+  - {fileID: 1474833949}
   - {fileID: 1474833925}
   - {fileID: 1474833924}
   - {fileID: 1474833935}
   - {fileID: 1474833936}
+  - {fileID: 1474833956}
   suppressAllAutoSelections: 0
 --- !u!114 &1474833924
 MonoBehaviour:
@@ -65884,7 +66004,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247276160}
+      - m_Target: {fileID: 607634421}
         m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
         m_MethodName: FadeOutCurrentAppearance
         m_Mode: 1
@@ -65939,75 +66059,6 @@ MonoBehaviour:
     floatRef: {fileID: 1824823368}
     floatVal: 20
   durationOLD: 0
---- !u!114 &1474833926
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474833905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 120
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 247276160}
-        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
-        m_MethodName: FadeInCurrentAppearance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 856902431}
-        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
-        m_MethodName: GetAudioClipTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1474833927
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -66046,7 +66097,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 856902431}
+      - m_Target: {fileID: 1586981378}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -66153,7 +66204,20 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247276160}
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: HandleInputSubmission
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 607634421}
         m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
         m_MethodName: FadeOutCurrentAppearance
         m_Mode: 1
@@ -66162,8 +66226,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -66208,75 +66271,6 @@ MonoBehaviour:
     floatRef: {fileID: 1824823368}
     floatVal: 20
   durationOLD: 0
---- !u!114 &1474833933
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474833905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 113
-  indentLevel: 1
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 247276160}
-        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
-        m_MethodName: FadeInCurrentAppearance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 856902431}
-        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
-        m_MethodName: GetAudioClipTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1474833934
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -66428,7 +66422,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247276160}
+      - m_Target: {fileID: 607634421}
         m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
         m_MethodName: FadeOutCurrentAppearance
         m_Mode: 1
@@ -66483,75 +66477,6 @@ MonoBehaviour:
     floatRef: {fileID: 1824823368}
     floatVal: 20
   durationOLD: 0
---- !u!114 &1474833940
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474833905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 127
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 247276160}
-        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
-        m_MethodName: FadeInCurrentAppearance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 856902431}
-        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
-        m_MethodName: GetAudioClipTime
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ho are you and what is your purpose? Answer briefly and
-            without asking questions.
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1474833941
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -66590,7 +66515,7 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 856902431}
+      - m_Target: {fileID: 1586981378}
         m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
         m_MethodName: HandleInputSubmission
         m_Mode: 5
@@ -66961,6 +66886,309 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1474833947
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474833905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 134
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1474833948
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474833905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 133
+  indentLevel: 1
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1474833949
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474833905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 135
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1474833950
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474833905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 136
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 607634421}
+        m_TargetAssemblyTypeName: UIAppearanceSettings, Assembly-CSharp
+        m_MethodName: FadeInCurrentAppearance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1586981378}
+        m_TargetAssemblyTypeName: Convai.Scripts.ConvaiNPC, Assembly-CSharp
+        m_MethodName: GetAudioClipTime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ho are you and what is your purpose? Answer briefly and
+            without asking questions.
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1474833956
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474833905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 142
+  indentLevel: 0
+  storyText: I sense the gathering of magic's essence in one place.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 0
+  stopVoiceover: 0
+  waitForVO: 1
+  setSayDialog: {fileID: 0}
 --- !u!1001 &1475991955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69557,7 +69785,7 @@ Transform:
   m_GameObject: {fileID: 1545841049}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.5, y: 52.60669, z: -125.9}
+  m_LocalPosition: {x: 37.33, y: 52.60669, z: -124.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69582,8 +69810,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 6.574218
-  m_Center: {x: 0, y: 1.5742178, z: 0}
+  m_Radius: 7.4851246
+  m_Center: {x: 0, y: 2.4851246, z: 0}
 --- !u!114 &1545841053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71063,7 +71291,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -71243,7 +71471,7 @@ PrefabInstance:
     - target: {fileID: 7279219806110391250, guid: a8cfdf730e31a834fae9d567d09b6b29,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911816790491952925, guid: a8cfdf730e31a834fae9d567d09b6b29,
         type: 3}
@@ -71273,7 +71501,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1586981376}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b38e4bc919e1f040ba78aea7472893e, type: 3}
   m_Name: 
@@ -71473,12 +71701,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1107188471}
   m_SourcePrefab: {fileID: 100100000, guid: af4b3d9b13dd03f41a53787ff69dec9f, type: 3}
---- !u!1 &1592120408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8474034333970955790, guid: 8db6108fd8c8ab844a27e425148a6f65,
-    type: 3}
-  m_PrefabInstance: {fileID: 1719226652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1592480888
 GameObject:
   m_ObjectHideFlags: 0
@@ -76539,6 +76761,7 @@ Transform:
   - {fileID: 1703806655}
   - {fileID: 1990589912}
   - {fileID: 1700955023}
+  - {fileID: 580993174}
   m_Father: {fileID: 1104822085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1710310814
@@ -77143,6 +77366,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9934022
+      objectReference: {fileID: 0}
+    - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.017864922
+      objectReference: {fileID: 0}
+    - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.028723061
+      objectReference: {fileID: 0}
+    - target: {fileID: 129263654034611549, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.109580554
+      objectReference: {fileID: 0}
     - target: {fileID: 204703878140874893, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: BookCanva
@@ -77193,15 +77436,35 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1934832686661281522, guid: 8db6108fd8c8ab844a27e425148a6f65,
-        type: 3}
-      propertyPath: canDrawWeapon
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2475899334529791213, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709555105655407139, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9920976
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709555105655407139, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.053938434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709555105655407139, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.032684684
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709555105655407139, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.108464874
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317435074578295210, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4107311140461658920, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -77261,17 +77524,17 @@ PrefabInstance:
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 561.136
+      value: 536.9499
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.728296
+      value: 16.997284
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80.933
+      value: 375.77808
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -77308,6 +77571,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6452950658911275179, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.03593146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452950658911275179, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.030711561
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452950658911275179, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.10903997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112363691083312362, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3075867
+      objectReference: {fileID: 0}
     - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77315,13 +77598,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3076019
+      value: 1.3075867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.60477185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.059094872
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.79043865
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960199719890922968, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.077237196
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167341307753442544, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.9552
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167341307753442544, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8818283
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167341307753442544, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.977051
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8474034333970955790, guid: 8db6108fd8c8ab844a27e425148a6f65, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2894329100586538871, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1833622519}
   m_SourcePrefab: {fileID: 100100000, guid: 8db6108fd8c8ab844a27e425148a6f65, type: 3}
 --- !u!4 &1719226653 stripped
 Transform:
@@ -78658,95 +78986,6 @@ MonoBehaviour:
         vector4Data:
           vector4Ref: {fileID: 0}
           vector4Val: {x: 0, y: 0, z: 0, w: 0}
-  - compareOperator: 0
-    anyVar:
-      variable: {fileID: 638987303}
-      data:
-        animatorData:
-          animatorRef: {fileID: 0}
-          animatorVal: {fileID: 0}
-        audioSourceData:
-          audioSourceRef: {fileID: 0}
-          audioSourceVal: {fileID: 0}
-        booleanData:
-          booleanRef: {fileID: 0}
-          booleanVal: 1
-        collectionData:
-          collectionRef: {fileID: 0}
-          collectionVal: {fileID: 0}
-        collider2DData:
-          collider2DRef: {fileID: 0}
-          collider2DVal: {fileID: 0}
-        colliderData:
-          colliderRef: {fileID: 0}
-          colliderVal: {fileID: 0}
-        colorData:
-          colorRef: {fileID: 0}
-          colorVal: {r: 0, g: 0, b: 0, a: 0}
-        floatData:
-          floatRef: {fileID: 0}
-          floatVal: 0
-        gameObjectData:
-          gameObjectRef: {fileID: 0}
-          gameObjectVal: {fileID: 0}
-        integerData:
-          integerRef: {fileID: 0}
-          integerVal: 0
-        materialData:
-          materialRef: {fileID: 0}
-          materialVal: {fileID: 0}
-        matrix4x4Data:
-          matrix4x4Ref: {fileID: 0}
-          matrix4x4Val:
-            e00: 0
-            e01: 0
-            e02: 0
-            e03: 0
-            e10: 0
-            e11: 0
-            e12: 0
-            e13: 0
-            e20: 0
-            e21: 0
-            e22: 0
-            e23: 0
-            e30: 0
-            e31: 0
-            e32: 0
-            e33: 0
-        objectData:
-          objectRef: {fileID: 0}
-          objectVal: {fileID: 0}
-        quaternionData:
-          quaternionRef: {fileID: 0}
-          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
-        rigidbody2DData:
-          rigidbody2DRef: {fileID: 0}
-          rigidbody2DVal: {fileID: 0}
-        rigidbodyData:
-          rigidbodyRef: {fileID: 0}
-          rigidbodyVal: {fileID: 0}
-        spriteData:
-          spriteRef: {fileID: 0}
-          spriteVal: {fileID: 0}
-        stringData:
-          stringRef: {fileID: 0}
-          stringVal: 
-        textureData:
-          textureRef: {fileID: 0}
-          textureVal: {fileID: 0}
-        transformData:
-          transformRef: {fileID: 0}
-          transformVal: {fileID: 0}
-        vector2Data:
-          vector2Ref: {fileID: 0}
-          vector2Val: {x: 0, y: 0}
-        vector3Data:
-          vector3Ref: {fileID: 0}
-          vector3Val: {x: 0, y: 0, z: 0}
-        vector4Data:
-          vector4Ref: {fileID: 0}
-          vector4Val: {x: 0, y: 0, z: 0, w: 0}
   compareOperator: 0
   anyVar:
     variable: {fileID: 0}
@@ -78969,7 +79208,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1733405849}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1733405847}
   variables:
   - {fileID: 1733405846}
   description: 
@@ -81280,9 +81520,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1761187802}
+  - {fileID: 1761187813}
   selectedCommands:
-  - {fileID: 1761187800}
+  - {fileID: 1761187867}
   variables:
   - {fileID: 1761187788}
   - {fileID: 1761187787}
@@ -82953,11 +83193,11 @@ MonoBehaviour:
   - {fileID: 1761187856}
   - {fileID: 1761187840}
   - {fileID: 1761187824}
-  - {fileID: 1761187855}
   - {fileID: 1761187866}
   - {fileID: 1761187865}
-  - {fileID: 1761187805}
+  - {fileID: 1761187855}
   - {fileID: 1761187867}
+  - {fileID: 1761187805}
   suppressAllAutoSelections: 0
 --- !u!4 &1761187814
 Transform:
@@ -83251,6 +83491,30 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1833622516}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833622512}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1203561068}
         m_TargetAssemblyTypeName: AccrossTheEvergate.TT_Manager, Assembly-CSharp
         m_MethodName: Activate
@@ -83676,7 +83940,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Will you force me to do this mission?
+          m_StringArgument: Will you force me to do this mission? Answer briefly
+            and without asking questions.
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -83759,7 +84024,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: If I save the world, what is it in for me?
+          m_StringArgument: If I save the world, what is it in for me? Answer briefly
+            and without asking questions.
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -83815,7 +84081,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: And if I refuse to follow?
+          m_StringArgument: And if I refuse to follow? Answer briefly and without
+            asking questions.
           m_BoolArgument: 0
         m_CallState: 2
   booleanParameter:
@@ -85048,10 +85315,22 @@ MonoBehaviour:
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1512211620}
+      - m_Target: {fileID: 576237043}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833622519}
+        m_TargetAssemblyTypeName: AccrossTheEvergate.AI_Child, Assembly-CSharp
+        m_MethodName: SetChildAndReset
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -85086,7 +85365,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &1761187867
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -85097,16 +85376,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 101
-  indentLevel: 0
+  indentLevel: 1
   description: 
   delay: 0
   invokeType: 0
   staticEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1592120408}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1833622516}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1833622512}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -85254,6 +85545,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e12ae7cf58334f4089c4d361c32b309,
     type: 3}
   m_PrefabInstance: {fileID: 1764544916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1765773461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972224281110512360, guid: 8db6108fd8c8ab844a27e425148a6f65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719226652}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1766311273
 PrefabInstance:
@@ -87722,7 +88019,7 @@ GameObject:
   - component: {fileID: 1824823368}
   - component: {fileID: 1824823369}
   m_Layer: 0
-  m_Name: Flowchart
+  m_Name: MainChart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87801,7 +88098,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -116.554085
     y: -244.37454
-    width: 76.31578
+    width: 78.42104
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -87837,8 +88134,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1824823352}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1824823364}
@@ -87898,7 +88194,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -114.05267
     y: -185.94324
-    width: 76.31578
+    width: 79.47367
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -88664,6 +88960,44 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719226652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833622512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6307158355322622767, guid: 8db6108fd8c8ab844a27e425148a6f65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719226652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350870009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04482b7b69ecff4b8277a434f751a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1833622516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 972656679006637703, guid: 8db6108fd8c8ab844a27e425148a6f65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719226652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350870009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1102eabd968e8e348bfab2e6689c3184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1833622519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350870009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f936516353003c74fa8cdfacd2266026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 95978064}
+  childObject: {fileID: 1512211620}
 --- !u!1001 &1834568320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93557,7 +93891,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -96295,7 +96629,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
+      - m_Value: {x: 561.136, y: 21.728296, z: 80.933}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -97388,7 +97722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2082109667
 Transform:
   m_ObjectHideFlags: 0
@@ -99365,7 +99699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2127397277
 Transform:
   m_ObjectHideFlags: 0
