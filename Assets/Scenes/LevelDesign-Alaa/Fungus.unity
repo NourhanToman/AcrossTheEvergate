@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 3797fde28932d344b81733ca672ca0e7
+  m_OcclusionCullingData: {fileID: 36300000, guid: 3d582f9f7c781b64bb937283a1294a72,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -97,8 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: ee7b5550b1b10a9439ca64975423ec5e,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 74c210d120660d0478b98253aadef95e,
     type: 2}
 --- !u!196 &4
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 807117922}
+  selectedFlowchart: {fileID: 1761187786}
 --- !u!4 &16613235
 Transform:
   m_ObjectHideFlags: 1
@@ -699,7 +699,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -949,7 +949,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1732,7 +1732,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1972,7 +1972,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3152,7 +3152,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3953,7 +3953,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4174,7 +4174,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4292,7 +4292,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5421,6 +5421,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96e1467600ebdd142a174099d4b523bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5551,13 +5556,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.396108e+33}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6310,7 +6315,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6428,7 +6433,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6684,7 +6689,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -7119,13 +7124,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.2e-44, z: 3.7366e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7837,7 +7842,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8209,7 +8214,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8535,7 +8540,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8932,6 +8937,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96e1467600ebdd142a174099d4b523bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9166,7 +9176,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10312,7 +10322,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 59.799995
     y: 137.99998
-    width: 104.4
+    width: 103
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10714,13 +10724,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2e-44, z: 3.7366e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -11627,7 +11637,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 59.799995
     y: 137.19998
-    width: 104.4
+    width: 103
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11813,7 +11823,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &301987501
 Transform:
@@ -11956,7 +11966,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -13286,7 +13296,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13368,7 +13378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313582070}
   - component: {fileID: 313582072}
-  - component: {fileID: 313582073}
+  - component: {fileID: 313582074}
   m_Layer: 0
   m_Name: 3/4 Verdant Veil
   m_TagString: Untagged
@@ -13412,7 +13422,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 30
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &313582073
+--- !u!114 &313582074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13421,10 +13431,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 313582069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a6c1fc53ea79848bf3df606b6e6ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ETree: {fileID: 585622283}
+  _EXName: VerdantVeil
+  _BName: VV1_isDone
 --- !u!1001 &315004229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14303,7 +14315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340980416}
   m_Layer: 0
-  m_Name: Verdant Veil Future
+  m_Name: Verdant Veil Past
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14322,8 +14334,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 693587443}
   - {fileID: 946214923}
+  - {fileID: 1545825520}
   m_Father: {fileID: 428480258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341583945
@@ -14418,7 +14430,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -14783,7 +14795,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -15388,7 +15400,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 82.34042
+    width: 85.106384
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15426,7 +15438,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 343701203}
   selectedCommands: []
   variables:
   - {fileID: 343701200}
@@ -15730,7 +15743,7 @@ MeshCollider:
   m_Mesh: {fileID: 467933617094216025, guid: 8a5354f4bb2d0f843b43825028f8a6c5, type: 3}
 --- !u!1 &350870009 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8865598131890790569, guid: 8db6108fd8c8ab844a27e425148a6f65,
+  m_CorrespondingSourceObject: {fileID: 2894329100586538871, guid: 8db6108fd8c8ab844a27e425148a6f65,
     type: 3}
   m_PrefabInstance: {fileID: 1719226652}
   m_PrefabAsset: {fileID: 0}
@@ -15841,7 +15854,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -17211,7 +17224,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18024,13 +18037,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.7e-44, z: 2.1598e-41, w: 1.339669e+33}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -18807,7 +18820,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &420707861
 Transform:
@@ -18950,7 +18963,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -19115,7 +19128,7 @@ Transform:
   - {fileID: 1262496211}
   - {fileID: 783907637}
   - {fileID: 1030030071}
-  - {fileID: 1545825520}
+  - {fileID: 693587443}
   - {fileID: 340980416}
   - {fileID: 543124734}
   - {fileID: 1171141677}
@@ -19785,7 +19798,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20582,13 +20595,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.1e-44, z: 2.1598e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -20626,7 +20639,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &480507599
 Transform:
@@ -20769,7 +20782,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -20986,7 +20999,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -21179,7 +21192,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -21417,7 +21430,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -22773,7 +22786,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -23120,13 +23133,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -6.9e-44, y: NaN, z: 2.2e-44, w: 4.5918e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -23754,7 +23767,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -23936,6 +23949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96e1467600ebdd142a174099d4b523bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24302,7 +24320,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -24350,7 +24368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568907897}
   - component: {fileID: 568907899}
-  - component: {fileID: 568907900}
+  - component: {fileID: 568907901}
   m_Layer: 0
   m_Name: Verdant Veil
   m_TagString: Untagged
@@ -24394,7 +24412,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 30
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &568907900
+--- !u!114 &568907901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24403,10 +24421,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 568907896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360b8bc9f315ffc499615a0d6e9828d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ETree: {fileID: 638987307}
+  _EXName: VerdantVeil
+  _BName: VV_isDone
 --- !u!1001 &573759498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24967,7 +24987,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -25030,7 +25050,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!64 &580993171
 MeshCollider:
@@ -25964,7 +25984,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 114.68085
+    width: 119.14893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -26002,7 +26022,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 585622282}
   selectedCommands: []
   variables:
   - {fileID: 585622279}
@@ -26193,7 +26214,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &595865853
 Transform:
@@ -26336,7 +26357,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -27888,7 +27909,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.05105
     y: 58.74891
-    width: 114.68085
+    width: 119.14893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28428,13 +28449,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 3.7382e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -28561,7 +28582,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -28639,6 +28660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lamp_post_sign_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b9568b6aec5d5e43a749d39c376aa82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29308,7 +29334,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 82.34042
+    width: 85.106384
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -30620,7 +30646,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -31499,7 +31525,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 82
+    width: 86
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -31816,6 +31842,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5464315649556711431, guid: 0cacb6c34ca19fc4fab7fec6f4c2afa2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32044,6 +32075,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96e1467600ebdd142a174099d4b523bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32158,7 +32194,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 340980416}
+    m_TransformParent: {fileID: 428480258}
     m_Modifications:
     - target: {fileID: 2148740592290217889, guid: dee2a950ae23a6247ab3cf95b23d8143,
         type: 3}
@@ -32199,6 +32235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Verdant Future
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251315886000943382, guid: dee2a950ae23a6247ab3cf95b23d8143,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5251315886000943382, guid: dee2a950ae23a6247ab3cf95b23d8143,
         type: 3}
@@ -32665,13 +32706,14 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.9316175e+34, y: 1.8540711e+25, z: 1.8062688e+28,
+    w: 7.871983e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -33030,8 +33072,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 725445254}
-  selectedCommands:
-  - {fileID: 725445257}
+  selectedCommands: []
   variables:
   - {fileID: 725445251}
   description: 
@@ -33117,7 +33158,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 50.19998
     y: 58.74891
-    width: 102.76595
+    width: 106.38298
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -34581,7 +34622,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -34966,7 +35007,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -35418,10 +35459,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 766263136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a68407e1f036e14489eae873d14dbce4, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 807117922}
+  _ETree: {fileID: 807117922}
+  _EXName: Past
+  _BName: P_isDone
 --- !u!4 &766877602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: 54a9cf01843431742a3126013891032d,
@@ -35862,7 +35905,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -35980,7 +36023,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -36540,7 +36583,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -36664,7 +36707,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -37706,7 +37749,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 74.68085
+    width: 76.59574
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -37747,7 +37790,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 807117921}
   selectedCommands: []
   variables:
   - {fileID: 807117918}
@@ -37975,7 +38019,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -38320,7 +38364,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &814627001
 Transform:
@@ -38463,7 +38507,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -39857,7 +39901,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -40665,6 +40709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96e1467600ebdd142a174099d4b523bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41866,7 +41915,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -42641,7 +42690,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -43385,7 +43434,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -45543,7 +45592,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -47005,7 +47054,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -48447,7 +48496,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -48571,13 +48620,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.4421162e-15, y: 4e-45, z: -1.7980362e-34, w: 0.055766713}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -50325,7 +50374,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -50414,10 +50463,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095021557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e234f6a3a57be4c8fcaa1810017aee, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 272299324}
+  _ETree: {fileID: 272299324}
+  _EXName: Ethervale
+  _BName: EF1_isDone
 --- !u!1 &1101348818
 GameObject:
   m_ObjectHideFlags: 0
@@ -50525,7 +50576,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -51036,10 +51087,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1108829893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6cf68cad3772843927abb5b7af0b5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ETree: {fileID: 1739109962}
+  _EXName: VerdantVeil
+  _BName: VV2_isDone
 --- !u!1001 &1109136006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52812,6 +52865,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lamp_post_sign_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b9568b6aec5d5e43a749d39c376aa82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53040,7 +53098,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -54294,7 +54352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203419214}
   - component: {fileID: 1203419216}
-  - component: {fileID: 1203419215}
+  - component: {fileID: 1203419217}
   m_Layer: 0
   m_Name: EthervaleTree
   m_TagString: Untagged
@@ -54317,19 +54375,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1710087806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1203419215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203419213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe563cf975ca82747b4ad1e2cd3de968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ETree: {fileID: 725445250}
 --- !u!135 &1203419216
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54351,6 +54396,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1203419217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203419213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ETree: {fileID: 725445250}
+  _EXName: Ethervale
+  _BName: ET_isDone
 --- !u!1 &1203561066
 GameObject:
   m_ObjectHideFlags: 0
@@ -54871,7 +54931,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -55220,7 +55280,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -56072,7 +56132,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -56190,7 +56250,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -56425,7 +56485,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -56922,7 +56982,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -57517,7 +57577,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -57576,7 +57636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1280806203
 Transform:
   m_ObjectHideFlags: 0
@@ -58123,7 +58183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290675841}
   - component: {fileID: 1290675843}
-  - component: {fileID: 1290675842}
+  - component: {fileID: 1290675844}
   m_Layer: 0
   m_Name: Entrance
   m_TagString: Untagged
@@ -58146,19 +58206,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 357807866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290675842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290675840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d44e049f5ae28a448be405c04ef4ca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ETree: {fileID: 1761187786}
 --- !u!65 &1290675843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58180,6 +58227,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.99999976, z: 2.6203063}
   m_Center: {x: 0, y: 0, z: -0.048000075}
+--- !u!114 &1290675844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290675840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ETree: {fileID: 1761187786}
+  _EXName: Entrance
+  _BName: E_isDone
 --- !u!1 &1294039987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 628fcf01b937fb740a3ab15785b2c560,
@@ -58654,6 +58716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77ea928ace9b39547919e6359d695331,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59370,7 +59437,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -60200,7 +60267,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -61746,7 +61813,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -61864,7 +61931,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -63078,13 +63145,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.922331e+34, y: 6e-44, z: 6e-45, w: 2.1957e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -63211,7 +63278,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -63685,7 +63752,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -65272,7 +65339,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 53.604248
     y: 59.599976
-    width: 82.34042
+    width: 85.106384
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65678,7 +65745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 190.08507
     y: 99.059586
-    width: 142.76596
+    width: 148.93616
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -65711,7 +65778,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 190.08502
     y: 12.251095
-    width: 103.61702
+    width: 105.319145
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -67486,7 +67553,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -68711,13 +68778,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0.00000059689046, z: 0.000000002695241, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -69223,7 +69290,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 428480258}
+    m_TransformParent: {fileID: 340980416}
     m_Modifications:
     - target: {fileID: 2668442093862489999, guid: dee2a950ae23a6247ab3cf95b23d8143,
         type: 3}
@@ -69258,7 +69325,7 @@ PrefabInstance:
     - target: {fileID: 5251315886000943382, guid: dee2a950ae23a6247ab3cf95b23d8143,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5251315886000943382, guid: dee2a950ae23a6247ab3cf95b23d8143,
         type: 3}
@@ -69458,10 +69525,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545841049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3c4af5ff568f14c9c2cda53a964c7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 646611687}
+  _ETree: {fileID: 646611687}
+  _EXName: Stone
+  _BName: SS1_isDone
 --- !u!1001 &1548370540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70648,7 +70717,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -70710,7 +70779,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1582945996
 Transform:
@@ -70853,7 +70922,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -71175,7 +71244,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -71361,7 +71430,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -71494,7 +71563,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -71652,7 +71721,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -72122,7 +72191,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -73145,7 +73214,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -74198,7 +74267,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -74316,7 +74385,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -75447,10 +75516,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700955022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17769c1f2c2793241986d2b70398dcbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 1474833913}
+  _ETree: {fileID: 1474833913}
+  _EXName: Stone
+  _BName: SS_isDone
 --- !u!1001 &1701320775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75609,7 +75680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703806655}
   - component: {fileID: 1703806657}
-  - component: {fileID: 1703806658}
+  - component: {fileID: 1703806659}
   m_Layer: 0
   m_Name: 1/2 Stone
   m_TagString: Untagged
@@ -75653,7 +75724,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1703806658
+--- !u!114 &1703806659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75662,10 +75733,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1703806654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbf583168497647478b060d95ccc2251, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 675547710}
+  _ETree: {fileID: 675547710}
+  _EXName: Stone
+  _BName: SS2_isDone
 --- !u!4 &1704839600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23007f4be19e72947baa937ca278a686,
@@ -75952,7 +76025,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -76471,7 +76544,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -76851,6 +76924,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204703878140874893, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: BookCanva
+      value: 
+      objectReference: {fileID: 1567131158}
+    - target: {fileID: 204703878140874893, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: mainChart
+      value: 
+      objectReference: {fileID: 1824823353}
+    - target: {fileID: 204703878140874893, guid: 8db6108fd8c8ab844a27e425148a6f65,
+        type: 3}
+      propertyPath: flipScript
+      value: 
+      objectReference: {fileID: 650183716}
     - target: {fileID: 1465343876259501939, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: _Chart
@@ -76946,35 +77034,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5905652237774202707, guid: 8db6108fd8c8ab844a27e425148a6f65,
-        type: 3}
-      propertyPath: BookCanva
-      value: 
-      objectReference: {fileID: 1567131158}
-    - target: {fileID: 5905652237774202707, guid: 8db6108fd8c8ab844a27e425148a6f65,
-        type: 3}
-      propertyPath: mainChart
-      value: 
-      objectReference: {fileID: 1824823353}
-    - target: {fileID: 5905652237774202707, guid: 8db6108fd8c8ab844a27e425148a6f65,
-        type: 3}
-      propertyPath: flipScript
-      value: 
-      objectReference: {fileID: 650183716}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 559.68286
+      value: 557.82043
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.9187
+      value: 21.728296
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 84.20414
+      value: 79.78204
       objectReference: {fileID: 0}
     - target: {fileID: 6261629403057945886, guid: 8db6108fd8c8ab844a27e425148a6f65,
         type: 3}
@@ -77141,7 +77214,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -77375,7 +77448,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -77505,13 +77578,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 6e-45, w: 2.1203e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -77638,7 +77711,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -77756,7 +77829,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -78622,7 +78695,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 59.799995
     y: 137.99998
-    width: 104.4
+    width: 103
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -79416,7 +79489,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 51.902115
     y: 59.599976
-    width: 114.68085
+    width: 119.14893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -79456,8 +79529,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1739109961}
-  selectedCommands:
-  - {fileID: 1739109959}
+  selectedCommands: []
   variables:
   - {fileID: 1739109958}
   description: 
@@ -79915,7 +79987,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -80018,7 +80090,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -80532,7 +80604,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -80735,6 +80807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lamp_post_sign_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b9568b6aec5d5e43a749d39c376aa82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80969,7 +81046,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1761187813}
+  - {fileID: 1761187796}
   selectedCommands: []
   variables:
   - {fileID: 1761187788}
@@ -81875,7 +81952,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -184.61887
     y: 97.56572
-    width: 97.83505
+    width: 101.54639
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -81948,7 +82025,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -173.7031
     y: 54.004078
-    width: 77.21649
+    width: 77.83505
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -82583,7 +82660,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -171.80702
     y: 140.26923
-    width: 78.04124
+    width: 79.896904
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -85166,7 +85243,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -85269,13 +85346,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -85696,7 +85773,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -86136,6 +86213,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5464315649556711431, guid: 0cacb6c34ca19fc4fab7fec6f4c2afa2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86323,6 +86405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lamp_post_sign_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b9568b6aec5d5e43a749d39c376aa82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -86554,7 +86641,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -86917,7 +87004,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -88243,7 +88330,7 @@ MeshCollider:
   m_Mesh: {fileID: -997433502755407839, guid: e22d4d220dc88bf4ca5a5d6da791bbd8, type: 3}
 --- !u!4 &1833622509 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1838209703911965755, guid: 8db6108fd8c8ab844a27e425148a6f65,
+  m_CorrespondingSourceObject: {fileID: 5377570086547076069, guid: 8db6108fd8c8ab844a27e425148a6f65,
     type: 3}
   m_PrefabInstance: {fileID: 1719226652}
   m_PrefabAsset: {fileID: 0}
@@ -91189,7 +91276,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -91307,7 +91394,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -92368,6 +92455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lamp_post_sign_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8b9568b6aec5d5e43a749d39c376aa82,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -92530,7 +92622,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -92874,7 +92966,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1962912781
 Transform:
@@ -93017,7 +93109,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -93283,13 +93375,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6e-44, y: 6e-44, z: 6e-45, w: 2.1954e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -93715,7 +93807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990589912}
   - component: {fileID: 1990589914}
-  - component: {fileID: 1990589915}
+  - component: {fileID: 1990589916}
   m_Layer: 0
   m_Name: 1/4 Stone
   m_TagString: Untagged
@@ -93759,7 +93851,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1990589915
+--- !u!114 &1990589916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93768,10 +93860,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990589911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4559fb6733ac197438de39b817e012cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 343701204}
+  _ETree: {fileID: 343701204}
+  _EXName: Stone
+  _BName: SS3_isDone
 --- !u!1 &1991525424
 GameObject:
   m_ObjectHideFlags: 0
@@ -94513,7 +94607,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -95064,7 +95158,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -95604,7 +95698,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2054429782
 Transform:
@@ -95747,7 +95841,7 @@ VisualEffect:
       - m_Value: {x: 33.125927, y: 3.7063026, z: 0}
         m_Name: Bounding Box_center
         m_Overridden: 1
-      - m_Value: {x: 559.68286, y: 21.9187, z: 84.20414}
+      - m_Value: {x: 557.82043, y: 21.728296, z: 79.78204}
         m_Name: Player Position
         m_Overridden: 1
     m_Vector4f:
@@ -96274,7 +96368,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -96652,13 +96746,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.4805647e+27}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -96886,10 +96980,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082109666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9032d0359c9b340449f76e38f39b810f, type: 3}
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Chart: {fileID: 295515254}
+  _ETree: {fileID: 295515254}
+  _EXName: Ethervale
+  _BName: EF2_isDone
 --- !u!1 &2083020034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e12ae7cf58334f4089c4d361c32b309,
@@ -97185,7 +97281,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -97326,7 +97422,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -97774,7 +97870,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.21568628, g: 0.30588236, b: 0.4117647, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -97813,13 +97909,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 2.3388e-41, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 226.35938, z: 2.8147875e+25, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -98068,7 +98164,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -98375,7 +98471,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -98493,7 +98589,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -98808,7 +98904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127397277}
   - component: {fileID: 2127397279}
-  - component: {fileID: 2127397278}
+  - component: {fileID: 2127397280}
   m_Layer: 0
   m_Name: EthervaleForest
   m_TagString: Untagged
@@ -98831,19 +98927,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1710087806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2127397278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127397276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d043d80018088ba4ba4d6630e56ce2f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Chart: {fileID: 1733405850}
 --- !u!135 &2127397279
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -98865,6 +98948,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 56.718353
   m_Center: {x: 0, y: 26.718353, z: 0}
+--- !u!114 &2127397280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127397276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ab1562bd58d0743af034345f862bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ETree: {fileID: 1733405850}
+  _EXName: Ethervale
+  _BName: EF_isDone
 --- !u!1 &2129457244
 GameObject:
   m_ObjectHideFlags: 0
