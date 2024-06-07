@@ -32,7 +32,28 @@ public class QuestSystem : MonoBehaviour
         SetNewActiveQuest();
        
     }
+    public void CompleteChooiseQuest(int id, int index)
+    {
+        activeQuest.CheckActiveGoal();
+        if (activeQuest.ActiveGoal.GetType() == typeof(TalkToNpcGoal))
+        {
+            TalkToNpcGoal talk = (TalkToNpcGoal)activeQuest.ActiveGoal;
 
+            if (talk.ChooiseQues == true)
+            {
+                DestroyAllChildren();
+                activeQuest = talk.QuestList[id];
+                _imgPanel.sprite = _questPanel[index];
+                activeQuest.CheckActiveGoal();
+                if (activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null)
+                {
+                    InstantiateQuestState();
+                }
+            }
+        }
+        activeQuest.CheckGoals();
+        CheckQuestCompleted();
+    }
     public void CheckQuestCompleted()
     {
         if (activeQuest.completed == true)
@@ -99,29 +120,6 @@ public class QuestSystem : MonoBehaviour
         {
             TalkToNpcGoal talk = (TalkToNpcGoal) activeQuest.ActiveGoal;
             talk.completed = true;
-        }
-        activeQuest.CheckGoals();
-        CheckQuestCompleted();
-    }
-
-    public void CompleteChooiseQuest(int id, int index)
-    {
-        activeQuest.CheckActiveGoal();
-        if (activeQuest.ActiveGoal.GetType() == typeof(TalkToNpcGoal))
-        {
-            TalkToNpcGoal talk = (TalkToNpcGoal)activeQuest.ActiveGoal;
-
-            if (talk.ChooiseQues == true)
-            {
-                DestroyAllChildren();
-                activeQuest = talk.QuestList[id];
-                _imgPanel.sprite = _questPanel[index];
-                activeQuest.CheckActiveGoal();
-                if (activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null)
-                {
-                    InstantiateQuestState();
-                }
-            }
         }
         activeQuest.CheckGoals();
         CheckQuestCompleted();
