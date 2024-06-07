@@ -6,12 +6,16 @@ namespace AccrossTheEvergate
 {
     public class Inventory : MonoBehaviour
     {
-        public int NumberOfRelics { get; private set; }
-        public int NumberOfPlants { get; private set; }
-        public bool Grimore { get; private set; }
+
+        bool bowCheck;
+        bool bloomCheck;
+        bool heartCheck;
+
+        public bool BowCheck { get => bowCheck; set => bowCheck = value; }
+        public bool BloomCheck { get => bloomCheck; set => bloomCheck = value; }
+        public bool HeartCheck { get => heartCheck; set => heartCheck = value; }
 
         private void Awake() => ServiceLocator.Instance.RegisterService(this);
-
 
     }
 }
