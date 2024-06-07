@@ -25,7 +25,9 @@ namespace AccrossTheEvergate
         
         bool playerInteracting;
         IInteractable CurrentInteractable;
+        Relic relicType;
         private InputManager _inputManager; //Rhods
+        private Inventory _inventory; //Rhods
 
         private void OnEnable()
         {
@@ -38,9 +40,11 @@ namespace AccrossTheEvergate
             promptUIPanel.gameObject.SetActive(false);
             playerInteracting = false;
             CurrentInteractable = null;
+            relicType = Relic.None;
             //InputUser.onChange += OnInputDeviceChanged;
             
             _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
+            _inventory = ServiceLocator.Instance.GetService<Inventory>();
         }
 
         //or on disable check y it didn't use on e & on dis
@@ -72,6 +76,13 @@ namespace AccrossTheEvergate
                     CurrentInteractable = InteractObj;
                     promptUIText.text = CurrentInteractable.GetPrompt();
                     promptUIPanel.SetActive(true);
+                    if (other.CompareTag("Relic"))
+                    {
+                        if (other.gameObject.TryGetComponent(out CollectRelic relicCollected))
+                        {
+                            relicType = relicCollected.RelicType;
+                        }
+                    }
                 }
             }
         }
@@ -81,14 +92,31 @@ namespace AccrossTheEvergate
             promptUIPanel.SetActive(false);
             playerInteracting = false;
             CurrentInteractable = null;
+            relicType = Relic.None;
         }
 
         private void CallInteract(IInteractable interactObject)
-        {
+        { 
             interactObject.Interact();
             playerInteracting = false;
             CurrentInteractable = null;
             promptUIPanel.SetActive(false);
+
+            if(relicType != Relic.None)
+            {
+                switch (relicType)
+                {
+                    case Relic.Bow:
+                        _inventory.BowCheck = true;
+                        break;
+                    case Relic.Bloom:
+                        _inventory.BloomCheck = true;
+                        break;
+                    case Relic.Heart:
+                        _inventory.HeartCheck = true;
+                        break;
+                }
+            }
         }
 
         private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -118,7 +146,6 @@ namespace AccrossTheEvergate
         //Check it works
         private void CheckDevices()
         {
-            //throw new NotImplementedException();
             bool usingKeyboardMouse = false;
 
             foreach (var device in InputSystem.devices)
