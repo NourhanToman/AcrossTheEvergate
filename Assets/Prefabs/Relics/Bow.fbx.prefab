@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3d4c899036ce1b41a1b4d8c460036a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Relic
+      objectReference: {fileID: 0}
     - target: {fileID: 2960622999723326088, guid: c3d4c899036ce1b41a1b4d8c460036a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -269,7 +274,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c3d4c899036ce1b41a1b4d8c460036a2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8451929974424553911}
+      addedObject: {fileID: 1096797822922382004}
   m_SourcePrefab: {fileID: 100100000, guid: c3d4c899036ce1b41a1b4d8c460036a2, type: 3}
 --- !u!1 &5639618809452563568 stripped
 GameObject:
@@ -298,7 +303,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2527023, y: 0.18818691, z: 0.31807363}
   m_Center: {x: 0.0031987538, y: -0.06747536, z: -0.0952301}
---- !u!114 &8451929974424553911
+--- !u!114 &1096797822922382004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,8 +312,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5639618809452563568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c770b640d051b4c821d3222170317f, type: 3}
+  m_Script: {fileID: 11500000, guid: f530454faf27866458247b4ae7f77604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  q: {fileID: 0}
   promptText: Collect
+  relicType: 1
