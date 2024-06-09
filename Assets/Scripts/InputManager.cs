@@ -104,6 +104,14 @@ public class InputManager : MonoBehaviour
     public void setCanDrawWeapon(bool canDraw)
     {
         canDrawWeapon = canDraw;
+    }  
+    public void setCanJump(bool CanJump)
+    {
+        canJump = CanJump;
+    }  
+    public void setCanMove(bool CanMove)
+    {
+        canMove = CanMove;
     }
 
     private void OnDisable()
