@@ -1,21 +1,23 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace AccrossTheEvergate
 {
-    public class NPC_Interact : MonoBehaviour
+    public class NPC_Interact : MonoBehaviour, IInteractable
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] public string promptText;
+        [SerializeField] private Flowchart _Chart;
+        [SerializeField] private string _EXName;
+        public void Interact()
         {
-        
+            _Chart.ExecuteBlock(_EXName);
         }
 
-        // Update is called once per frame
-        void Update()
+        public string GetPrompt()
         {
-        
+            return promptText;
         }
     }
 }
