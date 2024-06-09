@@ -46,8 +46,8 @@ namespace AccrossTheEvergate
         Vector2 PlayerPositionOnMap(Vector3 player)
         {
             //terrain dimensions
-            float terrainWidth =  875f;
-            float terrainHeight = 937.5f;
+            float terrainWidth = 1250f;//937.5f
+            float terrainHeight = 1000f;//875f
 
             //convert
             float normalizedX = player.x / terrainWidth;
