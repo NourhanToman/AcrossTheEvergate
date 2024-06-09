@@ -1,3 +1,4 @@
+using AccrossTheEvergate;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -16,12 +17,14 @@ public class DistanceShader : MonoBehaviour
     [SerializeField] private float maxDistance;
     [SerializeField] private float minmummDistance;
     private float referancevelo;
+    private float referanceRevvelo;
     public bool activate;
     [SerializeField] private GameObject player;
     public Volume globalVolume;
     private ChromaticAberration chromaticAberration; // Reference to the Chromatic Aberration effect
     [SerializeField] float DissolveTime;
     [SerializeField] float ReverseTime;
+    [SerializeField] TerrainSystem Terrainn;
 
     private void Start()
     {
@@ -29,6 +32,7 @@ public class DistanceShader : MonoBehaviour
         DissolveColor *= Intensity;
         Shader.SetGlobalColor(DissolveColorReferance, DissolveColor);
         referancevelo = 0;
+        distanceValue = 0;
     }
 
     void Update()
@@ -54,11 +58,11 @@ public class DistanceShader : MonoBehaviour
 
         if (activate)
         {
-            distanceValue = Mathf.SmoothDamp(distanceValue, maxDistance, ref referancevelo , DissolveTime);
+            distanceValue = Mathf.SmoothDamp(distanceValue, maxDistance, ref referancevelo, DissolveTime);
         }
         else
         {
-           distanceValue = Mathf.SmoothDamp(distanceValue, minmummDistance, ref referancevelo, ReverseTime);
+            distanceValue = Mathf.SmoothDamp(distanceValue, minmummDistance, ref referancevelo, ReverseTime);
         }
     }
 }
