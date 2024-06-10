@@ -31,6 +31,14 @@ public class PlayerManager : MonoBehaviour
             BookCanva.enabled = !BookCanva.enabled;
             flipScript.enabled = !flipScript.enabled;
             _inputManager.BookCanva = false;
+            if (BookCanva.enabled)
+            {
+                mainChart.SetBooleanVariable("BookOpen", true);
+            }
+            else
+            {
+                mainChart.SetBooleanVariable("BookOpen", false);
+            }
         }
         //controlls.HandleAllInputs();
     }
