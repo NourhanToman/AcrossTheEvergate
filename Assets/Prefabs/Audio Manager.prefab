@@ -441,5 +441,121 @@ MonoBehaviour:
   musicSounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 859d9e3520c5bc046824604e12822cd8, type: 3}
-  SFXSounds: []
+    volume: 0.1
+    pitch: 1
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: ForestAmbience
+    clip: {fileID: 8300000, guid: c09be2ea17fa3574ead38d3a84786693, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: PastVillage
+    clip: {fileID: 8300000, guid: 3bf6efd9a190fb840bbab762c725524e, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: VV-Past
+    clip: {fileID: 8300000, guid: ca9060f2071cd15428718ceac663477e, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: AmbienceDungeon
+    clip: {fileID: 8300000, guid: ecc43a932dd8b70448bfc3c47316fd44, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  SFXSounds:
+  - name: Archilion-Run
+    clip: {fileID: 8300000, guid: acd64ee2c7695144cb09abd70c5ef997, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: Charge-Arrow
+    clip: {fileID: 8300000, guid: 3eccfb68a9d893a4e9101538ff6c1bfd, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: Release-Arrow
+    clip: {fileID: 8300000, guid: cd725bf6e83e8d44597de52683413536, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
+  - name: Run
+    clip: {fileID: 8300000, guid: 1246f505c07152541947d86f7c41e85f, type: 3}
+    volume: 0.3
+    pitch: 0.9
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: feeceadc7c7c1a440b16731a9d7449cb, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: Landing
+    clip: {fileID: 8300000, guid: 1c778bf5b79ccf748862f50a5a78ce6a, type: 3}
+    volume: 0.5
+    pitch: 2
+    spatialBlend: 0
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: UI-Button
+    clip: {fileID: 8300000, guid: 0fe27f74943876e4fa2fb222fffe69a8, type: 3}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
   dialogueSounds: []
+  currentSound:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    playOnAwake: 0
+    isLoop: 0
+    priotity: 0
+    audSrc: {fileID: 0}
