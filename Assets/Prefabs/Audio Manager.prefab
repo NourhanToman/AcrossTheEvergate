@@ -441,48 +441,48 @@ MonoBehaviour:
   musicSounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 859d9e3520c5bc046824604e12822cd8, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.02
+    pitch: 1
     spatialBlend: 0
-    playOnAwake: 0
-    isLoop: 0
-    priotity: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
     audSrc: {fileID: 0}
   - name: ForestAmbience
     clip: {fileID: 8300000, guid: c09be2ea17fa3574ead38d3a84786693, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.5
+    pitch: 1
     spatialBlend: 0
-    playOnAwake: 0
-    isLoop: 0
-    priotity: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
     audSrc: {fileID: 0}
   - name: PastVillage
     clip: {fileID: 8300000, guid: 3bf6efd9a190fb840bbab762c725524e, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.5
+    pitch: 1
     spatialBlend: 0
-    playOnAwake: 0
-    isLoop: 0
-    priotity: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
     audSrc: {fileID: 0}
   - name: AmbienceDungeon
     clip: {fileID: 8300000, guid: ecc43a932dd8b70448bfc3c47316fd44, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     spatialBlend: 0
-    playOnAwake: 0
-    isLoop: 0
-    priotity: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
     audSrc: {fileID: 0}
   - name: VV-Past
     clip: {fileID: 8300000, guid: ca9060f2071cd15428718ceac663477e, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     spatialBlend: 0
-    playOnAwake: 0
-    isLoop: 0
-    priotity: 0
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
     audSrc: {fileID: 0}
   SFXSounds:
   - name: Run
@@ -504,7 +504,7 @@ MonoBehaviour:
     priotity: 128
     audSrc: {fileID: 0}
   - name: Landing
-    clip: {fileID: 8300000, guid: 4ac7555560d12ec4f813d0767b16cce5, type: 3}
+    clip: {fileID: 8300000, guid: 1c778bf5b79ccf748862f50a5a78ce6a, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 0.6
