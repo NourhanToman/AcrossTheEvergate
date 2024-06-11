@@ -11,7 +11,7 @@ namespace AccrossTheEvergate
         string loadingScene = "testTransition";
         public static LoadManager instance;
         private FadeManager _fadeManager;
-        [SerializeField] private Flowchart load;
+      //  [SerializeField] private Flowchart load;
 
         private void Awake()
         {
@@ -38,7 +38,7 @@ namespace AccrossTheEvergate
 
         public void LoadScene(int sceneIndex)
         {
-            load.ExecuteBlock("Load");
+         //   load.ExecuteBlock("Load");
             StartCoroutine(LoadSceneAsync(sceneIndex)); 
         }
 
