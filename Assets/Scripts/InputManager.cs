@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     //should i add static in below and that awake template?
     private InputActions action;
     public static InputManager instance;
+    private AudioManager audioManager;
     private Vector2 moveInput;
     private Vector2 rotationInput;
     public bool isHoldingWeapon;
@@ -39,6 +40,7 @@ public class InputManager : MonoBehaviour
             instance = this;
             ServiceLocator.Instance.RegisterService(this);
         }
+        audioManager = ServiceLocator.Instance.GetService<AudioManager>();
     }
 
     private void Start()
@@ -47,6 +49,7 @@ public class InputManager : MonoBehaviour
         canAttackAgain = true;
         isHoldingWeapon = false;
         canMove = true;
+        enableJump = true;
         playerAttacked = false;
         playerInteracted = false;
         isJumping = false;

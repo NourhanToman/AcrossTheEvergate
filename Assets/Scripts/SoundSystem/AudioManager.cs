@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds;
     public Sound[] SFXSounds;
     public Sound[] dialogueSounds;
-
+    public Sound currentSound;
     public static AudioManager instance;
     private bool justStarted;
 
@@ -33,10 +33,39 @@ public class AudioManager : MonoBehaviour
             // If no instance exists, set this one as the instance
             instance = this;
             ServiceLocator.Instance.RegisterService(this);
+
+            foreach (Sound sound in SFXSounds)
+            {
+                sound.audSrc = gameObject.AddComponent<AudioSource>();
+                sound.audSrc.clip = sound.clip;
+                sound.audSrc.volume = sound.volume;
+                sound.audSrc.pitch = sound.pitch;
+                sound.audSrc.loop = sound.isLoop;
+                sound.audSrc.priority = sound.priotity;
+                sound.audSrc.spatialBlend = sound.spatialBlend;
+                sound.audSrc.playOnAwake = sound.playOnAwake;
+            }
+
             DontDestroyOnLoad(gameObject); // Make this object persist across scenes
         }
-
         justStarted = true;
+    }
+
+    private void setSounds(Sound sound)
+    {
+        if (sound == null) return;
+
+        if (sound.audSrc == null) // Ensure we don't add multiple AudioSources for the same sound
+        {
+            sound.audSrc = gameObject.AddComponent<AudioSource>();
+        }
+
+        sound.audSrc.clip = sound.clip;
+        sound.audSrc.volume = sound.volume;
+        sound.audSrc.loop = sound.isLoop;
+        sound.audSrc.pitch = sound.pitch;
+        sound.audSrc.playOnAwake = sound.playOnAwake;
+
     }
 
     private void Start() => PlayMusic("Theme");
@@ -46,9 +75,10 @@ public class AudioManager : MonoBehaviour
     //Functions to play music & sfx
     public void PlayMusic(string name)
     {
-        Sound currentSound = Array.Find(musicSounds, sound => sound.name == name);
+        Sound currentMusicSound = Array.Find(musicSounds, sound => sound.name == name);
+        setSounds(currentMusicSound);
 
-        if (currentSound == null)
+        if (currentMusicSound == null)
         {
             Debug.Log("Sound not found");
         }
@@ -57,20 +87,34 @@ public class AudioManager : MonoBehaviour
             if (justStarted)
             {
                 Debug.Log("first");
-                musicSource.clip = currentSound.clip;
+                musicSource.clip = currentMusicSound.clip;
+                musicSource.volume = currentMusicSound.volume;
                 musicSource.Play();
-                musicSource.volume = 1.0f;
                 justStarted = false;
+                Debug.Log(currentMusicSound.volume);
             }
             else
             {
-                StartCoroutine(FadeOutIn(musicSource, currentSound.clip));
+                StartCoroutine(FadeOutIn(musicSource, currentMusicSound));
             }
-
         }
     }
 
     public void PlaySFX(string name)
+    {
+        currentSound = Array.Find(SFXSounds, sound => sound.name == name);
+
+        if (currentSound == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            currentSound.audSrc.Play();
+        }
+    }
+
+    public void StopSFX(string name)
     {
         Sound currentSound = Array.Find(SFXSounds, sound => sound.name == name);
 
@@ -80,8 +124,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            SFXSource.clip = currentSound.clip;
-            SFXSource.Play();
+            currentSound.audSrc.Stop();
         }
     }
 
@@ -123,7 +166,7 @@ public class AudioManager : MonoBehaviour
     ///////////////////////////////////////////////////////
     // IEnumerators
 
-    private IEnumerator FadeOutIn(AudioSource source, AudioClip clip)
+    private IEnumerator FadeOutIn(AudioSource source, Sound sound)
     {
         float startVolume = source.volume;
 
@@ -137,7 +180,8 @@ public class AudioManager : MonoBehaviour
         source.Stop();
 
         //Start the new clip
-        source.clip = clip;
+        source.clip = sound.clip;
+        source.volume = sound.volume;
         source.Play();
 
         for (float t = 0; t < fadeDuration; t += Time.deltaTime)
