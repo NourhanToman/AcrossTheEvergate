@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
     public bool playerInteracted;
     public bool isJumping;
     public bool canJump;
+    public bool enableJump;
     public bool isRightFlip;
     public bool isLeftFlip;
     public bool BookCanva;
@@ -53,6 +54,8 @@ public class InputManager : MonoBehaviour
         canDrawWeapon = false;
         BookCanva = false;
         isMapOpen = false;
+        enableJump = true;
+
     }
 
     private void OnEnable()
@@ -107,7 +110,7 @@ public class InputManager : MonoBehaviour
     }  
     public void setCanJump(bool CanJump)
     {
-        canJump = CanJump;
+        enableJump = CanJump;
     }  
     public void setCanMove(bool CanMove)
     {
@@ -127,7 +130,7 @@ public class InputManager : MonoBehaviour
 
     public void handleMovementInput()
     {
-        if (canAttackAgain == true)
+        if (canAttackAgain == true && canMove)
         {
             verticalInput = moveInput.y;
             horizontalInput = moveInput.x;
@@ -194,7 +197,7 @@ public class InputManager : MonoBehaviour
 
     private void playerJump()
     {
-        if (isJumping == false && canJump == true)
+        if (isJumping == false && canJump == true && enableJump)
         {
             isJumping = true;
             canJump = false;
