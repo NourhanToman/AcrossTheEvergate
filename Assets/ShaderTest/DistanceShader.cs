@@ -22,10 +22,12 @@ public class DistanceShader : MonoBehaviour
     private ChromaticAberration chromaticAberration; // Reference to the Chromatic Aberration effect
     [SerializeField] float DissolveTime;
     [SerializeField] float ReverseTime;
+    private bool playingMusic;
 
     private void Start()
     {
         activate = false;
+        playingMusic = false;
         DissolveColor *= Intensity;
         Shader.SetGlobalColor(DissolveColorReferance, DissolveColor);
         referancevelo = 0;
@@ -55,6 +57,11 @@ public class DistanceShader : MonoBehaviour
         if (activate)
         {
             distanceValue = Mathf.SmoothDamp(distanceValue, maxDistance, ref referancevelo , DissolveTime);
+            if(playingMusic == false)
+            {
+                ServiceLocator.Instance.GetService<AudioManager>().PlaySFX("TimeTravel");
+                playingMusic = true;
+            }
         }
         else
         {

@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 targerDirection = Vector3.zero;
     private Transform cameraTransform;
+    private bool moving;
 
     [Header("PlayerMovement")]
     [SerializeField] private float moveSpeed = 6f;
 
     [SerializeField] private float rotationSpeed = 15f;
     private InputManager _inputManager; //Rhods
+    private AudioManager _audioManager;
 
     // Start is called before the first frame update
     private void Start()
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
         _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
+        _audioManager = ServiceLocator.Instance.GetService<AudioManager>();
+        moving = false;
     }
 
     public void handleAllMovement()
@@ -55,6 +59,21 @@ public class PlayerMovement : MonoBehaviour
         moveDirection *= moveSpeed;
         Vector3 movementVelocity = moveDirection;
         rb.velocity = new Vector3(movementVelocity.x, rb.velocity.y, movementVelocity.z);
+        if((_inputManager.verticalInput != 0 || _inputManager.horizontalInput != 0) && moving == false && _inputManager.canJump == true)
+        {
+            _audioManager.PlaySFX("Run");
+            moving = true;
+        }
+        else if ((_inputManager.verticalInput == 0 && _inputManager.horizontalInput == 0) && moving == true)
+        {
+            _audioManager.StopSFX("Run");
+            moving = false;
+        }
+        else if(_inputManager.canJump == false && moving == true)
+        {
+            _audioManager.StopSFX("Run");
+            moving = false;
+        }
     } // normal movment handiling
 
     private void handleRotation()
