@@ -16,7 +16,9 @@ namespace AccrossTheEvergate
 
         private void OnTriggerEnter(Collider other)
         {
-            _worldMap.OpenArea(AreaID);
+            //_worldMap.OpenArea(AreaID);
+            if(other.CompareTag("Player"))
+                _worldMap.PlayerPositionOnMap(AreaID);
         }
     }
 }
