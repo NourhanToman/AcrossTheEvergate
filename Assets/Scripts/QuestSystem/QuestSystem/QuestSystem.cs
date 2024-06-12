@@ -11,7 +11,7 @@ public class QuestSystem : MonoBehaviour
    public List<Quest> QuestList;
    public Quest activeQuest;
    private Quest endQuest;
-   private int currentQuest;
+   public int currentQuest;
    public GameObject questPanal;
    private Image _imgPanel;
    public List<Sprite> _questPanel;
