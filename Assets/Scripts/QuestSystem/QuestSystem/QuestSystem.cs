@@ -28,7 +28,7 @@ public class QuestSystem : MonoBehaviour
     void Start()
     {
         resetQuests();
-        currentQuest = 3;
+        currentQuest = 0;
         _imgPanel = questPanal.GetComponent<Image>();
         SetNewActiveQuest();
        
