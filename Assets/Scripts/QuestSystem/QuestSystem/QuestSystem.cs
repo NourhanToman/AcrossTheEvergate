@@ -18,6 +18,7 @@ public class QuestSystem : MonoBehaviour
    public int nextQuestId;
     //public Flowchart fungusFlowChars;
     // Start is called before the first frame update
+    protected Collect_Iteams_Goal collect;
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class QuestSystem : MonoBehaviour
     void Start()
     {
         resetQuests();
-        currentQuest = 0;
+        currentQuest = 3;
         _imgPanel = questPanal.GetComponent<Image>();
         SetNewActiveQuest();
        
@@ -83,7 +84,7 @@ public class QuestSystem : MonoBehaviour
     {
         if(activeQuest.ActiveGoal.GetType() == typeof(Collect_Iteams_Goal))
         {
-            Collect_Iteams_Goal collect = (Collect_Iteams_Goal) activeQuest.ActiveGoal;
+            collect = (Collect_Iteams_Goal) activeQuest.ActiveGoal;
             if(collect.completed != true)
             {
                 collect.increaseAmount();
@@ -98,7 +99,7 @@ public class QuestSystem : MonoBehaviour
             }
             else
             {
-                Debug.Log("Completed");
+               // Debug.Log("Completed");
                 InstantiateQuestState();
             }
 
@@ -111,6 +112,11 @@ public class QuestSystem : MonoBehaviour
         activeQuest.CheckGoals();
         CheckQuestCompleted();
 
+    }
+
+    public int CurrentAmount()
+    {
+        return collect.currentAmount;
     }
 
     public void CompleteInteraction()
