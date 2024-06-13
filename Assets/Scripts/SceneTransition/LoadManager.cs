@@ -68,7 +68,7 @@ namespace AccrossTheEvergate
             yield return null;
 
             // Fade in
-            yield return StartCoroutine(_fadeManager.FadeIn());
+            /*yield return*/ StartCoroutine(_fadeManager.FadeIn());
         }
 
     }
