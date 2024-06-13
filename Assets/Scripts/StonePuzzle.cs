@@ -9,18 +9,6 @@ namespace AccrossTheEvergate
     {
 
         [SerializeField] private Flowchart _Chart;
-        [SerializeField] private Flowchart _MainChart;
-
-        private void Update()
-        {
-            if (_Chart.GetBooleanVariable("SSP_isDone"))
-            {
-                if (!_MainChart.GetBooleanVariable("Interacted"))
-                {
-                    _Chart.ExecuteBlock("InteractLoop");
-                }
-            }
-        }
 
         private void OnTriggerStay(Collider other)
         {

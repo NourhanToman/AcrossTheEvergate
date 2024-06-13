@@ -1233,6 +1233,7 @@ GameObject:
   - component: {fileID: 4876915437851142329}
   - component: {fileID: -3619392135132756604}
   - component: {fileID: 5491435117457431592}
+  - component: {fileID: 7427763854895090031}
   m_Layer: 7
   m_Name: EverHeart
   m_TagString: Relic
@@ -1289,8 +1290,35 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0671983, y: 5.185498, z: 3.9947321}
-  m_Center: {x: 0.18673635, y: 1.7042193, z: 0.69087017}
+  m_Size: {x: 3.0766296, y: 2.0262609, z: 3.1819239}
+  m_Center: {x: -0.30854797, y: 0.48579222, z: 0.28446603}
+--- !u!54 &7427763854895090031
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765041463851074740}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &59027253703122025
 PrefabInstance:
   m_ObjectHideFlags: 0

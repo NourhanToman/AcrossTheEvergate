@@ -37,7 +37,7 @@ namespace AccrossTheEvergate
 
         public void PlayerPositionOnMap(int areaIndex)
         {
-            if(areaIndex >= 0 || areaIndex < areaPos.Length)
+            if(areaIndex >= 0 && areaIndex < areaPos.Length)
             {
                 playerIconTransform.anchorMin = areaPos[areaIndex].anchorMin;
                 playerIconTransform.anchorMax = areaPos[areaIndex].anchorMax;
@@ -57,7 +57,7 @@ namespace AccrossTheEvergate
 
         public void OpenArea(int areaId)
         {
-            if (areaId >= 0 || areaId < areaNames.Length)
+            if (areaId >= 0 && areaId < areaNames.Length)
             {
                 areaNames[areaId].gameObject.SetActive(true);
             }
