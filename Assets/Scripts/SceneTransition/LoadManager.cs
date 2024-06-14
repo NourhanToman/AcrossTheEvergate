@@ -10,8 +10,8 @@ namespace AccrossTheEvergate
     {
         string loadingScene = "testTransition";
         public static LoadManager instance;
-        private FadeManager _fadeManager;
-        [SerializeField] private Flowchart load;
+        private FadeManagerMenu _fadeManager;
+      //  [SerializeField] private Flowchart load;
 
         private void Awake()
         {
@@ -32,13 +32,13 @@ namespace AccrossTheEvergate
 
         private void Start()
         {
-            _fadeManager = ServiceLocator.Instance.GetService<FadeManager>();
+            _fadeManager = ServiceLocator.Instance.GetService<FadeManagerMenu>();
 
         }
 
         public void LoadScene(int sceneIndex)
         {
-            load.ExecuteBlock("Load");
+         //   load.ExecuteBlock("Load");
             StartCoroutine(LoadSceneAsync(sceneIndex)); 
         }
 
@@ -68,7 +68,7 @@ namespace AccrossTheEvergate
             yield return null;
 
             // Fade in
-            yield return StartCoroutine(_fadeManager.FadeIn());
+            /*yield return*/ StartCoroutine(_fadeManager.FadeIn());
         }
 
     }

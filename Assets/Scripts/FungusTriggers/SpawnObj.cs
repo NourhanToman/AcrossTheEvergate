@@ -12,7 +12,7 @@ namespace AccrossTheEvergate
 
         public void SpawnRelic(GameObject Relic)
         {
-            Instantiate(Relic, transform.position, transform.rotation, transform);
+            Instantiate(Relic, transform.position, Relic.transform.rotation, transform);
         }
     }
 }
