@@ -28,7 +28,7 @@ public class QuestSystem : MonoBehaviour
     void Start()
     {
         resetQuests();
-        currentQuest = 0;
+        currentQuest = 2;
         _imgPanel = questPanal.GetComponent<Image>();
         SetNewActiveQuest();
        
@@ -44,7 +44,7 @@ public class QuestSystem : MonoBehaviour
             {
                 DestroyAllChildren();
                 activeQuest = talk.QuestList[id];
-                _imgPanel.sprite = _questPanel[index];
+               // _imgPanel.sprite = _questPanel[index];
                 activeQuest.CheckActiveGoal();
                 if (activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null)
                 {
@@ -72,7 +72,7 @@ public class QuestSystem : MonoBehaviour
     public void SetNewActiveQuest()
     {
         activeQuest = QuestList[currentQuest];
-        _imgPanel.sprite = _questPanel[currentQuest];
+       // _imgPanel.sprite = _questPanel[currentQuest];
         activeQuest.CheckActiveGoal();
         if(activeQuest != null && activeQuest.ActiveQuestUi != null && activeQuest.QuestDescription != null) 
         {
