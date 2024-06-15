@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8920600859946487414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6185363778401796088}
+  - component: {fileID: 6582016429853275186}
+  - component: {fileID: 295365359999368574}
+  m_Layer: 0
+  m_Name: GlobalVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6185363778401796088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8920600859946487414}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1824.3418, y: -432.56393, z: -406.74533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6582016429853275186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8920600859946487414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c576fd9b10164a745b333bd95f0b845d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables:
+  - globalReference: _Distance
+    selectedType: 0
+    floatValue: 0
+    floatRangeValue: 0
+    textureValue: {fileID: 0}
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &295365359999368574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8920600859946487414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070803bf51781f24999a2ccb9d946a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceValue: 0
+  DissolveColorReferance: _DissolveColor
+  DissolveColor: {r: 0.2320754, g: 1, b: 0.9818793, a: 1}
+  Intensity: 30
+  distanceReferance: _Distance
+  playerPosition: _Position
+  maxDistance: 200
+  minmummDistance: 0
+  activate: 0
+  player: {fileID: 0}
+  globalVolume: {fileID: 0}
+  DissolveTime: 30
+  ReverseTime: 1.5
+  pause: 0
