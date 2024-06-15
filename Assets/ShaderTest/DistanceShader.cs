@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 
 public class DistanceShader : MonoBehaviour
 {
-    [SerializeField] private float distanceValue;
+    public float distanceValue;
     [SerializeField] private string DissolveColorReferance;
     [SerializeField] private Color DissolveColor;
     [SerializeField] private int Intensity;
@@ -20,12 +20,14 @@ public class DistanceShader : MonoBehaviour
     [SerializeField] private GameObject player;
     public Volume globalVolume;
     private ChromaticAberration chromaticAberration; // Reference to the Chromatic Aberration effect
-    [SerializeField] float DissolveTime;
-    [SerializeField] float ReverseTime;
+    public float DissolveTime;
+    public float ReverseTime;
     private bool playingMusic;
+    public bool pause;
 
     private void Start()
     {
+        pause = false;
         activate = false;
         playingMusic = false;
         DissolveColor *= Intensity;
@@ -54,7 +56,7 @@ public class DistanceShader : MonoBehaviour
     {
         Shader.SetGlobalVector(playerPosition, player.transform.position);
 
-        if (activate)
+        if (activate && pause == false)
         {
             distanceValue = Mathf.SmoothDamp(distanceValue, maxDistance, ref referancevelo , DissolveTime);
             if(playingMusic == false)
@@ -63,7 +65,7 @@ public class DistanceShader : MonoBehaviour
                 playingMusic = true;
             }
         }
-        else
+        else if(activate == false && pause == false)
         {
            distanceValue = Mathf.SmoothDamp(distanceValue, minmummDistance, ref referancevelo, ReverseTime);
         }
