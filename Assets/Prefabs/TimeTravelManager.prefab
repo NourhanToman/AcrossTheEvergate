@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7586008696533493611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3648474142190907905}
+  - component: {fileID: 4589713152937511721}
+  m_Layer: 0
+  m_Name: TimeTravelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3648474142190907905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586008696533493611}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.8481445, y: 21.625793, z: 20.195038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4589713152937511721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586008696533493611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0155af8081e287043868809c180c365d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shad: {fileID: 0}
+  newMap: {fileID: 0}
+  currentMap: {fileID: 0}
+  FutureAssets:
+  - {fileID: 0}
+  PastAssets:
+  - {fileID: 0}
+  SecondTransition: 6
+  FirstTransitoin: 1
+  villageFog: {r: 0.050980393, g: 0.09019608, b: 0.1764706, a: 1}
+  villageFogDensity: 0.02
+  liberaryFog: {r: 0.105882354, g: 0.23137255, b: 0.5568628, a: 1}
+  liberaryFogDensitiy: 0.05
+  liberaryVolum: {fileID: 0}
+  FutureVolume: {fileID: 0}
+  phase1: 0
+  phase2: 0
+  phase3: 0
+  BooksLiberary: {fileID: 0}
