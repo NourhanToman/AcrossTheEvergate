@@ -20,7 +20,6 @@ namespace AccrossTheEvergate
 
         [SerializeField] GameObject oldEnviroment;
         [SerializeField] GameObject newEnviroment;
-       
 
         public static FadeManager instance;
 
@@ -75,5 +74,7 @@ namespace AccrossTheEvergate
 
             yield return StartCoroutine(FadeIn());
         }
+
+ 
     }
 }
