@@ -13,12 +13,14 @@ public class AttackSystm : MonoBehaviour
     private bool chargeEffectActivated;
     private bool shootEffectActivated;
     private InputManager _inputManager; //Rhods
+    private AudioManager _AudioManager;
 
     private void Start()
     {
         chargeEffectActivated = false;
         shootEffectActivated = false;
         _inputManager = ServiceLocator.Instance.GetService<InputManager>(); //Rhods
+        _AudioManager = ServiceLocator.Instance.GetService<AudioManager>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class AttackSystm : MonoBehaviour
         {
             ChargeEffect.Play();
             ChargeEffect2.Play();
+            _AudioManager.PlaySFX("ChargeArrow");
+            StartCoroutine(PlayLoopArrowSound());
             chargeEffectActivated = true;
             if(shootEffectActivated == true)
             {
@@ -39,18 +43,24 @@ public class AttackSystm : MonoBehaviour
         {
             ChargeEffect.Stop();
             ChargeEffect2.Stop();
+            _AudioManager.StopSFX("ChargeArrow");
+            _AudioManager.StopSFX("LoopArrow");
             chargeEffectActivated = false;
             GameObject arrowPrefab = Instantiate(arrow, ArrowPos.position, Quaternion.identity);
             arrowPrefab.transform.rotation = this.transform.rotation;
             ShootEffect.Play();
+            _AudioManager.PlaySFX("FireArrow");
             shootEffectActivated = true;
             this.transform.rotation = new Quaternion(0, this.transform.rotation.y, 0, this.transform.rotation.w);
         }
     }
 
-    IEnumerator resetRotation()
+    IEnumerator PlayLoopArrowSound()
     {
-        yield return new WaitForSeconds(0.6f);
-        
+        yield return new WaitForSeconds(3);
+        if(_inputManager.isHoldingAttack == true && chargeEffectActivated == true)
+        {
+            _AudioManager.PlaySFX("LoopArrow");
+        }
     }
 }
