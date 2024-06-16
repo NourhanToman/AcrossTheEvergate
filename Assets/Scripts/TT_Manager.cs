@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace AccrossTheEvergate
 {
@@ -24,6 +25,8 @@ namespace AccrossTheEvergate
         public bool phase2;
         public bool phase3;
         public GameObject BooksLiberary;
+        public Material SkyboxPast;
+        public Cubemap pastCubeMap;
         private void Start()
         {
             phase1 = false;
@@ -96,6 +99,9 @@ namespace AccrossTheEvergate
                 yield return new WaitForSeconds(2);
                 RenderSettings.fogColor = villageFog;
                 RenderSettings.fogDensity = villageFogDensity;
+                RenderSettings.skybox = SkyboxPast;
+                RenderSettings.defaultReflectionMode = DefaultReflectionMode.Custom;
+                RenderSettings.customReflectionTexture = pastCubeMap;
                 liberaryVolum.SetActive(false);
                 FutureVolume.SetActive(true);
             }
