@@ -35,6 +35,12 @@ public class Book : MonoBehaviour {
     {
         get { return ebr; }
     }
+
+    public void setCurretPage(int pageNum)
+    {
+        currentPage = pageNum;
+    }
+
     public float Height
     {
         get

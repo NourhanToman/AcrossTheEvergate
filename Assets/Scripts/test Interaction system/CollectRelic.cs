@@ -18,11 +18,11 @@ namespace AccrossTheEvergate
 
         public Relic RelicType { get => relicType;/* set => relicType = value;*/ }
 
-        //  [SerializeField] private GameObject spellInteract;
+         // [SerializeField] private GameObject spellInteract;
 
         public void Interact()
         {
-            //Instantiate(spellInteract, transform.position, Quaternion.identity);
+          //  Instantiate(spellInteract, transform.position, Quaternion.identity);
             // questSys.increaseIteam();
             gameObject.SetActive(false);
         }

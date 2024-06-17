@@ -11,11 +11,13 @@ namespace AccrossTheEvergate
         [SerializeField] public string promptText;
         [SerializeField] public Flowchart _Chart;
         [SerializeField] private string _EXName;
+        // [SerializeField] private GameObject spellInteract;
         // [SerializeField] private string _BName;
         private QuestSystem questSys;
         private void Start() => questSys = ServiceLocator.Instance.GetService<QuestSystem>();
         public void Interact()
         {
+          //  Instantiate(spellInteract, transform.position, Quaternion.identity);
             questSys.increaseIteam();
             gameObject.SetActive(false);
             if (questSys.CurrentAmount()>=5)
