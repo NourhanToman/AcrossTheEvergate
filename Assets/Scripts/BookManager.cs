@@ -10,11 +10,19 @@ namespace AccrossTheEvergate
     public class BookManager : MonoBehaviour
     {
         [SerializeField] GameObject Firstpage;
-        public void select1stBttn()
+
+
+        private void Start()
         {
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(Firstpage);
         }
+
+        /*public void select1stBttn()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(Firstpage);
+        }*/
 
     }
 }

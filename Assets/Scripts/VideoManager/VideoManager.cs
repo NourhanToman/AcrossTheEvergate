@@ -14,13 +14,13 @@ namespace AccrossTheEvergate
         [SerializeField] RenderTexture defaultRenderTexture;
         [SerializeField] VideoClip[] videoClips;
 
-        private tempFade _FadeManager; //Replace it with FadeManagerMenu 
+        private FadeManagerMenu _FadeManager; //Replace it with FadeManagerMenu 
         private void OnEnable()
         {
             videoPlayer.loopPointReached += OnVideoEnded;
         }
 
-        private void Start() => _FadeManager = ServiceLocator.Instance.GetService<tempFade>();
+        private void Start() => _FadeManager = ServiceLocator.Instance.GetService<FadeManagerMenu>();
 
         public void PlayVideo(int vidIndex)
         {
