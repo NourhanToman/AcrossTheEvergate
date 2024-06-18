@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     private InputManager _inputManager; 
     private void Awake()
     {
-      //  Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         movementScript = GetComponent<PlayerMovement>();
         BookCanva.enabled = false;
         flipScript.enabled = false;
