@@ -102,6 +102,7 @@ public class InputManager : MonoBehaviour
 
     private void OpenMap()
     {
+        AudioManager.instance.PlaySFX("Paper");
         isMapOpen = true;
     }
 
@@ -225,6 +226,8 @@ public class InputManager : MonoBehaviour
 
     void RightFlip()
     {
+        if(BookCanva)
+            AudioManager.instance.PlaySFX("Paper");
         isRightFlip = true;
     }
 
@@ -234,6 +237,8 @@ public class InputManager : MonoBehaviour
     }
     void LeftFlip()
     {
+        if(BookCanva)
+            AudioManager.instance.PlaySFX("Paper");
         isLeftFlip = true;
     }
     void CancelLeftFlip()

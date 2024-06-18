@@ -15,8 +15,12 @@ namespace AccrossTheEvergate
         [SerializeField] Transform newPlayerLocation;
         [SerializeField] GameObject playerObj;
 
-        [SerializeField] List<GameObject> Future;
-        [SerializeField] List<GameObject> Past;
+        //[SerializeField] GameObject Future;
+        // [SerializeField] GameObject Past;
+
+        [Header ("Library settings")]
+        public Color liberaryFog;
+        public float liberaryFogDensitiy;
 
         [SerializeField] GameObject oldEnviroment;
         [SerializeField] GameObject newEnviroment;
@@ -64,11 +68,12 @@ namespace AccrossTheEvergate
         public IEnumerator Fade()
         {
             yield return StartCoroutine(FadeOut());
-
+            RenderSettings.fogColor = liberaryFog;
+            RenderSettings.fogDensity = liberaryFogDensitiy;
             newEnviroment.gameObject.SetActive(true);
             playerObj.transform.position = newPlayerLocation.position;
-            Future.ForEach(x => x.gameObject.SetActive(false));
-            Past.ForEach(x => x.gameObject.SetActive(true));
+           // Future.gameObject.SetActive(false);
+           // Past.gameObject.SetActive(true);
             oldEnviroment.gameObject.SetActive(false);
 
 

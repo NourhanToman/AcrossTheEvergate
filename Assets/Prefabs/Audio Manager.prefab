@@ -440,8 +440,8 @@ MonoBehaviour:
   dialogueSource: {fileID: 3471554941458046506}
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 859d9e3520c5bc046824604e12822cd8, type: 3}
-    volume: 0.02
+    clip: {fileID: 8300000, guid: c09be2ea17fa3574ead38d3a84786693, type: 3}
+    volume: 0.5
     pitch: 1
     spatialBlend: 0
     playOnAwake: 1
@@ -487,7 +487,7 @@ MonoBehaviour:
   SFXSounds:
   - name: Run
     clip: {fileID: 8300000, guid: 60efcf1def9e4c94c97b5ea3db20b686, type: 3}
-    volume: 0.4
+    volume: 0.2
     pitch: 0.9
     spatialBlend: 0.6
     playOnAwake: 1
@@ -505,6 +505,51 @@ MonoBehaviour:
     audSrc: {fileID: 0}
   - name: Landing
     clip: {fileID: 8300000, guid: 1c778bf5b79ccf748862f50a5a78ce6a, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: ChargeArrow
+    clip: {fileID: 8300000, guid: 8af9968a78209d048907d1a301653641, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: LoopArrow
+    clip: {fileID: 8300000, guid: 964fd3c97b2ee654791f60f5e5e0f2fb, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 1
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: FireArrow
+    clip: {fileID: 8300000, guid: e60c3e561c751a3458f08bd1b56eb742, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: Wosh
+    clip: {fileID: 8300000, guid: 857db98b0986a574a9008fa0b29d818b, type: 3}
+    volume: 0.5
+    pitch: 1
+    spatialBlend: 0.6
+    playOnAwake: 1
+    isLoop: 0
+    priotity: 128
+    audSrc: {fileID: 0}
+  - name: Paper
+    clip: {fileID: 8300000, guid: cb8306cb27d823f4796c9cca52cd85e0, type: 3}
     volume: 0.5
     pitch: 1
     spatialBlend: 0.6
