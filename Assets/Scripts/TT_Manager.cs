@@ -9,24 +9,34 @@ namespace AccrossTheEvergate
     public class TT_Manager : MonoBehaviour
     {
         public DistanceShader shad;
-        public GameObject newMap;
-        public GameObject currentMap;
-        public GameObject[] FutureAssets;
-        public GameObject[] PastAssets;
-        public float SecondTransition = 7;
-        public float FirstTransitoin = 2;
-        public Color villageFog;
-        public float villageFogDensity;
-        public Color liberaryFog;
-        public float liberaryFogDensitiy;
+
+        [Header("GameObjects")]
+        [SerializeField] GameObject newMap;
+        [SerializeField] GameObject currentMap;
+        [SerializeField] GameObject FutureAssets;
+        [SerializeField] GameObject PastAssets;
         [SerializeField] GameObject liberaryVolum;
         [SerializeField] GameObject FutureVolume;
-        public bool phase1;
-        public bool phase2;
-        public bool phase3;
-        public GameObject BooksLiberary;
+        [SerializeField] GameObject BooksLiberary;
+
+        [Header("Colors")]
+        public Color villageFog;
+        public Color liberaryFog;
+        public Color hdrAmbientLightColor = new Color(0.1589609f, 0.1946179f, 0.3419144f, 1.0f);
+
+        [Header("Settings")]
+        public float SecondTransition = 7;
+        public float FirstTransitoin = 2;
+        public float villageFogDensity;
+        public float liberaryFogDensitiy;
+
+        [Header("Matrials")]
         public Material SkyboxPast;
         public Cubemap pastCubeMap;
+
+        private bool phase1;
+        private bool phase2;
+        private bool phase3;
         private void Start()
         {
             phase1 = false;
@@ -35,17 +45,14 @@ namespace AccrossTheEvergate
         }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                Activate();
-            }
-
             if (phase2 == true && shad.pause == false && phase3 == false)
             {
-                if(shad.distanceValue < 0.05f)
+                if (shad.distanceValue < 0.05f)
                 {
-                    //shad.pause = true;
                     newMap.SetActive(true);
+                    PastAssets.SetActive(true);
+                    FutureAssets.SetActive(false);
+                    RenderSettings.skybox = SkyboxPast;
                     StartCoroutine(wait());
                 }
             }
@@ -60,10 +67,7 @@ namespace AccrossTheEvergate
             {
                 phase2TimeTravel();
             }
-            //liberaryVolum.SetActive(false);
-
         }
-
         public void phase1TimeTravel()
         {
             phase1 = true;
@@ -78,11 +82,9 @@ namespace AccrossTheEvergate
             BooksLiberary.SetActive(false);
             StartCoroutine(wait());
         }
-
         public void phase2TimeTravel()
         {
             phase2 = true;
-            //BooksLiberary.SetActive(true);
             if (shad.activate == false)
             {
                 shad.activate = true;
@@ -94,14 +96,10 @@ namespace AccrossTheEvergate
         }
         IEnumerator wait()
         {
-            if(phase1 == true && phase2 == false)
+            if (phase1 == true && phase2 == false)
             {
                 yield return new WaitForSeconds(2);
-                RenderSettings.fogColor = villageFog;
-                RenderSettings.fogDensity = villageFogDensity;
-                RenderSettings.skybox = SkyboxPast;
-                RenderSettings.defaultReflectionMode = DefaultReflectionMode.Custom;
-                RenderSettings.customReflectionTexture = pastCubeMap;
+                ChangeRenderSettings();
                 liberaryVolum.SetActive(false);
                 FutureVolume.SetActive(true);
             }
@@ -119,24 +117,24 @@ namespace AccrossTheEvergate
                 }
                 shad.DissolveTime = shad.DissolveTime / 1.3f;
                 shad.ReverseTime = shad.ReverseTime / 1.3f;
-                //shad.pause = false;
-                for (int i = 0; i < PastAssets.Length; i++)
-                {
-                    PastAssets[i].SetActive(true);
-                }
                 yield return new WaitForSeconds(SecondTransition);
+
                 currentMap.SetActive(false);
-                for (int i = 0; i < PastAssets.Length; i++)
-                {
-                    PastAssets[i].SetActive(true);
-                }
                 GameObject temp;
                 temp = newMap;
                 newMap = currentMap;
                 currentMap = temp;
                 this.gameObject.SetActive(false);
             }
-
+        }
+        public void ChangeRenderSettings()
+        {
+            RenderSettings.fogColor = villageFog;
+            RenderSettings.fogDensity = villageFogDensity;
+            RenderSettings.defaultReflectionMode = DefaultReflectionMode.Custom;
+            RenderSettings.customReflectionTexture = pastCubeMap;
+            RenderSettings.ambientMode = AmbientMode.Flat;
+            RenderSettings.ambientLight = hdrAmbientLightColor;
         }
     }
 }

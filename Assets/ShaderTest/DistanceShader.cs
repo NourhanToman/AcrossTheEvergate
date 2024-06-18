@@ -38,12 +38,6 @@ public class DistanceShader : MonoBehaviour
     void Update()
     {
         changeDistance();
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Shader.SetGlobalVector(playerPosition, player.transform.position);
-            activate = !activate;
-        }
         ReveilOjects();
     }
 
