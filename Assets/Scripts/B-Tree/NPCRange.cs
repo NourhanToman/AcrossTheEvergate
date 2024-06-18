@@ -14,7 +14,7 @@ namespace AccrossTheEvergate
         public SharedBool WithinRange;
 
         private float fleeDistance = 20f; 
-        private float detectionRange = 20f; 
+        private float detectionRange = 50f; 
 
         private NavMeshAgent navMeshAgent;
         private Transform npcTransform;
