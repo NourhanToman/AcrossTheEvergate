@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 866319192526664853}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09187879, y: 0.26264012, z: -0.02513057, w: 0.96018076}
-  m_LocalPosition: {x: -0.1302, y: 0.221, z: -0.2411}
+  m_LocalPosition: {x: -0.1302, y: 0.54700124, z: -0.2411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 1285459591922206770}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09187879, y: 0.26264012, z: -0.02513057, w: 0.96018076}
-  m_LocalPosition: {x: 0.264, y: -0.20600128, z: 0.702}
+  m_LocalPosition: {x: 0.264, y: 0.12, z: 0.702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -248,9 +248,9 @@ GameObject:
   - component: {fileID: 4717175761569775593}
   - component: {fileID: 4611463108876126352}
   - component: {fileID: 755739787577526866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EverBloom
-  m_TagString: Untagged
+  m_TagString: Relic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,8 +295,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.1125946, y: 2.9251504, z: 5.6212845}
-  m_Center: {x: -0.0019607544, y: -0.061583757, z: 0.3346672}
+  m_Size: {x: 4.1125946, y: 4.7457743, z: 6.975337}
+  m_Center: {x: -0.0019607544, y: 0.8487282, z: -0.34235907}
 --- !u!114 &4611463108876126352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,8 +311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptText: Collect
   relicType: 2
-  spellInteract: {fileID: 3967905812828356956, guid: c977d527679151f4e82fb8a7a19d6979,
-    type: 3}
 --- !u!54 &755739787577526866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -367,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 4342628689215957690}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09187879, y: 0.26264012, z: -0.02513057, w: 0.96018076}
-  m_LocalPosition: {x: 0.34, y: -0.14639649, z: -0.412}
+  m_LocalPosition: {x: 0.34, y: 0.17960477, z: -0.412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -485,7 +483,7 @@ Transform:
   m_GameObject: {fileID: 4566300137289366519}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09187879, y: 0.26264012, z: -0.02513057, w: 0.96018076}
-  m_LocalPosition: {x: -0.562, y: 0.244, z: -0.489}
+  m_LocalPosition: {x: -0.562, y: 0.57000124, z: -0.489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,7 +601,7 @@ Transform:
   m_GameObject: {fileID: 6410942359982522187}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09187879, y: 0.26264012, z: -0.02513057, w: 0.96018076}
-  m_LocalPosition: {x: 0.016, y: 0.487, z: -0.144}
+  m_LocalPosition: {x: 0.016, y: 0.8130015, z: -0.144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,7 +723,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2c64770e0f207dc4384d7f430f8daa22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.3260013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c64770e0f207dc4384d7f430f8daa22,
         type: 3}
