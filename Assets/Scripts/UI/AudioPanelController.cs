@@ -10,8 +10,6 @@ public class AudioPanelController : MonoBehaviour
 
     private void Start() => audioManager = ServiceLocator.GetService<AudioManager>();
 
-    
-
     public void ToggleMusic()
     {
         audioManager.PlaySFX("Button");

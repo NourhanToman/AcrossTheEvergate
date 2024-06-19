@@ -1231,9 +1231,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4876915437851142329}
-  - component: {fileID: -3619392135132756604}
   - component: {fileID: 5491435117457431592}
   - component: {fileID: 7427763854895090031}
+  - component: {fileID: 5498645988303187922}
   m_Layer: 7
   m_Name: EverHeart
   m_TagString: Relic
@@ -1257,22 +1257,6 @@ Transform:
   - {fileID: 5005928695833223190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-3619392135132756604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8765041463851074740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f530454faf27866458247b4ae7f77604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptText: Collect
-  relicType: 3
-  spellInteract: {fileID: 3967905812828356956, guid: c977d527679151f4e82fb8a7a19d6979,
-    type: 3}
 --- !u!65 &5491435117457431592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1321,6 +1305,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5498645988303187922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765041463851074740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f530454faf27866458247b4ae7f77604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: Collect
+  relicType: 3
+  animationStateName: Deactivate_SpellAnim
 --- !u!1001 &59027253703122025
 PrefabInstance:
   m_ObjectHideFlags: 0

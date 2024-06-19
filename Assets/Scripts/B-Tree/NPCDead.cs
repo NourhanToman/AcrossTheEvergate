@@ -13,6 +13,7 @@ namespace AccrossTheEvergate
     {
         [SerializeField] private Flowchart _Chart;
         [SerializeField] private Flowchart _ARChart;
+        [SerializeField] private GameObject _Everheart;
         private BehaviorTree _NPCtree;
         private NavMeshAgent _Agent;
         [SerializeField] private GameObject Arachilion;
@@ -46,8 +47,9 @@ namespace AccrossTheEvergate
                     _NPCtree.enabled = false;
                     animator.SetFloat("RUN", 0.0f, 0.0f, Time.deltaTime);
                     dissolve.Dissolve();
-                    Destroy(Arachilion.gameObject, 2.0f);
-                    _ARChart.ExecuteBlock("Collect");
+                    Arachilion.SetActive(false);
+                    Instantiate(_Everheart, Arachilion.transform.position, Arachilion.transform.rotation);
+                   
                 }
             }
         }
