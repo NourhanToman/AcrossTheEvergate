@@ -28,12 +28,12 @@ public class QuestSystem : MonoBehaviour
     void Start()
     {
         resetQuests();
-        //currentQuest = 0;
+        currentQuest = 0;
         _imgPanel = questPanal.GetComponent<Image>();
         SetNewActiveQuest();
        
     }
-    public void CompleteChooiseQuest(int id, int index)
+    public void CompleteChooiseQuest(int id)
     {
         activeQuest.CheckActiveGoal();
         if (activeQuest.ActiveGoal.GetType() == typeof(TalkToNpcGoal))
