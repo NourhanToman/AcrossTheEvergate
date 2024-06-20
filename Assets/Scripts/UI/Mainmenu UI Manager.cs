@@ -18,7 +18,7 @@ public class MainmenuUIManager : MonoBehaviour
     [SerializeField] GameObject settingsClosedBttn;
 
     private AudioManager AudioManager;
-
+    private void Awake() => Cursor.lockState = CursorLockMode.Locked;
     private void Start() 
     {
         AudioManager = ServiceLocator.Instance.GetService<AudioManager>();
