@@ -33,7 +33,7 @@ namespace AccrossTheEvergate
         {
             if (collision.gameObject.CompareTag("Arrow"))
             {
-                if (_ARChart.GetBooleanVariable("isCollect"))
+                /*if (_ARChart.GetBooleanVariable("isCollect"))
                 {
                     _Chart.ExecuteBlock("isHit");
                     if (_currentValue <= 0)
@@ -42,7 +42,7 @@ namespace AccrossTheEvergate
                     }
                 }
                 else
-                {
+                {*/
                     _Agent.speed = 0f;
                     _NPCtree.enabled = false;
                     animator.SetFloat("RUN", 0.0f, 0.0f, Time.deltaTime);
@@ -50,7 +50,7 @@ namespace AccrossTheEvergate
                     Arachilion.SetActive(false);
                     Instantiate(_Everheart, Arachilion.transform.position, Arachilion.transform.rotation);
                    
-                }
+                //}
             }
         }
     }
