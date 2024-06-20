@@ -16,9 +16,9 @@ namespace AccrossTheEvergate
         {
            if (other.gameObject.CompareTag("Player") && Vector3.Distance(other.transform.position , this.transform.position) > 10)
            {
-                
+               
                m_Animator.SetTrigger("Play");
-                Destroy(gameObject);
+               Destroy(gameObject);
            }
         }
     }

@@ -43,6 +43,11 @@ public class PlayerManager : MonoBehaviour
         //controlls.HandleAllInputs();
     }
 
+    public void setLookAt(Transform obj)
+    {
+        transform.LookAt(obj);
+    }
+
     private void FixedUpdate()
     {
         movementScript.handleAllMovement();
