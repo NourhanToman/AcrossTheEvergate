@@ -28,7 +28,7 @@ public class cameraHandling : MonoBehaviour
         changePriority();
         SwitchCameras();
     }
-    void VirutalCameraLimitation()
+    /*void VirutalCameraLimitation()
     {
         if (cinemachineTargetLock.transform.position.y >= 5f)
         {
@@ -38,7 +38,7 @@ public class cameraHandling : MonoBehaviour
         {
             cinemachineTargetLock.transform.position = new Vector3(cinemachineTargetLock.transform.position.x, 1f, cinemachineTargetLock.transform.position.z);
         }
-    }
+    }*/
     void changePriority()
     {
         if(_CMTargetGroup.m_Targets[0].target != null && _inputManager.isLockingOnTarget == true) //&& manager.anim.swordState == true) //Rhods

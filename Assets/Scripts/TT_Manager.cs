@@ -18,6 +18,7 @@ namespace AccrossTheEvergate
         [SerializeField] GameObject liberaryVolum;
         [SerializeField] GameObject FutureVolume;
         [SerializeField] GameObject BooksLiberary;
+        [SerializeField] GameObject timeTraveCanvas;
 
         [Header("Colors")]
         public Color villageFog;
@@ -45,15 +46,19 @@ namespace AccrossTheEvergate
         }
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                Activate();
+            }
             if (phase2 == true && shad.pause == false && phase3 == false)
             {
-                if (shad.distanceValue < 0.05f)
+                if (shad.distanceValue < 0.1f)
                 {
-                    newMap.SetActive(true);
-                    PastAssets.SetActive(true);
-                    FutureAssets.SetActive(false);
-                    RenderSettings.skybox = SkyboxPast;
                     StartCoroutine(wait());
+                }
+                else if (shad.distanceValue < 0.2f)
+                {
+                    timeTraveCanvas.SetActive(true);
                 }
             }
         }
@@ -99,13 +104,18 @@ namespace AccrossTheEvergate
             if (phase1 == true && phase2 == false)
             {
                 yield return new WaitForSeconds(2);
-                ChangeRenderSettings();
-                liberaryVolum.SetActive(false);
-                FutureVolume.SetActive(true);
             }
             else
             {
                 phase3 = true;
+                yield return new WaitForSeconds(2.1f);
+                newMap.SetActive(true);
+                PastAssets.SetActive(true);
+                FutureAssets.SetActive(false);
+                ChangeRenderSettings();
+                liberaryVolum.SetActive(false);
+                FutureVolume.SetActive(true);
+                RenderSettings.skybox = SkyboxPast;
                 yield return new WaitForSeconds(1);
                 if (shad.activate == false)
                 {
