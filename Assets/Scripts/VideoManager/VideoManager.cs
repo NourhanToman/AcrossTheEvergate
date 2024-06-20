@@ -14,7 +14,7 @@ namespace AccrossTheEvergate
         [SerializeField] RenderTexture defaultRenderTexture;
         [SerializeField] VideoClip[] videoClips;
 
-        private FadeManagerMenu _FadeManager; //Replace it with FadeManagerMenu 
+        private FadeManagerMenu _FadeManager;
         private void OnEnable()
         {
             videoPlayer.loopPointReached += OnVideoEnded;
@@ -25,14 +25,6 @@ namespace AccrossTheEvergate
         public void PlayVideo(int vidIndex)
         {
             StartCoroutine(CinematicSatrt(vidIndex));
-            //if (vidIndex == 0)
-            //{
-            //    videoPlayer.Play();
-            //}
-            //else
-            //{
-            //    StartCoroutine(CinematicSatrt(vidIndex));
-            //}
         }
 
         private void OnVideoEnded(VideoPlayer source)
