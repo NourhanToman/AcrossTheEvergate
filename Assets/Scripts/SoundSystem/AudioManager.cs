@@ -1,17 +1,20 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
 
     [Header("Variables")]
-    public float fadeDuration = 0;
+    [SerializeField] float fadeDuration = 0;
 
     [Header("Audio Sources")]
-    public AudioSource musicSource;
-    public AudioSource SFXSource;
-    public AudioSource dialogueSource;
+    [SerializeField] AudioMixerGroup SFXMixerGroup;
+    [SerializeField] public AudioMixer myAudioMixer;
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource dialogueSource;
 
     [Header("Audios")]
     public Sound[] musicSounds;
@@ -38,6 +41,7 @@ public class AudioManager : MonoBehaviour
             {
                 sound.audSrc = gameObject.AddComponent<AudioSource>();
                 sound.audSrc.clip = sound.clip;
+                sound.audSrc.outputAudioMixerGroup = SFXMixerGroup;
                 sound.audSrc.volume = sound.volume;
                 sound.audSrc.pitch = sound.pitch;
                 sound.audSrc.loop = sound.isLoop;
@@ -80,7 +84,7 @@ public class AudioManager : MonoBehaviour
 
         if (currentMusicSound == null)
         {
-            Debug.Log("Sound not found");
+            Debug.Log("Music not found");
         }
         else
         {
@@ -157,9 +161,32 @@ public class AudioManager : MonoBehaviour
 
     ////////////////////////////////////////////
     //Functions to increase or decrease volume
-    public void MusicVolume(float volume) => musicSource.volume = volume;
+    public void MusicVolume(float volume)
+    {
+        float dBVolume;
 
-    public void SFXVolume(float volume) => SFXSource.volume = volume;
+        if (volume < 0.001f)
+            dBVolume = -80f;
+        else
+            dBVolume = 45f * Mathf.Log10(volume);
+
+        myAudioMixer.SetFloat("AmbienceVolume", dBVolume);
+        myAudioMixer.SetFloat("3DMusicVolume", dBVolume);
+        myAudioMixer.SetFloat("DialogueVolume", dBVolume);
+        //Debug.Log("Called m Volume");
+    }
+
+    public void SFXVolume(float volume)
+    {
+        float dBVolume;
+
+        if (volume < 0.001f)
+            dBVolume = -80f;
+        else
+            dBVolume = 45f * Mathf.Log10(volume);
+
+        myAudioMixer.SetFloat("SFXVolume", dBVolume);
+    }
 
     //public void DiaolgueVolume(float volume) => dialogueSource.volume = volume;
 
