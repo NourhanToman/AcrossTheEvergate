@@ -143,6 +143,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Quest"",
+                    ""type"": ""Button"",
+                    ""id"": ""a80eb329-1751-4a26-8df7-9658590bbf20"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -539,6 +548,39 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FlipPageLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b88e3e6d-5561-4910-8023-a8fc62666539"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d2c9df0-b774-459e-ac86-0e4241a318b1"",
+                    ""path"": ""<DualShockGamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""366e0e51-7933-4b8a-a13f-ecd5930d2f38"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1566,6 +1608,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerLocomoation_TimeTravel = m_PlayerLocomoation.FindAction("TimeTravel", throwIfNotFound: true);
         m_PlayerLocomoation_FlipPageRight = m_PlayerLocomoation.FindAction("FlipPageRight", throwIfNotFound: true);
         m_PlayerLocomoation_FlipPageLeft = m_PlayerLocomoation.FindAction("FlipPageLeft", throwIfNotFound: true);
+        m_PlayerLocomoation_Quest = m_PlayerLocomoation.FindAction("Quest", throwIfNotFound: true);
         // Test
         m_Test = asset.FindActionMap("Test", throwIfNotFound: true);
         m_Test_Newaction = m_Test.FindAction("New action", throwIfNotFound: true);
@@ -1656,6 +1699,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomoation_TimeTravel;
     private readonly InputAction m_PlayerLocomoation_FlipPageRight;
     private readonly InputAction m_PlayerLocomoation_FlipPageLeft;
+    private readonly InputAction m_PlayerLocomoation_Quest;
     public struct PlayerLocomoationActions
     {
         private @InputActions m_Wrapper;
@@ -1673,6 +1717,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @TimeTravel => m_Wrapper.m_PlayerLocomoation_TimeTravel;
         public InputAction @FlipPageRight => m_Wrapper.m_PlayerLocomoation_FlipPageRight;
         public InputAction @FlipPageLeft => m_Wrapper.m_PlayerLocomoation_FlipPageLeft;
+        public InputAction @Quest => m_Wrapper.m_PlayerLocomoation_Quest;
         public InputActionMap Get() { return m_Wrapper.m_PlayerLocomoation; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1721,6 +1766,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @FlipPageLeft.started += instance.OnFlipPageLeft;
             @FlipPageLeft.performed += instance.OnFlipPageLeft;
             @FlipPageLeft.canceled += instance.OnFlipPageLeft;
+            @Quest.started += instance.OnQuest;
+            @Quest.performed += instance.OnQuest;
+            @Quest.canceled += instance.OnQuest;
         }
 
         private void UnregisterCallbacks(IPlayerLocomoationActions instance)
@@ -1764,6 +1812,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @FlipPageLeft.started -= instance.OnFlipPageLeft;
             @FlipPageLeft.performed -= instance.OnFlipPageLeft;
             @FlipPageLeft.canceled -= instance.OnFlipPageLeft;
+            @Quest.started -= instance.OnQuest;
+            @Quest.performed -= instance.OnQuest;
+            @Quest.canceled -= instance.OnQuest;
         }
 
         public void RemoveCallbacks(IPlayerLocomoationActions instance)
@@ -1968,6 +2019,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnTimeTravel(InputAction.CallbackContext context);
         void OnFlipPageRight(InputAction.CallbackContext context);
         void OnFlipPageLeft(InputAction.CallbackContext context);
+        void OnQuest(InputAction.CallbackContext context);
     }
     public interface ITestActions
     {

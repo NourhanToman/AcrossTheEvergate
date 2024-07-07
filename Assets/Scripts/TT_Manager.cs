@@ -46,10 +46,10 @@ namespace AccrossTheEvergate
         }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            /*if (Input.GetKeyDown(KeyCode.P))
             {
                 Activate();
-            }
+            }*/
             if (phase2 == true && shad.pause == false && phase3 == false)
             {
                 if (shad.distanceValue < 0.1f)

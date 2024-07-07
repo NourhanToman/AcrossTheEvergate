@@ -5,10 +5,12 @@ using UnityEngine;
 public class ControlQuestPanal : MonoBehaviour
 {
     [SerializeField] private GameObject QuestPanal;
+    private InputManager _inputManager;
 
+    private void Start() => _inputManager = ServiceLocator.Instance.GetService<InputManager>();
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             OnPanalClick();
         }

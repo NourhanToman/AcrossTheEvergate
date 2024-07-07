@@ -32,6 +32,7 @@ public class InputManager : MonoBehaviour
     public bool isLeftFlip;
     public bool BookCanva;
     public bool isMapOpen;
+    public bool isQuestOpen;
 
     private void Awake()
     {
@@ -82,13 +83,28 @@ public class InputManager : MonoBehaviour
             action.PlayerLocomoation.FlipPageLeft.performed += i => LeftFlip();
             action.PlayerLocomoation.FlipPageLeft.canceled += i => CancelLeftFlip();
             action.PlayerLocomoation.WorldMap.performed += i => OpenMap();
+            action.PlayerLocomoation.Quest.performed += i => OpenQuest();
+            action.PlayerLocomoation.Quest.canceled += i => CloseQuest();
             //action.PlayerLocomoation.WorldMap.canceled += i => CloseMap();
 
         }
         action.Enable();
     }
 
-    
+
+    private void OpenQuest()
+    {
+        AudioManager.instance.PlaySFX("Paper");
+        isQuestOpen = true;
+    }
+   
+    private void CloseQuest()
+    {
+        AudioManager.instance.PlaySFX("Paper");
+        isQuestOpen = false;
+
+    }
+
     private void SpellBook()
     {
         BookCanva = true;

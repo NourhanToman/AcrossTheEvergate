@@ -46,7 +46,7 @@ namespace AccrossTheEvergate
                     _NPCtree.enabled = false;
                     animator.SetFloat("RUN", 0.0f, 0.0f, Time.deltaTime);
                     dissolve.Dissolve();
-                    Destroy(Arachilion.gameObject);
+                    Destroy(Arachilion.gameObject,2f);
                    // Instantiate(_Everheart, Arachilion.transform.position, Arachilion.transform.rotation);
                    
                 //}

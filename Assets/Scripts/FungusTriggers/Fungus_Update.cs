@@ -10,9 +10,9 @@ namespace AccrossTheEvergate
         [SerializeField] private Flowchart _Chart;
         [SerializeField] private Flowchart _MainChart;
 
-        [SerializeField] private string _C_EXName;
-        [SerializeField] private string _C_VName;
-        [SerializeField] private string _M_VName;
+        [SerializeField] private string _C_EXName; //vv
+        [SerializeField] private string _C_VName; //iscollect
+        [SerializeField] private string _M_VName; //main
 
         private void Update()
         {
